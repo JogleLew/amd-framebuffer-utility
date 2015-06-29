@@ -1,0 +1,447 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		157A7B431B411DF000275C92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157A7B421B411DF000275C92 /* AppDelegate.swift */; };
+		157A7B471B411DF000275C92 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 157A7B461B411DF000275C92 /* Images.xcassets */; };
+		157A7B4A1B411DF100275C92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 157A7B481B411DF100275C92 /* Main.storyboard */; };
+		157A7B561B411DF100275C92 /* AMDFramebufferUtilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157A7B551B411DF100275C92 /* AMDFramebufferUtilityTests.swift */; };
+		157A7B611B411E3D00275C92 /* correct.png in Resources */ = {isa = PBXBuildFile; fileRef = 157A7B5F1B411E3D00275C92 /* correct.png */; };
+		157A7B621B411E3D00275C92 /* incorrect.png in Resources */ = {isa = PBXBuildFile; fileRef = 157A7B601B411E3D00275C92 /* incorrect.png */; };
+		157A7B651B411E4800275C92 /* radeon_bios_decode in Resources */ = {isa = PBXBuildFile; fileRef = 157A7B631B411E4800275C92 /* radeon_bios_decode */; };
+		157A7B661B411E4800275C92 /* redsock_bios_decoder in Resources */ = {isa = PBXBuildFile; fileRef = 157A7B641B411E4800275C92 /* redsock_bios_decoder */; };
+		157A7B691B411E5100275C92 /* ConnectorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157A7B671B411E5100275C92 /* ConnectorData.swift */; };
+		157A7B6A1B411E5100275C92 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157A7B681B411E5100275C92 /* ResultViewController.swift */; };
+		157A7B6C1B411E5800275C92 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157A7B6B1B411E5800275C92 /* ViewController.swift */; };
+		157A7B6E1B41237700275C92 /* ati.txt in Resources */ = {isa = PBXBuildFile; fileRef = 157A7B6D1B41237700275C92 /* ati.txt */; };
+		157A7B701B413EC600275C92 /* getSystemFB.php in Resources */ = {isa = PBXBuildFile; fileRef = 157A7B6F1B413EC600275C92 /* getSystemFB.php */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		157A7B501B411DF100275C92 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 157A7B351B411DF000275C92 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 157A7B3C1B411DF000275C92;
+			remoteInfo = AMDFramebufferUtility;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		157A7B3D1B411DF000275C92 /* AMDFramebufferUtility.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AMDFramebufferUtility.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		157A7B411B411DF000275C92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		157A7B421B411DF000275C92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		157A7B461B411DF000275C92 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		157A7B491B411DF100275C92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		157A7B4F1B411DF100275C92 /* AMDFramebufferUtilityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AMDFramebufferUtilityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		157A7B541B411DF100275C92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		157A7B551B411DF100275C92 /* AMDFramebufferUtilityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMDFramebufferUtilityTests.swift; sourceTree = "<group>"; };
+		157A7B5F1B411E3D00275C92 /* correct.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = correct.png; sourceTree = "<group>"; };
+		157A7B601B411E3D00275C92 /* incorrect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = incorrect.png; sourceTree = "<group>"; };
+		157A7B631B411E4800275C92 /* radeon_bios_decode */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = radeon_bios_decode; sourceTree = "<group>"; };
+		157A7B641B411E4800275C92 /* redsock_bios_decoder */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = redsock_bios_decoder; sourceTree = "<group>"; };
+		157A7B671B411E5100275C92 /* ConnectorData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectorData.swift; sourceTree = "<group>"; };
+		157A7B681B411E5100275C92 /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		157A7B6B1B411E5800275C92 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		157A7B6D1B41237700275C92 /* ati.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ati.txt; sourceTree = "<group>"; };
+		157A7B6F1B413EC600275C92 /* getSystemFB.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = getSystemFB.php; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		157A7B3A1B411DF000275C92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		157A7B4C1B411DF100275C92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		157A7B341B411DF000275C92 = {
+			isa = PBXGroup;
+			children = (
+				157A7B3F1B411DF000275C92 /* AMDFramebufferUtility */,
+				157A7B521B411DF100275C92 /* AMDFramebufferUtilityTests */,
+				157A7B3E1B411DF000275C92 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		157A7B3E1B411DF000275C92 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				157A7B3D1B411DF000275C92 /* AMDFramebufferUtility.app */,
+				157A7B4F1B411DF100275C92 /* AMDFramebufferUtilityTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		157A7B3F1B411DF000275C92 /* AMDFramebufferUtility */ = {
+			isa = PBXGroup;
+			children = (
+				157A7B421B411DF000275C92 /* AppDelegate.swift */,
+				157A7B671B411E5100275C92 /* ConnectorData.swift */,
+				157A7B6B1B411E5800275C92 /* ViewController.swift */,
+				157A7B681B411E5100275C92 /* ResultViewController.swift */,
+				157A7B461B411DF000275C92 /* Images.xcassets */,
+				157A7B481B411DF100275C92 /* Main.storyboard */,
+				157A7B5F1B411E3D00275C92 /* correct.png */,
+				157A7B601B411E3D00275C92 /* incorrect.png */,
+				157A7B6D1B41237700275C92 /* ati.txt */,
+				157A7B6F1B413EC600275C92 /* getSystemFB.php */,
+				157A7B631B411E4800275C92 /* radeon_bios_decode */,
+				157A7B641B411E4800275C92 /* redsock_bios_decoder */,
+				157A7B401B411DF000275C92 /* Supporting Files */,
+			);
+			path = AMDFramebufferUtility;
+			sourceTree = "<group>";
+		};
+		157A7B401B411DF000275C92 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				157A7B411B411DF000275C92 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		157A7B521B411DF100275C92 /* AMDFramebufferUtilityTests */ = {
+			isa = PBXGroup;
+			children = (
+				157A7B551B411DF100275C92 /* AMDFramebufferUtilityTests.swift */,
+				157A7B531B411DF100275C92 /* Supporting Files */,
+			);
+			path = AMDFramebufferUtilityTests;
+			sourceTree = "<group>";
+		};
+		157A7B531B411DF100275C92 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				157A7B541B411DF100275C92 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		157A7B3C1B411DF000275C92 /* AMDFramebufferUtility */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 157A7B591B411DF100275C92 /* Build configuration list for PBXNativeTarget "AMDFramebufferUtility" */;
+			buildPhases = (
+				157A7B391B411DF000275C92 /* Sources */,
+				157A7B3A1B411DF000275C92 /* Frameworks */,
+				157A7B3B1B411DF000275C92 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AMDFramebufferUtility;
+			productName = AMDFramebufferUtility;
+			productReference = 157A7B3D1B411DF000275C92 /* AMDFramebufferUtility.app */;
+			productType = "com.apple.product-type.application";
+		};
+		157A7B4E1B411DF100275C92 /* AMDFramebufferUtilityTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 157A7B5C1B411DF100275C92 /* Build configuration list for PBXNativeTarget "AMDFramebufferUtilityTests" */;
+			buildPhases = (
+				157A7B4B1B411DF100275C92 /* Sources */,
+				157A7B4C1B411DF100275C92 /* Frameworks */,
+				157A7B4D1B411DF100275C92 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				157A7B511B411DF100275C92 /* PBXTargetDependency */,
+			);
+			name = AMDFramebufferUtilityTests;
+			productName = AMDFramebufferUtilityTests;
+			productReference = 157A7B4F1B411DF100275C92 /* AMDFramebufferUtilityTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		157A7B351B411DF000275C92 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = joglelew;
+				TargetAttributes = {
+					157A7B3C1B411DF000275C92 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					157A7B4E1B411DF100275C92 = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = 157A7B3C1B411DF000275C92;
+					};
+				};
+			};
+			buildConfigurationList = 157A7B381B411DF000275C92 /* Build configuration list for PBXProject "AMDFramebufferUtility" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 157A7B341B411DF000275C92;
+			productRefGroup = 157A7B3E1B411DF000275C92 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				157A7B3C1B411DF000275C92 /* AMDFramebufferUtility */,
+				157A7B4E1B411DF100275C92 /* AMDFramebufferUtilityTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		157A7B3B1B411DF000275C92 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				157A7B471B411DF000275C92 /* Images.xcassets in Resources */,
+				157A7B621B411E3D00275C92 /* incorrect.png in Resources */,
+				157A7B701B413EC600275C92 /* getSystemFB.php in Resources */,
+				157A7B4A1B411DF100275C92 /* Main.storyboard in Resources */,
+				157A7B651B411E4800275C92 /* radeon_bios_decode in Resources */,
+				157A7B661B411E4800275C92 /* redsock_bios_decoder in Resources */,
+				157A7B6E1B41237700275C92 /* ati.txt in Resources */,
+				157A7B611B411E3D00275C92 /* correct.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		157A7B4D1B411DF100275C92 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		157A7B391B411DF000275C92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				157A7B431B411DF000275C92 /* AppDelegate.swift in Sources */,
+				157A7B691B411E5100275C92 /* ConnectorData.swift in Sources */,
+				157A7B6C1B411E5800275C92 /* ViewController.swift in Sources */,
+				157A7B6A1B411E5100275C92 /* ResultViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		157A7B4B1B411DF100275C92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				157A7B561B411DF100275C92 /* AMDFramebufferUtilityTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		157A7B511B411DF100275C92 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 157A7B3C1B411DF000275C92 /* AMDFramebufferUtility */;
+			targetProxy = 157A7B501B411DF100275C92 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		157A7B481B411DF100275C92 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				157A7B491B411DF100275C92 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		157A7B571B411DF100275C92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		157A7B581B411DF100275C92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		157A7B5A1B411DF100275C92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = AMDFramebufferUtility/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		157A7B5B1B411DF100275C92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = AMDFramebufferUtility/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		157A7B5D1B411DF100275C92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = AMDFramebufferUtilityTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AMDFramebufferUtility.app/Contents/MacOS/AMDFramebufferUtility";
+			};
+			name = Debug;
+		};
+		157A7B5E1B411DF100275C92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = AMDFramebufferUtilityTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AMDFramebufferUtility.app/Contents/MacOS/AMDFramebufferUtility";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		157A7B381B411DF000275C92 /* Build configuration list for PBXProject "AMDFramebufferUtility" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				157A7B571B411DF100275C92 /* Debug */,
+				157A7B581B411DF100275C92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		157A7B591B411DF100275C92 /* Build configuration list for PBXNativeTarget "AMDFramebufferUtility" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				157A7B5A1B411DF100275C92 /* Debug */,
+				157A7B5B1B411DF100275C92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		157A7B5C1B411DF100275C92 /* Build configuration list for PBXNativeTarget "AMDFramebufferUtilityTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				157A7B5D1B411DF100275C92 /* Debug */,
+				157A7B5E1B411DF100275C92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 157A7B351B411DF000275C92 /* Project object */;
+}
