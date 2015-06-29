@@ -50,6 +50,7 @@
 		157A7B6B1B411E5800275C92 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		157A7B6D1B41237700275C92 /* ati.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ati.txt; sourceTree = "<group>"; };
 		157A7B6F1B413EC600275C92 /* getSystemFB.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = getSystemFB.php; sourceTree = "<group>"; };
+		157A7B711B41999B00275C92 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,6 +269,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				157A7B491B411DF100275C92 /* Base */,
+				157A7B711B41999B00275C92 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

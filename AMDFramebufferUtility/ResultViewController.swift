@@ -200,6 +200,7 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
         // Position card information
         var split: [String] = content!.componentsSeparatedByString("\r\n")
         var nameArray: [String] = []
+        var isFound = false
         for i in split {
             if count(i) == 0 || i[i.startIndex] == "/" {
                 continue
@@ -213,11 +214,16 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
                 else {
                     continue
                 }
-                if j == id {
+                if j == id.uppercaseString {
                     nameArray = i.componentsSeparatedByString("\"")
+                    isFound = true
                     break
                 }
             }
+        }
+        
+        if (!isFound) {
+            return ("", "Null")
         }
         
         if (nameArray[2].hasSuffix("Mobile")) {
