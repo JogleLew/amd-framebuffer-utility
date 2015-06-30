@@ -23,6 +23,7 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
     var encDatas: [NSTextField] = []
     var hotpluginDatas: [NSTextField] = []
     var senseidDatas: [NSTextField] = []
+    var saveButton: NSButton?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -179,6 +180,7 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
             if systemFBname[i].hasPrefix(recommendFB) {
                 FBComboBox!.selectItemAtIndex(i)
                 FBInf!.stringValue = systemFBvalue[i]
+                saveButton!.enabled = true
                 break
             }
         }
@@ -353,14 +355,15 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
     }
     
     func showSaveAndCloseButton() {
-        var saveButton = NSButton()
-        saveButton.stringValue = NSLocalizedString("SAVE_ALL", comment: "Save All")
-        saveButton.title = NSLocalizedString("SAVE_ALL", comment: "Save All")
-        saveButton.frame = CGRectMake(210, 0, 125, 25)
-        saveButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
-        saveButton.target = self
-        saveButton.action = "saveButtonPressed"
-        self.view.addSubview(saveButton)
+        saveButton = NSButton()
+        saveButton!.stringValue = NSLocalizedString("SAVE_ALL", comment: "Save All")
+        saveButton!.title = NSLocalizedString("SAVE_ALL", comment: "Save All")
+        saveButton!.frame = CGRectMake(210, 0, 125, 25)
+        saveButton!.bezelStyle = NSBezelStyle.RoundedBezelStyle
+        saveButton!.enabled = false
+        saveButton!.target = self
+        saveButton!.action = "saveButtonPressed"
+        self.view.addSubview(saveButton!)
         
         var exitButton = NSButton()
         exitButton.stringValue = NSLocalizedString("EXIT", comment: "Exit")
@@ -413,5 +416,6 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
     func comboBoxSelectionDidChange(notification: NSNotification) {
         var i = FBComboBox!.indexOfSelectedItem
         FBInf?.stringValue = systemFBvalue[i]
+        saveButton!.enabled = true
     }
 }
