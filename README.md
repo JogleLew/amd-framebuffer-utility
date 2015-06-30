@@ -5,7 +5,7 @@ For Hackintoshers!
 1. Get Framebuffer informations from ROM of graphics card
 1. Get origin Framebuffer informations from AMD kexts
 1. Recommend suitable Framebuffer to users
-1. Adjust your Framebuffer and save to file to your desktop
+1. Adjust your Framebuffer and save to file on your desktop
 
 #System Requirement
 
