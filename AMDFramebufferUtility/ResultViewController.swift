@@ -344,7 +344,7 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
             
             // Show senseid
             var senseidData = NSTextField()
-            senseidData.stringValue = connectors[i].hotplugin
+            senseidData.stringValue = connectors[i].senseid
             senseidData.frame = CGRectMake(415, (CGFloat)(height), 70, 25)
             senseidData.bezelStyle = NSTextFieldBezelStyle.RoundedBezel
             self.view.addSubview(senseidData)

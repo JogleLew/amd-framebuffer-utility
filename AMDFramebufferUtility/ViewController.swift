@@ -200,6 +200,7 @@ class ViewController: NSViewController {
         task.launch()
         var data = file.readDataToEndOfFile()
         var context1 = NSString(data: data, encoding: NSUTF8StringEncoding)
+        println(context1)
         return "\(context1)"
     }
 }
