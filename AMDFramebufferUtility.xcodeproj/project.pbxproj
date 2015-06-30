@@ -20,6 +20,7 @@
 		157A7B6C1B411E5800275C92 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157A7B6B1B411E5800275C92 /* ViewController.swift */; };
 		157A7B6E1B41237700275C92 /* ati.txt in Resources */ = {isa = PBXBuildFile; fileRef = 157A7B6D1B41237700275C92 /* ati.txt */; };
 		157A7B701B413EC600275C92 /* getSystemFB.php in Resources */ = {isa = PBXBuildFile; fileRef = 157A7B6F1B413EC600275C92 /* getSystemFB.php */; };
+		15D5CA9E1B423999004875C4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 15D5CAA01B423999004875C4 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,9 @@
 		157A7B6D1B41237700275C92 /* ati.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ati.txt; sourceTree = "<group>"; };
 		157A7B6F1B413EC600275C92 /* getSystemFB.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = getSystemFB.php; sourceTree = "<group>"; };
 		157A7B711B41999B00275C92 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		15D5CA9F1B423999004875C4 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		15D5CAAB1B4242D0004875C4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		15D5CAAC1B4242EF004875C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,7 @@
 				157A7B671B411E5100275C92 /* ConnectorData.swift */,
 				157A7B6B1B411E5800275C92 /* ViewController.swift */,
 				157A7B681B411E5100275C92 /* ResultViewController.swift */,
+				15D5CAA01B423999004875C4 /* Localizable.strings */,
 				157A7B461B411DF000275C92 /* Images.xcassets */,
 				157A7B481B411DF100275C92 /* Main.storyboard */,
 				157A7B5F1B411E3D00275C92 /* correct.png */,
@@ -218,6 +223,7 @@
 				157A7B621B411E3D00275C92 /* incorrect.png in Resources */,
 				157A7B701B413EC600275C92 /* getSystemFB.php in Resources */,
 				157A7B4A1B411DF100275C92 /* Main.storyboard in Resources */,
+				15D5CA9E1B423999004875C4 /* Localizable.strings in Resources */,
 				157A7B651B411E4800275C92 /* radeon_bios_decode in Resources */,
 				157A7B661B411E4800275C92 /* redsock_bios_decoder in Resources */,
 				157A7B6E1B41237700275C92 /* ati.txt in Resources */,
@@ -272,6 +278,17 @@
 				157A7B711B41999B00275C92 /* zh-Hans */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		15D5CAA01B423999004875C4 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				15D5CA9F1B423999004875C4 /* zh-Hans */,
+				15D5CAAB1B4242D0004875C4 /* en */,
+				15D5CAAC1B4242EF004875C4 /* Base */,
+			);
+			name = Localizable.strings;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -364,6 +381,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = AMDFramebufferUtility/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -375,6 +393,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = AMDFramebufferUtility/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -434,6 +453,7 @@
 				157A7B5B1B411DF100275C92 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		157A7B5C1B411DF100275C92 /* Build configuration list for PBXNativeTarget "AMDFramebufferUtilityTests" */ = {
 			isa = XCConfigurationList;
@@ -442,6 +462,7 @@
 				157A7B5E1B411DF100275C92 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

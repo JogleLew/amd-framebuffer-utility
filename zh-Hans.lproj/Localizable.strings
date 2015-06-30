@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  AMDFramebufferUtility
+
+  Created by jogle on 15/6/30.
+  Copyright (c) 2015年 joglelew. All rights reserved.
+*/
+
+GRAPHIC_CARD_INFO = "您的显卡信息：";
+RECOMMEND = "推荐替换的Framebuffer：";
+ORIGIN = "原始Framebuffer值：";
+USER_FB = "您的显卡Framebuffer：";
+TYPE = "接口类型";
+SAVE_ALL = "保存所有数据";
+EXIT = "退出";
+PLEASE_WAIT = "请稍候...";
+SELECT_FB = "请选择一个Framebuffer";
+MOBILE = " (移动版)";

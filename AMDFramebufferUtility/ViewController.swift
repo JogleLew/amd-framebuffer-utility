@@ -13,6 +13,7 @@ class ViewController: NSViewController {
     var PCIID: String = ""
     
     @IBOutlet weak var processStatus: NSImageView!
+
     @IBOutlet weak var filePath: NSTextField!
     @IBOutlet weak var showDataButton: NSButton!
     
@@ -172,7 +173,7 @@ class ViewController: NSViewController {
     override func prepareForSegue(segue: NSStoryboardSegue, sender: AnyObject?) {
         var viewController = segue.destinationController as! ResultViewController
         viewController.connectors = connectors
-        viewController.PCIID = PCIID
+        viewController.PCIID = PCIID.uppercaseString
     }
     
     func runProgram(name: String, inputFile: String) -> String {

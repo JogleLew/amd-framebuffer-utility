@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  AMDFramebufferUtility
+
+  Created by jogle on 15/6/30.
+  Copyright (c) 2015年 joglelew. All rights reserved.
+*/
+
+GRAPHIC_CARD_INFO = "Graphic Card Info: ";
+RECOMMEND = "Recommend Framebuffer to replace: ";
+ORIGIN = "Origin Framebuffer: ";
+USER_FB = "Framebuffer Of Your Graphics Card: ";
+TYPE = "type";
+SAVE_ALL = "Save All";
+EXIT = "Exit";
+PLEASE_WAIT = "Please wait...";
+SELECT_FB = "Please select a framebuffer";
+MOBILE = " (Mobile)";

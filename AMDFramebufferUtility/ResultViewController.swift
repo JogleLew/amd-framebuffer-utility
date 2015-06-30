@@ -48,7 +48,7 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
     
     func showCardInfo() {
         var cardInfo = NSTextField()
-        cardInfo.stringValue = "Graphic Card Info: "
+        cardInfo.stringValue = NSLocalizedString("GRAPHIC_CARD_INFO", comment: "Graphic Card Info: ")
         cardInfo.frame = CGRectMake(25, CGFloat(height), 140, 25)
         cardInfo.bordered = false
         cardInfo.editable = false
@@ -78,7 +78,7 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
         
         if (fb != "Null") {
             var recommendFB = NSTextField()
-            recommendFB.stringValue = "Recommend FrameBuffer to replace: "
+            recommendFB.stringValue = NSLocalizedString("RECOMMEND", comment: "Recommend FrameBuffer to replace: ")
             recommendFB.frame = CGRectMake(25, CGFloat(height) - 5, 250, 25)
             recommendFB.bordered = false
             recommendFB.editable = false
@@ -99,7 +99,7 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
     func showOriginFB() {
         
         var originFB = NSTextField()
-        originFB.stringValue = "Origin FrameBuffer: "
+        originFB.stringValue = NSLocalizedString("ORIGIN", comment: "Origin FrameBuffer: ")
         originFB.frame = CGRectMake(25, CGFloat(height - 3), 150, 25)
         originFB.bordered = false
         originFB.editable = false
@@ -107,7 +107,7 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
         self.view.addSubview(originFB)
         
         FBComboBox = NSComboBox()
-        FBComboBox!.placeholderString = "Please wait..."
+        FBComboBox!.placeholderString = NSLocalizedString("PLEASE_WAIT", comment: "Please wait...")
         FBComboBox!.frame = CGRectMake(175, CGFloat(height), 200, 25)
         FBComboBox!.editable = false
         FBComboBox!.selectable = true
@@ -173,7 +173,7 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
                 systemFBvalue.append(datas)
             }
         }
-        FBComboBox!.placeholderString = "Please select a framebuffer"
+        FBComboBox!.placeholderString = NSLocalizedString("SELECT_FB", comment: "Please select a framebuffer")
         FBComboBox!.addItemsWithObjectValues(systemFBname)
         for var i = 0; i < systemFBname.count; i++ {
             if systemFBname[i].hasPrefix(recommendFB) {
@@ -195,7 +195,10 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
         
         var content = String(contentsOfFile: dir, encoding: NSUTF8StringEncoding, error: nil)
         
-        var id = PCIID.substringFromIndex(advance(PCIID.startIndex, 13))
+        var id = ""
+        if count(PCIID) >= 13 {
+            id = PCIID.substringFromIndex(advance(PCIID.startIndex, 13))
+        }
         
         // Position card information
         var split: [String] = content!.componentsSeparatedByString("\r\n")
@@ -227,7 +230,7 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
         }
         
         if (nameArray[2].hasSuffix("Mobile")) {
-            nameArray[1] += " (Mobile)"
+            nameArray[1] += NSLocalizedString("MOBILE", comment: " (Mobile)")
         }
         
         while nameArray[2][nameArray[2].startIndex] == "\"" {
@@ -253,7 +256,7 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
     
     func showText(count: Int) {
         var userFB = NSTextField()
-        userFB.stringValue = "Framebuffer Of Your Graphics Card: "
+        userFB.stringValue = NSLocalizedString("USER_FB", comment: "Framebuffer Of Your Graphics Card: ")
         userFB.frame = CGRectMake(25, (CGFloat)(height), 300, 25)
         userFB.bordered = false
         userFB.editable = false
@@ -262,7 +265,7 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
         height -= 25
         
         var typeLabel = NSTextField()
-        typeLabel.stringValue = "Type"
+        typeLabel.stringValue = NSLocalizedString("TYPE", comment: "Type")
         typeLabel.frame = CGRectMake(25, (CGFloat)(height), 100, 25)
         typeLabel.bordered = false
         typeLabel.editable = false
@@ -351,18 +354,18 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
     
     func showSaveAndCloseButton() {
         var saveButton = NSButton()
-        saveButton.stringValue = "Save All"
-        saveButton.title = "Save All"
-        saveButton.frame = CGRectMake(260, 0, 100, 25)
+        saveButton.stringValue = NSLocalizedString("SAVE_ALL", comment: "Save All")
+        saveButton.title = NSLocalizedString("SAVE_ALL", comment: "Save All")
+        saveButton.frame = CGRectMake(210, 0, 125, 25)
         saveButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         saveButton.target = self
         saveButton.action = "saveButtonPressed"
         self.view.addSubview(saveButton)
         
         var exitButton = NSButton()
-        exitButton.stringValue = "Exit"
-        exitButton.title = "Exit"
-        exitButton.frame = CGRectMake(385, 0, 100, 25)
+        exitButton.stringValue = NSLocalizedString("EXIT", comment: "Exit")
+        exitButton.title = NSLocalizedString("EXIT", comment: "Exit")
+        exitButton.frame = CGRectMake(360, 0, 125, 25)
         exitButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         exitButton.target = self
         exitButton.action = "exitButtonPressed"
