@@ -1,0 +1,3926 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>6610</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon R7 250</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_OLAND</string>
+		<key>Controller</key>
+		<string>AMD7000Controller</string>
+		<key>Framebuffer</key>
+		<string>Futomaki</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>6613</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon R7 240</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_OLAND</string>
+		<key>Controller</key>
+		<string>AMD7000Controller</string>
+		<key>Framebuffer</key>
+		<string>Futomaki</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>665C</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 7790</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_BONAIRE</string>
+		<key>Controller</key>
+		<string>AMD7000Controller</string>
+		<key>Framebuffer</key>
+		<string>Futomaki</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>665D</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon R9 260</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_BONAIRE</string>
+		<key>Controller</key>
+		<string>AMD7000Controller</string>
+		<key>Framebuffer</key>
+		<string>Futomaki</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>665F</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon R9 360</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_BONAIRE</string>
+		<key>Controller</key>
+		<string>AMD7000Controller</string>
+		<key>Framebuffer</key>
+		<string>Futomaki</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>6701</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 6xxx Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_CAYMAN</string>
+		<key>Controller</key>
+		<string>AMD6000Controller</string>
+		<key>Framebuffer</key>
+		<string>Lotus</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>6702</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 6xxx Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_CAYMAN</string>
+		<key>Controller</key>
+		<string>AMD6000Controller</string>
+		<key>Framebuffer</key>
+		<string>Lotus</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>6703</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 6xxx Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_CAYMAN</string>
+		<key>Controller</key>
+		<string>AMD6000Controller</string>
+		<key>Framebuffer</key>
+		<string>Lotus</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>6704</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD FirePro V7900</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_CAYMAN</string>
+		<key>Controller</key>
+		<string>AMD6000Controller</string>
+		<key>Framebuffer</key>
+		<string>Lotus</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>6705</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 6xxx Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_CAYMAN</string>
+		<key>Controller</key>
+		<string>AMD6000Controller</string>
+		<key>Framebuffer</key>
+		<string>Lotus</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>6706</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 6xxx Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_CAYMAN</string>
+		<key>Controller</key>
+		<string>AMD6000Controller</string>
+		<key>Framebuffer</key>
+		<string>Lotus</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>6707</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 6xxx Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_CAYMAN</string>
+		<key>Controller</key>
+		<string>AMD6000Controller</string>
+		<key>Framebuffer</key>
+		<string>Lotus</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>6708</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD FirePro V5900</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_CAYMAN</string>
+		<key>Controller</key>
+		<string>AMD6000Controller</string>
+		<key>Framebuffer</key>
+		<string>Lotus</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>6709</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 6xxx Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_CAYMAN</string>
+		<key>Controller</key>
+		<string>AMD6000Controller</string>
+		<key>Framebuffer</key>
+		<string>Lotus</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>6718</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 6970 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_CAYMAN</string>
+		<key>Controller</key>
+		<string>AMD6000Controller</string>
+		<key>Framebuffer</key>
+		<string>Lotus</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>6719</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 6950 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_CAYMAN</string>
+		<key>Controller</key>
+		<string>AMD6000Controller</string>
+		<key>Framebuffer</key>
+		<string>Lotus</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>671C</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 6990 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_CAYMAN</string>
+		<key>Controller</key>
+		<string>AMD6000Controller</string>
+		<key>Framebuffer</key>
+		<string>Lotus</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>671D</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 6950 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_CAYMAN</string>
+		<key>Controller</key>
+		<string>AMD6000Controller</string>
+		<key>Framebuffer</key>
+		<string>Lotus</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>671F</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 6930 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_CAYMAN</string>
+		<key>Controller</key>
+		<string>AMD6000Controller</string>
+		<key>Framebuffer</key>
+		<string>Lotus</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>6720</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 6970M Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_BARTS</string>
+		<key>Controller</key>
+		<string>AMD6000Controller</string>
+		<key>Framebuffer</key>
+		<string>Fanwort</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>6722</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 6900M Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_BARTS</string>
+		<key>Controller</key>
+		<string>AMD6000Controller</string>
+		<key>Framebuffer</key>
+		<string>Fanwort</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>6729</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 6900M Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_BARTS</string>
+		<key>Controller</key>
+		<string>AMD6000Controller</string>
+		<key>Framebuffer</key>
+		<string>Fanwort</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>6738</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 6870 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_BARTS</string>
+		<key>Controller</key>
+		<string>AMD6000Controller</string>
+		<key>Framebuffer</key>
+		<string>Duckweed</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>6739</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 6850 X2</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_BARTS</string>
+		<key>Controller</key>
+		<string>AMD6000Controller</string>
+		<key>Framebuffer</key>
+		<string>Duckweed</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>673E</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 6790 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_BARTS</string>
+		<key>Controller</key>
+		<string>AMD6000Controller</string>
+		<key>Framebuffer</key>
+		<string>Duckweed</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>6740</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 6770M Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_TURKS</string>
+		<key>Controller</key>
+		<string>AMD6000Controller</string>
+		<key>Framebuffer</key>
+		<string>Cattail</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>6741</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 6750M</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_TURKS</string>
+		<key>Controller</key>
+		<string>AMD6000Controller</string>
+		<key>Framebuffer</key>
+		<string>Cattail</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>6742</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 7500/7600</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_TURKS</string>
+		<key>Controller</key>
+		<string>AMD6000Controller</string>
+		<key>Framebuffer</key>
+		<string>Cattail</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>6745</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 6600M Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_TURKS</string>
+		<key>Controller</key>
+		<string>AMD6000Controller</string>
+		<key>Framebuffer</key>
+		<string>Cattail</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>6749</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon FirePro V4900</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_TURKS</string>
+		<key>Controller</key>
+		<string>AMD6000Controller</string>
+		<key>Framebuffer</key>
+		<string>Pithecia</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>674A</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD FirePro V3900</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_TURKS</string>
+		<key>Controller</key>
+		<string>AMD6000Controller</string>
+		<key>Framebuffer</key>
+		<string>Pithecia</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>6750</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 6670 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_TURKS</string>
+		<key>Controller</key>
+		<string>AMD6000Controller</string>
+		<key>Framebuffer</key>
+		<string>Pithecia</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>6758</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 6670 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_TURKS</string>
+		<key>Controller</key>
+		<string>AMD6000Controller</string>
+		<key>Framebuffer</key>
+		<string>Pithecia</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>6759</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 6570 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_TURKS</string>
+		<key>Controller</key>
+		<string>AMD6000Controller</string>
+		<key>Framebuffer</key>
+		<string>Pithecia</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>675B</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 7600 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_TURKS</string>
+		<key>Controller</key>
+		<string>AMD6000Controller</string>
+		<key>Framebuffer</key>
+		<string>Pithecia</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>675D</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 7570M Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_TURKS</string>
+		<key>Controller</key>
+		<string>AMD6000Controller</string>
+		<key>Framebuffer</key>
+		<string>Cattail</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>675F</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 6510 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_TURKS</string>
+		<key>Controller</key>
+		<string>AMD6000Controller</string>
+		<key>Framebuffer</key>
+		<string>Pithecia</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>6760</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 6470M Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_CAICOS</string>
+		<key>Controller</key>
+		<string>AMD6000Controller</string>
+		<key>Framebuffer</key>
+		<string>Hydrilla</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>6761</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 6430M Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_CAICOS</string>
+		<key>Controller</key>
+		<string>AMD6000Controller</string>
+		<key>Framebuffer</key>
+		<string>Hydrilla</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>6763</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon E6460 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_CAICOS</string>
+		<key>Controller</key>
+		<string>AMD6000Controller</string>
+		<key>Framebuffer</key>
+		<string>Hydrilla</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>6768</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 6400M Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_CAICOS</string>
+		<key>Controller</key>
+		<string>AMD6000Controller</string>
+		<key>Framebuffer</key>
+		<string>Hydrilla</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>6770</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 6400 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_CAICOS</string>
+		<key>Controller</key>
+		<string>AMD6000Controller</string>
+		<key>Framebuffer</key>
+		<string>Bulrushes</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>6772</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 7400A Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_CAICOS</string>
+		<key>Controller</key>
+		<string>AMD6000Controller</string>
+		<key>Framebuffer</key>
+		<string>Bulrushes</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>6778</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 7000 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_CAICOS</string>
+		<key>Controller</key>
+		<string>AMD6000Controller</string>
+		<key>Framebuffer</key>
+		<string>Bulrushes</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>6779</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 6450/7450/8450/R5 230</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_CAICOS</string>
+		<key>Controller</key>
+		<string>AMD6000Controller</string>
+		<key>Framebuffer</key>
+		<string>Bulrushes</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>677B</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 7400 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_CAICOS</string>
+		<key>Controller</key>
+		<string>AMD6000Controller</string>
+		<key>Framebuffer</key>
+		<string>Bulrushes</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>6780</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 7900 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_TAHITI</string>
+		<key>Controller</key>
+		<string>AMD7000Controller</string>
+		<key>Framebuffer</key>
+		<string>Futomaki</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>6784</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 7900 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_TAHITI</string>
+		<key>Controller</key>
+		<string>AMD7000Controller</string>
+		<key>Framebuffer</key>
+		<string>Futomaki</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>6788</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 7900 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_TAHITI</string>
+		<key>Controller</key>
+		<string>AMD7000Controller</string>
+		<key>Framebuffer</key>
+		<string>Futomaki</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>678A</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 7900 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_TAHITI</string>
+		<key>Controller</key>
+		<string>AMD7000Controller</string>
+		<key>Framebuffer</key>
+		<string>Futomaki</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>6790</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 7900 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_TAHITI</string>
+		<key>Controller</key>
+		<string>AMD7000Controller</string>
+		<key>Framebuffer</key>
+		<string>Futomaki</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>6791</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 7900 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_TAHITI</string>
+		<key>Controller</key>
+		<string>AMD7000Controller</string>
+		<key>Framebuffer</key>
+		<string>Futomaki</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>6792</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 7900 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_TAHITI</string>
+		<key>Controller</key>
+		<string>AMD7000Controller</string>
+		<key>Framebuffer</key>
+		<string>Futomaki</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>6798</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 7970X/8970/R9 280X</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_TAHITI</string>
+		<key>Controller</key>
+		<string>AMD7000Controller</string>
+		<key>Framebuffer</key>
+		<string>Futomaki</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>6799</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 7990 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_TAHITI</string>
+		<key>Controller</key>
+		<string>AMD7000Controller</string>
+		<key>Framebuffer</key>
+		<string>Aji</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>679A</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 7950/8950/R9 280</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_TAHITI</string>
+		<key>Controller</key>
+		<string>AMD7000Controller</string>
+		<key>Framebuffer</key>
+		<string>Futomaki</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>679B</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 7990 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_TAHITI</string>
+		<key>Controller</key>
+		<string>AMD7000Controller</string>
+		<key>Framebuffer</key>
+		<string>Futomaki</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>679E</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 7870 XT</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_TAHITI</string>
+		<key>Controller</key>
+		<string>AMD7000Controller</string>
+		<key>Framebuffer</key>
+		<string>Futomaki</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>679F</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 7950 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_TAHITI</string>
+		<key>Controller</key>
+		<string>AMD7000Controller</string>
+		<key>Framebuffer</key>
+		<string>Futomaki</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>67B0</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon R9 290X</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_HAWAII</string>
+		<key>Controller</key>
+		<string>AMD8000Controller</string>
+		<key>Framebuffer</key>
+		<string>Baladi</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>67B1</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon R9 290</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_HAWAII</string>
+		<key>Controller</key>
+		<string>AMD8000Controller</string>
+		<key>Framebuffer</key>
+		<string>Baladi</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>67B9</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon R9 200</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_HAWAII</string>
+		<key>Controller</key>
+		<string>AMD7000Controller</string>
+		<key>Framebuffer</key>
+		<string>Futomaki</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>6800</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 7970M</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_PITCAIRN</string>
+		<key>Controller</key>
+		<string>AMD7000Controller</string>
+		<key>Framebuffer</key>
+		<string>Buri</string>
+		<key>isMobile</key>
+		<true/>
+	</dict>
+	<key>6801</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 8970M Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_PITCAIRN</string>
+		<key>Controller</key>
+		<string>AMD7000Controller</string>
+		<key>Framebuffer</key>
+		<string>Futomaki</string>
+		<key>isMobile</key>
+		<true/>
+	</dict>
+	<key>6806</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 7600 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_PITCAIRN</string>
+		<key>Controller</key>
+		<string>AMD7000Controller</string>
+		<key>Framebuffer</key>
+		<string>Futomaki</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>6808</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 7600 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_PITCAIRN</string>
+		<key>Controller</key>
+		<string>AMD7000Controller</string>
+		<key>Framebuffer</key>
+		<string>Futomaki</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>6810</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon R9 270X</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_PITCAIRN</string>
+		<key>Controller</key>
+		<string>AMD7000Controller</string>
+		<key>Framebuffer</key>
+		<string>Futomaki</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>6811</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon R9 270</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_PITCAIRN</string>
+		<key>Controller</key>
+		<string>AMD7000Controller</string>
+		<key>Framebuffer</key>
+		<string>Futomaki</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>6818</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 7870 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_PITCAIRN</string>
+		<key>Controller</key>
+		<string>AMD7000Controller</string>
+		<key>Framebuffer</key>
+		<string>Futomaki</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>6819</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 7850 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_PITCAIRN</string>
+		<key>Controller</key>
+		<string>AMD7000Controller</string>
+		<key>Framebuffer</key>
+		<string>Futomaki</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>6820</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 7700 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_VERDE</string>
+		<key>Controller</key>
+		<string>AMD7000Controller</string>
+		<key>Framebuffer</key>
+		<string>Buri</string>
+		<key>isMobile</key>
+		<true/>
+	</dict>
+	<key>6821</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 7700 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_VERDE</string>
+		<key>Controller</key>
+		<string>AMD7000Controller</string>
+		<key>Framebuffer</key>
+		<string>Buri</string>
+		<key>isMobile</key>
+		<true/>
+	</dict>
+	<key>6822</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon E8860</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_VERDE</string>
+		<key>Controller</key>
+		<string>AMD7000Controller</string>
+		<key>Framebuffer</key>
+		<string>Buri</string>
+		<key>isMobile</key>
+		<true/>
+	</dict>
+	<key>6823</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 8800M Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_VERDE</string>
+		<key>Controller</key>
+		<string>AMD7000Controller</string>
+		<key>Framebuffer</key>
+		<string>Buri</string>
+		<key>isMobile</key>
+		<true/>
+	</dict>
+	<key>6825</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 7800M Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_VERDE</string>
+		<key>Controller</key>
+		<string>AMD6000Controller</string>
+		<key>Framebuffer</key>
+		<string>Pondweed</string>
+		<key>isMobile</key>
+		<true/>
+	</dict>
+	<key>6826</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 7700 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_VERDE</string>
+		<key>Controller</key>
+		<string>AMD7000Controller</string>
+		<key>Framebuffer</key>
+		<string>Buri</string>
+		<key>isMobile</key>
+		<true/>
+	</dict>
+	<key>6827</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 7800M Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_VERDE</string>
+		<key>Controller</key>
+		<string>AMD6000Controller</string>
+		<key>Framebuffer</key>
+		<string>Pondweed</string>
+		<key>isMobile</key>
+		<true/>
+	</dict>
+	<key>6828</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI FirePro V</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_VERDE</string>
+		<key>Controller</key>
+		<string>AMD7000Controller</string>
+		<key>Framebuffer</key>
+		<string>Buri</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>682B</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 8800M Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_VERDE</string>
+		<key>Controller</key>
+		<string>AMD7000Controller</string>
+		<key>Framebuffer</key>
+		<string>Buri</string>
+		<key>isMobile</key>
+		<true/>
+	</dict>
+	<key>682D</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 7700 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_VERDE</string>
+		<key>Controller</key>
+		<string>AMD7000Controller</string>
+		<key>Framebuffer</key>
+		<string>Buri</string>
+		<key>isMobile</key>
+		<true/>
+	</dict>
+	<key>682F</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 7730 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_VERDE</string>
+		<key>Controller</key>
+		<string>AMD7000Controller</string>
+		<key>Framebuffer</key>
+		<string>Buri</string>
+		<key>isMobile</key>
+		<true/>
+	</dict>
+	<key>6830</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 7800M Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_VERDE</string>
+		<key>Controller</key>
+		<string>AMD7000Controller</string>
+		<key>Framebuffer</key>
+		<string>Buri</string>
+		<key>isMobile</key>
+		<true/>
+	</dict>
+	<key>6831</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 7700 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_VERDE</string>
+		<key>Controller</key>
+		<string>AMD7000Controller</string>
+		<key>Framebuffer</key>
+		<string>Buri</string>
+		<key>isMobile</key>
+		<true/>
+	</dict>
+	<key>6835</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD R7 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_VERDE</string>
+		<key>Controller</key>
+		<string>AMD7000Controller</string>
+		<key>Framebuffer</key>
+		<string>Buri</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>6837</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 7730 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_VERDE</string>
+		<key>Controller</key>
+		<string>AMD7000Controller</string>
+		<key>Framebuffer</key>
+		<string>Futomaki</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>6838</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 7700 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_VERDE</string>
+		<key>Controller</key>
+		<string>AMD7000Controller</string>
+		<key>Framebuffer</key>
+		<string>Futomaki</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>6839</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 7700 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_VERDE</string>
+		<key>Controller</key>
+		<string>AMD7000Controller</string>
+		<key>Framebuffer</key>
+		<string>Futomaki</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>683B</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 7700 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_VERDE</string>
+		<key>Controller</key>
+		<string>AMD7000Controller</string>
+		<key>Framebuffer</key>
+		<string>Futomaki</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>683D</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 7770 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_VERDE</string>
+		<key>Controller</key>
+		<string>AMD7000Controller</string>
+		<key>Framebuffer</key>
+		<string>Futomaki</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>683F</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 7750 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_VERDE</string>
+		<key>Controller</key>
+		<string>AMD7000Controller</string>
+		<key>Framebuffer</key>
+		<string>Futomaki</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>6840</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 7670M Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_TURKS</string>
+		<key>Controller</key>
+		<string>AMD6000Controller</string>
+		<key>Framebuffer</key>
+		<string>Pondweed</string>
+		<key>isMobile</key>
+		<true/>
+	</dict>
+	<key>6841</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 7650M Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_TURKS</string>
+		<key>Controller</key>
+		<string>AMD6000Controller</string>
+		<key>Framebuffer</key>
+		<string>Pondweed</string>
+		<key>isMobile</key>
+		<true/>
+	</dict>
+	<key>6842</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 7600M Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_TURKS</string>
+		<key>Controller</key>
+		<string>AMD6000Controller</string>
+		<key>Framebuffer</key>
+		<string>Pondweed</string>
+		<key>isMobile</key>
+		<true/>
+	</dict>
+	<key>6843</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 7670M Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_TURKS</string>
+		<key>Controller</key>
+		<string>AMD6000Controller</string>
+		<key>Framebuffer</key>
+		<string>Pondweed</string>
+		<key>isMobile</key>
+		<true/>
+	</dict>
+	<key>6849</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 7600M Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_TURKS</string>
+		<key>Controller</key>
+		<string>AMD6000Controller</string>
+		<key>Framebuffer</key>
+		<string>Pondweed</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>6850</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 7600M Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_TURKS</string>
+		<key>Controller</key>
+		<string>AMD6000Controller</string>
+		<key>Framebuffer</key>
+		<string>Pondweed</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>6858</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 7400 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_TURKS</string>
+		<key>Controller</key>
+		<string>AMD6000Controller</string>
+		<key>Framebuffer</key>
+		<string>Pondweed</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>6859</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 7600M Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_TURKS</string>
+		<key>Controller</key>
+		<string>AMD6000Controller</string>
+		<key>Framebuffer</key>
+		<string>Pondweed</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>688C</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD FireStream 9370</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_CYPRESS</string>
+		<key>Controller</key>
+		<string>AMD5000Controller</string>
+		<key>Framebuffer</key>
+		<string>Zonalis</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>688D</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD FireStream 9350</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_CYPRESS</string>
+		<key>Controller</key>
+		<string>AMD5000Controller</string>
+		<key>Framebuffer</key>
+		<string>Zonalis</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>6898</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 5870 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_CYPRESS</string>
+		<key>Controller</key>
+		<string>AMD5000Controller</string>
+		<key>Framebuffer</key>
+		<string>Uakari</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>6899</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 5850 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_CYPRESS</string>
+		<key>Controller</key>
+		<string>AMD5000Controller</string>
+		<key>Framebuffer</key>
+		<string>Uakari</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>689C</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 5970 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_HEMLOCK</string>
+		<key>Controller</key>
+		<string>AMD5000Controller</string>
+		<key>Framebuffer</key>
+		<string>Uakari</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>689D</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 5900 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_HEMLOCK</string>
+		<key>Controller</key>
+		<string>AMD5000Controller</string>
+		<key>Framebuffer</key>
+		<string>Uakari</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>689E</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 5800 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_CYPRESS</string>
+		<key>Controller</key>
+		<string>AMD5000Controller</string>
+		<key>Framebuffer</key>
+		<string>Uakari</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>68A0</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 5770 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_JUNIPER</string>
+		<key>Controller</key>
+		<string>AMD5000Controller</string>
+		<key>Framebuffer</key>
+		<string>Hoolock</string>
+		<key>isMobile</key>
+		<true/>
+	</dict>
+	<key>68A1</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 5850 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_JUNIPER</string>
+		<key>Controller</key>
+		<string>AMD5000Controller</string>
+		<key>Framebuffer</key>
+		<string>Hoolock</string>
+		<key>isMobile</key>
+		<true/>
+	</dict>
+	<key>68A8</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 6850M</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_JUNIPER</string>
+		<key>Controller</key>
+		<string>AMD5000Controller</string>
+		<key>Framebuffer</key>
+		<string>Hoolock</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>68A9</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI FirePro V5800 (FireGL)</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_JUNIPER</string>
+		<key>Controller</key>
+		<string>AMD5000Controller</string>
+		<key>Framebuffer</key>
+		<string>Hoolock</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>68B0</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 5770 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_JUNIPER</string>
+		<key>Controller</key>
+		<string>AMD5000Controller</string>
+		<key>Framebuffer</key>
+		<string>Hoolock</string>
+		<key>isMobile</key>
+		<true/>
+	</dict>
+	<key>68B1</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 5770 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_JUNIPER</string>
+		<key>Controller</key>
+		<string>AMD5000Controller</string>
+		<key>Framebuffer</key>
+		<string>Hoolock</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>68B8</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 5770 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_JUNIPER</string>
+		<key>Controller</key>
+		<string>AMD5000Controller</string>
+		<key>Framebuffer</key>
+		<string>Vervet</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>68B9</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 5700 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_JUNIPER</string>
+		<key>Controller</key>
+		<string>AMD5000Controller</string>
+		<key>Framebuffer</key>
+		<string>Hoolock</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>68BA</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 6770 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_JUNIPER</string>
+		<key>Controller</key>
+		<string>AMD5000Controller</string>
+		<key>Framebuffer</key>
+		<string>Hoolock</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>68BC</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD FireStream 9370</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_JUNIPER</string>
+		<key>Controller</key>
+		<string>AMD5000Controller</string>
+		<key>Framebuffer</key>
+		<string>Hoolock</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>68BD</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD FireStream 9350</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_JUNIPER</string>
+		<key>Controller</key>
+		<string>AMD5000Controller</string>
+		<key>Framebuffer</key>
+		<string>Hoolock</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>68BE</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 5750 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_JUNIPER</string>
+		<key>Controller</key>
+		<string>AMD5000Controller</string>
+		<key>Framebuffer</key>
+		<string>Hoolock</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>68BF</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 6750 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_JUNIPER</string>
+		<key>Controller</key>
+		<string>AMD5000Controller</string>
+		<key>Framebuffer</key>
+		<string>Hoolock</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>68C0</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 5730 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_REDWOOD</string>
+		<key>Controller</key>
+		<string>AMD5000Controller</string>
+		<key>Framebuffer</key>
+		<string>Baboon</string>
+		<key>isMobile</key>
+		<true/>
+	</dict>
+	<key>68C1</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 5650 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_REDWOOD</string>
+		<key>Controller</key>
+		<string>AMD5000Controller</string>
+		<key>Framebuffer</key>
+		<string>Baboon</string>
+		<key>isMobile</key>
+		<true/>
+	</dict>
+	<key>68C7</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Mobility Radeon HD 5570</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_REDWOOD</string>
+		<key>Controller</key>
+		<string>AMD5000Controller</string>
+		<key>Framebuffer</key>
+		<string>Eulemur</string>
+		<key>isMobile</key>
+		<true/>
+	</dict>
+	<key>68C8</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI FirePro v4800</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_REDWOOD</string>
+		<key>Controller</key>
+		<string>AMD5000Controller</string>
+		<key>Framebuffer</key>
+		<string>Baboon</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>68C9</key>
+	<dict>
+		<key>Card Name</key>
+		<string>FirePro 3D V3800</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_REDWOOD</string>
+		<key>Controller</key>
+		<string>AMD5000Controller</string>
+		<key>Framebuffer</key>
+		<string>Baboon</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>68D8</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 5670 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_REDWOOD</string>
+		<key>Controller</key>
+		<string>AMD5000Controller</string>
+		<key>Framebuffer</key>
+		<string>Baboon</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>68D9</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 5570 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_REDWOOD</string>
+		<key>Controller</key>
+		<string>AMD5000Controller</string>
+		<key>Framebuffer</key>
+		<string>Baboon</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>68DA</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 5500 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_REDWOOD</string>
+		<key>Controller</key>
+		<string>AMD5000Controller</string>
+		<key>Framebuffer</key>
+		<string>Baboon</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>68E0</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 5470 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_CEDAR</string>
+		<key>Controller</key>
+		<string>AMD5000Controller</string>
+		<key>Framebuffer</key>
+		<string>Eulemur</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>68E1</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD Radeon HD 6230</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_CEDAR</string>
+		<key>Controller</key>
+		<string>AMD5000Controller</string>
+		<key>Framebuffer</key>
+		<string>Eulemur</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>68E4</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 6370M Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_CEDAR</string>
+		<key>Controller</key>
+		<string>AMD5000Controller</string>
+		<key>Framebuffer</key>
+		<string>Eulemur</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>68E5</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 6300M Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_CEDAR</string>
+		<key>Controller</key>
+		<string>AMD5000Controller</string>
+		<key>Framebuffer</key>
+		<string>Eulemur</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>68F1</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD FirePro 2460</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_CEDAR</string>
+		<key>Controller</key>
+		<string>AMD5000Controller</string>
+		<key>Framebuffer</key>
+		<string>Eulemur</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>68F2</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD FirePro 2270</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_CEDAR</string>
+		<key>Controller</key>
+		<string>AMD5000Controller</string>
+		<key>Framebuffer</key>
+		<string>Eulemur</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>68F9</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 5450 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_CEDAR</string>
+		<key>Controller</key>
+		<string>AMD5000Controller</string>
+		<key>Framebuffer</key>
+		<string>Eulemur</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>68FA</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 7300 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_CEDAR</string>
+		<key>Controller</key>
+		<string>AMD5000Controller</string>
+		<key>Framebuffer</key>
+		<string>Eulemur</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>6900</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon R7 M260/M265</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_TOPAS</string>
+		<key>Controller</key>
+		<string>AMD7000Controller</string>
+		<key>Framebuffer</key>
+		<string>Buri</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>6901</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon R5 M255</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_TOPAS</string>
+		<key>Controller</key>
+		<string>AMD7000Controller</string>
+		<key>Framebuffer</key>
+		<string>Buri</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>6921</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon R9 M295X</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_AMETHYST</string>
+		<key>Controller</key>
+		<string>AMD7000Controller</string>
+		<key>Framebuffer</key>
+		<string>Buri</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>6938</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon R9 M295X</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_AMETHYST</string>
+		<key>Controller</key>
+		<string>AMD7000Controller</string>
+		<key>Framebuffer</key>
+		<string>Buri</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>6939</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon R9 285</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_TONGA</string>
+		<key>Controller</key>
+		<string>AMD7000Controller</string>
+		<key>Framebuffer</key>
+		<string>Futomaki</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>7140</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Desktop </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV515</string>
+		<key>Framebuffer</key>
+		<string>Caretta</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>7141</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Desktop </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV515</string>
+		<key>Framebuffer</key>
+		<string>Caretta</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>7142</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Desktop </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV515</string>
+		<key>Framebuffer</key>
+		<string>Caretta</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>7143</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Desktop </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV515</string>
+		<key>Framebuffer</key>
+		<string>Caretta</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>7144</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Mobile </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV515</string>
+		<key>Framebuffer</key>
+		<string>Caretta</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>7145</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Mobile </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV515</string>
+		<key>Framebuffer</key>
+		<string>Caretta</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>7146</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Desktop </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV515</string>
+		<key>Framebuffer</key>
+		<string>Caretta</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>7147</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Desktop </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV515</string>
+		<key>Framebuffer</key>
+		<string>Caretta</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>7149</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Mobile </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV515</string>
+		<key>Framebuffer</key>
+		<string>Caretta</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>714A</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Mobile </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV515</string>
+		<key>Framebuffer</key>
+		<string>Caretta</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>714B</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Mobile </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV515</string>
+		<key>Framebuffer</key>
+		<string>Caretta</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>714C</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Mobile </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV515</string>
+		<key>Framebuffer</key>
+		<string>Caretta</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>714D</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Desktop </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV515</string>
+		<key>Framebuffer</key>
+		<string>Caretta</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>714E</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Desktop </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV515</string>
+		<key>Framebuffer</key>
+		<string>Caretta</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>714F</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Desktop </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV515</string>
+		<key>Framebuffer</key>
+		<string>Caretta</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>7151</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Desktop </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV515</string>
+		<key>Framebuffer</key>
+		<string>Caretta</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>7152</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Desktop </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV515</string>
+		<key>Framebuffer</key>
+		<string>Caretta</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>7153</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Desktop </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV515</string>
+		<key>Framebuffer</key>
+		<string>Caretta</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>715E</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Desktop </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV515</string>
+		<key>Framebuffer</key>
+		<string>Caretta</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>715F</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Desktop </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV515</string>
+		<key>Framebuffer</key>
+		<string>Caretta</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>7180</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Desktop </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV515</string>
+		<key>Framebuffer</key>
+		<string>Caretta</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>7181</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Desktop </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV515</string>
+		<key>Framebuffer</key>
+		<string>Caretta</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>7183</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Desktop </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV515</string>
+		<key>Framebuffer</key>
+		<string>Caretta</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>7186</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Mobile </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV515</string>
+		<key>Framebuffer</key>
+		<string>Caretta</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>7187</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Desktop </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV515</string>
+		<key>Framebuffer</key>
+		<string>Caretta</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>7188</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD2300 Mobile </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV515</string>
+		<key>Framebuffer</key>
+		<string>Caretta</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>718A</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Mobile </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV515</string>
+		<key>Framebuffer</key>
+		<string>Caretta</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>718B</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Mobile </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV515</string>
+		<key>Framebuffer</key>
+		<string>Caretta</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>718C</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Mobile </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV515</string>
+		<key>Framebuffer</key>
+		<string>Caretta</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>718D</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Mobile </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV515</string>
+		<key>Framebuffer</key>
+		<string>Caretta</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>718F</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Desktop </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV515</string>
+		<key>Framebuffer</key>
+		<string>Caretta</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>7193</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Desktop </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV515</string>
+		<key>Framebuffer</key>
+		<string>Caretta</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>7196</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Mobile </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV515</string>
+		<key>Framebuffer</key>
+		<string>Caretta</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>719B</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Desktop </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV515</string>
+		<key>Framebuffer</key>
+		<string>Caretta</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>719F</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Desktop </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV515</string>
+		<key>Framebuffer</key>
+		<string>Caretta</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>71C0</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Desktop </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV530</string>
+		<key>Framebuffer</key>
+		<string>Wormy</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>71C1</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Desktop </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV530</string>
+		<key>Framebuffer</key>
+		<string>Wormy</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>71C2</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Desktop </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV530</string>
+		<key>Framebuffer</key>
+		<string>Wormy</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>71C3</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Desktop </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV530</string>
+		<key>Framebuffer</key>
+		<string>Wormy</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>71C4</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Mobile </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV530</string>
+		<key>Framebuffer</key>
+		<string>Wormy</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>71C5</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD1600 Mobile </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV530</string>
+		<key>Framebuffer</key>
+		<string>Wormy</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>71C6</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Desktop </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV530</string>
+		<key>Framebuffer</key>
+		<string>Wormy</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>71C7</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Desktop </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV530</string>
+		<key>Framebuffer</key>
+		<string>Wormy</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>71CD</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Desktop </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV530</string>
+		<key>Framebuffer</key>
+		<string>Wormy</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>71CE</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Desktop </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV530</string>
+		<key>Framebuffer</key>
+		<string>Wormy</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>71D2</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Desktop </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV530</string>
+		<key>Framebuffer</key>
+		<string>Wormy</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>71D4</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Mobility FireGL V5250</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV530</string>
+		<key>Framebuffer</key>
+		<string>Wormy</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>71D5</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Mobile </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV530</string>
+		<key>Framebuffer</key>
+		<string>Wormy</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>71D6</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Mobile </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV530</string>
+		<key>Framebuffer</key>
+		<string>Wormy</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>71DA</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Desktop </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV530</string>
+		<key>Framebuffer</key>
+		<string>Wormy</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>71DE</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ASUS M66 ATI Radeon Mobile </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV530</string>
+		<key>Framebuffer</key>
+		<string>Wormy</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>7200</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Desktop </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV515</string>
+		<key>Framebuffer</key>
+		<string>Wormy</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>7210</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Mobile </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV515</string>
+		<key>Framebuffer</key>
+		<string>Wormy</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>7211</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Mobile </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV515</string>
+		<key>Framebuffer</key>
+		<string>Wormy</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>7240</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Desktop </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_R580</string>
+		<key>Framebuffer</key>
+		<string>Alopias</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>7243</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Desktop </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_R580</string>
+		<key>Framebuffer</key>
+		<string>Alopias</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>7244</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Desktop </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_R580</string>
+		<key>Framebuffer</key>
+		<string>Alopias</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>7245</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Desktop </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_R580</string>
+		<key>Framebuffer</key>
+		<string>Alopias</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>7246</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Desktop </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_R580</string>
+		<key>Framebuffer</key>
+		<string>Alopias</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>7247</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Desktop </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_R580</string>
+		<key>Framebuffer</key>
+		<string>Alopias</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>7248</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Desktop </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_R580</string>
+		<key>Framebuffer</key>
+		<string>Alopias</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>7249</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Desktop </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_R580</string>
+		<key>Framebuffer</key>
+		<string>Alopias</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>724A</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Desktop </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_R580</string>
+		<key>Framebuffer</key>
+		<string>Alopias</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>724B</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Desktop </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_R580</string>
+		<key>Framebuffer</key>
+		<string>Alopias</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>724C</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Desktop </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_R580</string>
+		<key>Framebuffer</key>
+		<string>Alopias</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>724D</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Desktop </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_R580</string>
+		<key>Framebuffer</key>
+		<string>Alopias</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>724E</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Desktop </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_R580</string>
+		<key>Framebuffer</key>
+		<string>Alopias</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>724F</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Desktop </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_R580</string>
+		<key>Framebuffer</key>
+		<string>Alopias</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>7280</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon X1950 Pro </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV570</string>
+		<key>Framebuffer</key>
+		<string>Alopias</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>7281</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Desktop </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV560</string>
+		<key>Framebuffer</key>
+		<string>Alopias</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>7283</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Desktop </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV560</string>
+		<key>Framebuffer</key>
+		<string>Alopias</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>7284</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Mobile </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_R580</string>
+		<key>Framebuffer</key>
+		<string>Alopias</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>7287</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Desktop </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV560</string>
+		<key>Framebuffer</key>
+		<string>Alopias</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>7288</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Desktop </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV570</string>
+		<key>Framebuffer</key>
+		<string>Alopias</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>7289</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Desktop </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV570</string>
+		<key>Framebuffer</key>
+		<string>Alopias</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>728B</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Desktop </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV570</string>
+		<key>Framebuffer</key>
+		<string>Alopias</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>728C</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Desktop </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV570</string>
+		<key>Framebuffer</key>
+		<string>Alopias</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>7290</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Desktop </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV560</string>
+		<key>Framebuffer</key>
+		<string>Alopias</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>7291</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Desktop </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV560</string>
+		<key>Framebuffer</key>
+		<string>Alopias</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>7293</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Desktop </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV560</string>
+		<key>Framebuffer</key>
+		<string>Alopias</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>7297</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Desktop </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV560</string>
+		<key>Framebuffer</key>
+		<string>Alopias</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>9440</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 4870 </string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV770</string>
+		<key>Controller</key>
+		<string>AMD4800Controller</string>
+		<key>Framebuffer</key>
+		<string>Motmot</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>9441</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 4870 X2</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV770</string>
+		<key>Controller</key>
+		<string>AMD4800Controller</string>
+		<key>Framebuffer</key>
+		<string>Motmot</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>9442</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 4850 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV770</string>
+		<key>Controller</key>
+		<string>AMD4800Controller</string>
+		<key>Framebuffer</key>
+		<string>Motmot</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>9443</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 4850 X2</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV770</string>
+		<key>Controller</key>
+		<string>AMD4800Controller</string>
+		<key>Framebuffer</key>
+		<string>Motmot</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>9444</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI FirePro V8750 (FireGL)</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV770</string>
+		<key>Controller</key>
+		<string>AMD4800Controller</string>
+		<key>Framebuffer</key>
+		<string>Motmot</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>9446</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI FirePro V7770 (FireGL)</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV770</string>
+		<key>Controller</key>
+		<string>AMD4800Controller</string>
+		<key>Framebuffer</key>
+		<string>Motmot</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>9447</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI FirePro V8700 Duo (FireGL)</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV770</string>
+		<key>Controller</key>
+		<string>AMD4800Controller</string>
+		<key>Framebuffer</key>
+		<string>Motmot</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>944A</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Mobility Radeon HD 4850</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV770</string>
+		<key>Controller</key>
+		<string>AMD4800Controller</string>
+		<key>Framebuffer</key>
+		<string>Motmot</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>944B</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Mobility Radeon HD 4850 X2</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV770</string>
+		<key>Controller</key>
+		<string>AMD4800Controller</string>
+		<key>Framebuffer</key>
+		<string>Motmot</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>944C</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 4830 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV770</string>
+		<key>Controller</key>
+		<string>AMD4800Controller</string>
+		<key>Framebuffer</key>
+		<string>Motmot</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>944E</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 4810 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV770</string>
+		<key>Controller</key>
+		<string>AMD4800Controller</string>
+		<key>Framebuffer</key>
+		<string>Motmot</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>9450</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD FireStream 9270</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV770</string>
+		<key>Controller</key>
+		<string>AMD4800Controller</string>
+		<key>Framebuffer</key>
+		<string>Motmot</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>9452</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD FireStream 9250</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV770</string>
+		<key>Controller</key>
+		<string>AMD4800Controller</string>
+		<key>Framebuffer</key>
+		<string>Motmot</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>9456</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI FirePro V8700 (FireGL)</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV770</string>
+		<key>Controller</key>
+		<string>AMD4800Controller</string>
+		<key>Framebuffer</key>
+		<string>Motmot</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>945A</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Mobility Radeon HD 4870</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV770</string>
+		<key>Controller</key>
+		<string>AMD4800Controller</string>
+		<key>Framebuffer</key>
+		<string>Motmot</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>9460</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 4800 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV770</string>
+		<key>Controller</key>
+		<string>AMD4800Controller</string>
+		<key>Framebuffer</key>
+		<string>Motmot</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>9462</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 4800 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV770</string>
+		<key>Controller</key>
+		<string>AMD4800Controller</string>
+		<key>Framebuffer</key>
+		<string>Motmot</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>9480</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Mobility Radeon HD 550v</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV730</string>
+		<key>Controller</key>
+		<string>AMD4600Controller</string>
+		<key>Framebuffer</key>
+		<string>Gliff</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>9487</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV730</string>
+		<key>Controller</key>
+		<string>AMD4600Controller</string>
+		<key>Framebuffer</key>
+		<string>Gliff</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>9488</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 4650 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV730</string>
+		<key>Controller</key>
+		<string>AMD4600Controller</string>
+		<key>Framebuffer</key>
+		<string>Gliff</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>9489</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV730</string>
+		<key>Controller</key>
+		<string>AMD4600Controller</string>
+		<key>Framebuffer</key>
+		<string>Gliff</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>948A</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV730</string>
+		<key>Controller</key>
+		<string>AMD4600Controller</string>
+		<key>Framebuffer</key>
+		<string>Gliff</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>948F</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV730</string>
+		<key>Controller</key>
+		<string>AMD4600Controller</string>
+		<key>Framebuffer</key>
+		<string>Gliff</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>9490</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 4670 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV730</string>
+		<key>Controller</key>
+		<string>AMD4600Controller</string>
+		<key>Framebuffer</key>
+		<string>Gliff</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>9491</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 4600 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV730</string>
+		<key>Controller</key>
+		<string>AMD4600Controller</string>
+		<key>Framebuffer</key>
+		<string>Gliff</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>9495</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 4650 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV730</string>
+		<key>Controller</key>
+		<string>AMD4600Controller</string>
+		<key>Framebuffer</key>
+		<string>Gliff</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>9498</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 4710 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV730</string>
+		<key>Controller</key>
+		<string>AMD4600Controller</string>
+		<key>Framebuffer</key>
+		<string>Gliff</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>949C</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI FirePro V7750 (FireGL)</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV730</string>
+		<key>Controller</key>
+		<string>AMD4600Controller</string>
+		<key>Framebuffer</key>
+		<string>Gliff</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>949E</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI FirePro V5700 (FireGL)</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV730</string>
+		<key>Controller</key>
+		<string>AMD4600Controller</string>
+		<key>Framebuffer</key>
+		<string>Gliff</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>949F</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI FirePro V3750 (FireGL)</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV730</string>
+		<key>Controller</key>
+		<string>AMD4600Controller</string>
+		<key>Framebuffer</key>
+		<string>Gliff</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>94A0</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 4830M</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV740</string>
+		<key>Controller</key>
+		<string>AMD4600Controller</string>
+		<key>Framebuffer</key>
+		<string>Flicker</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>94A1</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 4860M</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV740</string>
+		<key>Controller</key>
+		<string>AMD4600Controller</string>
+		<key>Framebuffer</key>
+		<string>Flicker</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>94A3</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI FirePro M7740</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV740</string>
+		<key>Controller</key>
+		<string>AMD4600Controller</string>
+		<key>Framebuffer</key>
+		<string>Flicker</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>94B1</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV740</string>
+		<key>Controller</key>
+		<string>AMD4600Controller</string>
+		<key>Framebuffer</key>
+		<string>Flicker</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>94B3</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 4770</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV740</string>
+		<key>Controller</key>
+		<string>AMD4600Controller</string>
+		<key>Framebuffer</key>
+		<string>Flicker</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>94B4</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 4700 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV740</string>
+		<key>Controller</key>
+		<string>AMD4600Controller</string>
+		<key>Framebuffer</key>
+		<string>Flicker</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>94B5</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 4770</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV740</string>
+		<key>Controller</key>
+		<string>AMD4600Controller</string>
+		<key>Framebuffer</key>
+		<string>Flicker</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>94B9</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV740</string>
+		<key>Controller</key>
+		<string>AMD4600Controller</string>
+		<key>Framebuffer</key>
+		<string>Flicker</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>94C0</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV610</string>
+		<key>Controller</key>
+		<string>AMD2400Controller</string>
+		<key>Framebuffer</key>
+		<string>Iago</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>94C1</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 2400 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV610</string>
+		<key>Controller</key>
+		<string>AMD2400Controller</string>
+		<key>Framebuffer</key>
+		<string>Iago</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>94C3</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 2350 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV610</string>
+		<key>Controller</key>
+		<string>AMD2400Controller</string>
+		<key>Framebuffer</key>
+		<string>Iago</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>94C4</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 2400 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV610</string>
+		<key>Controller</key>
+		<string>AMD2400Controller</string>
+		<key>Framebuffer</key>
+		<string>Iago</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>94C5</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 2400 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV610</string>
+		<key>Controller</key>
+		<string>AMD2400Controller</string>
+		<key>Framebuffer</key>
+		<string>Iago</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>94C6</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 2400 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV610</string>
+		<key>Controller</key>
+		<string>AMD2400Controller</string>
+		<key>Framebuffer</key>
+		<string>Iago</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>94C7</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 2350</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV610</string>
+		<key>Controller</key>
+		<string>AMD2400Controller</string>
+		<key>Framebuffer</key>
+		<string>Iago</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>94C8</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 2400 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV610</string>
+		<key>Controller</key>
+		<string>AMD2400Controller</string>
+		<key>Framebuffer</key>
+		<string>Iago</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>94C9</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 2400 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV610</string>
+		<key>Controller</key>
+		<string>AMD2400Controller</string>
+		<key>Framebuffer</key>
+		<string>Iago</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>94CB</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 2400 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV610</string>
+		<key>Controller</key>
+		<string>AMD2400Controller</string>
+		<key>Framebuffer</key>
+		<string>Iago</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>94CC</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 2400 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV610</string>
+		<key>Controller</key>
+		<string>AMD2400Controller</string>
+		<key>Framebuffer</key>
+		<string>Iago</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>94CD</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 2400 PRO Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV610</string>
+		<key>Controller</key>
+		<string>AMD2400Controller</string>
+		<key>Framebuffer</key>
+		<string>Iago</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>9500</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 3800 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV670</string>
+		<key>Controller</key>
+		<string>AMD3800Controller</string>
+		<key>Framebuffer</key>
+		<string>Megalodon</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>9501</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 3690 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV670</string>
+		<key>Controller</key>
+		<string>AMD3800Controller</string>
+		<key>Framebuffer</key>
+		<string>Megalodon</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>9504</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 3850M Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV670</string>
+		<key>Controller</key>
+		<string>AMD3800Controller</string>
+		<key>Framebuffer</key>
+		<string>Megalodon</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>9505</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 3800 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV670</string>
+		<key>Controller</key>
+		<string>AMD3800Controller</string>
+		<key>Framebuffer</key>
+		<string>Megalodon</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>9506</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 3850 X2 M Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV670</string>
+		<key>Controller</key>
+		<string>AMD3800Controller</string>
+		<key>Framebuffer</key>
+		<string>Megalodon</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>9507</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 3830</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV670</string>
+		<key>Controller</key>
+		<string>AMD3800Controller</string>
+		<key>Framebuffer</key>
+		<string>Megalodon</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>9508</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 3870M Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV670</string>
+		<key>Controller</key>
+		<string>AMD3800Controller</string>
+		<key>Framebuffer</key>
+		<string>Megalodon</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>9509</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 3870 X2 MSeries</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV670</string>
+		<key>Controller</key>
+		<string>AMD3800Controller</string>
+		<key>Framebuffer</key>
+		<string>Megalodon</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>950F</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 3870 X2</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV670</string>
+		<key>Controller</key>
+		<string>AMD3800Controller</string>
+		<key>Framebuffer</key>
+		<string>Megalodon</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>9511</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 3850 X2</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV670</string>
+		<key>Controller</key>
+		<string>AMD3800Controller</string>
+		<key>Framebuffer</key>
+		<string>Megalodon</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>9513</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 3850 X2</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV670</string>
+		<key>Controller</key>
+		<string>AMD3800Controller</string>
+		<key>Framebuffer</key>
+		<string>Megalodon</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>9515</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 3850 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV670</string>
+		<key>Controller</key>
+		<string>AMD3800Controller</string>
+		<key>Framebuffer</key>
+		<string>Megalodon</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>9517</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV670</string>
+		<key>Controller</key>
+		<string>AMD3800Controller</string>
+		<key>Framebuffer</key>
+		<string>Megalodon</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>9519</key>
+	<dict>
+		<key>Card Name</key>
+		<string>AMD FireStream 9170</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV670</string>
+		<key>Controller</key>
+		<string>AMD3800Controller</string>
+		<key>Framebuffer</key>
+		<string>Megalodon</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>9540</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 4550</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV710</string>
+		<key>Controller</key>
+		<string>AMD4600Controller</string>
+		<key>Framebuffer</key>
+		<string>Flicker</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>9541</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV710</string>
+		<key>Controller</key>
+		<string>AMD4600Controller</string>
+		<key>Framebuffer</key>
+		<string>Flicker</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>9542</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV710</string>
+		<key>Controller</key>
+		<string>AMD4600Controller</string>
+		<key>Framebuffer</key>
+		<string>Flicker</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>954E</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV710</string>
+		<key>Controller</key>
+		<string>AMD4600Controller</string>
+		<key>Framebuffer</key>
+		<string>Flicker</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>954F</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 4350</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV710</string>
+		<key>Controller</key>
+		<string>AMD4600Controller</string>
+		<key>Framebuffer</key>
+		<string>Flicker</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>9552</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Mobility Radeon HD 4330</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV710</string>
+		<key>Controller</key>
+		<string>AMD4600Controller</string>
+		<key>Framebuffer</key>
+		<string>Shrike</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>9553</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Mobility Radeon HD 4570</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV710</string>
+		<key>Controller</key>
+		<string>AMD4600Controller</string>
+		<key>Framebuffer</key>
+		<string>Shrike</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>9555</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Mobility Radeon HD 4550</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV710</string>
+		<key>Controller</key>
+		<string>AMD4600Controller</string>
+		<key>Framebuffer</key>
+		<string>Shrike</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>9557</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI FirePro RG220</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV710</string>
+		<key>Controller</key>
+		<string>AMD4600Controller</string>
+		<key>Framebuffer</key>
+		<string>Flicker</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>955F</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 4330M series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV710</string>
+		<key>Controller</key>
+		<string>AMD4600Controller</string>
+		<key>Framebuffer</key>
+		<string>Flicker</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>9580</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV630</string>
+		<key>Controller</key>
+		<string>AMD2600Controller</string>
+		<key>Framebuffer</key>
+		<string>Hypoprion</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>9581</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 2600 XT</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV630</string>
+		<key>Controller</key>
+		<string>AMD2600Controller</string>
+		<key>Framebuffer</key>
+		<string>Hypoprion</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>9583</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 2600 XT</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV630</string>
+		<key>Controller</key>
+		<string>AMD2600Controller</string>
+		<key>Framebuffer</key>
+		<string>Hypoprion</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>9586</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 2600 XT Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV630</string>
+		<key>Controller</key>
+		<string>AMD2600Controller</string>
+		<key>Framebuffer</key>
+		<string>Hypoprion</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>9587</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 2600 Pro Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV630</string>
+		<key>Controller</key>
+		<string>AMD2600Controller</string>
+		<key>Framebuffer</key>
+		<string>Hypoprion</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>9588</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 2600 XT</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV630</string>
+		<key>Controller</key>
+		<string>AMD2600Controller</string>
+		<key>Framebuffer</key>
+		<string>Hypoprion</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>9589</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 2600 PRO</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV630</string>
+		<key>Controller</key>
+		<string>AMD2600Controller</string>
+		<key>Framebuffer</key>
+		<string>Hypoprion</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>958A</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 2600 X2 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV630</string>
+		<key>Controller</key>
+		<string>AMD2600Controller</string>
+		<key>Framebuffer</key>
+		<string>Lamna</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>958B</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 2600 X2 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV630</string>
+		<key>Controller</key>
+		<string>AMD2600Controller</string>
+		<key>Framebuffer</key>
+		<string>Lamna</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>958C</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 2600 X2 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV630</string>
+		<key>Controller</key>
+		<string>AMD2600Controller</string>
+		<key>Framebuffer</key>
+		<string>Lamna</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>958D</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 2600 X2 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV630</string>
+		<key>Controller</key>
+		<string>AMD2600Controller</string>
+		<key>Framebuffer</key>
+		<string>Lamna</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>958E</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 2600 X2 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV630</string>
+		<key>Controller</key>
+		<string>AMD2600Controller</string>
+		<key>Framebuffer</key>
+		<string>Lamna</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>958F</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV630</string>
+		<key>Controller</key>
+		<string>AMD2600Controller</string>
+		<key>Framebuffer</key>
+		<string>Hypoprion</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>9591</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 3600 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV635</string>
+		<key>Controller</key>
+		<string>AMD3800Controller</string>
+		<key>Framebuffer</key>
+		<string>Megalodon</string>
+		<key>isMobile</key>
+		<true/>
+	</dict>
+	<key>9598</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 3600 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV635</string>
+		<key>Controller</key>
+		<string>AMD3800Controller</string>
+		<key>Framebuffer</key>
+		<string>Megalodon</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>95C0</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 3550 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV620</string>
+		<key>Controller</key>
+		<string>AMD2400Controller</string>
+		<key>Framebuffer</key>
+		<string>Iago</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>95C4</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 3470 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV620</string>
+		<key>Controller</key>
+		<string>AMD2400Controller</string>
+		<key>Framebuffer</key>
+		<string>Iago</string>
+		<key>isMobile</key>
+		<true/>
+	</dict>
+	<key>95C5</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 3450 Series</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV620</string>
+		<key>Controller</key>
+		<string>AMD2400Controller</string>
+		<key>Framebuffer</key>
+		<string>Iago</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>95C6</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI Radeon HD 3450 AGP</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV620</string>
+		<key>Controller</key>
+		<string>AMD2400Controller</string>
+		<key>Framebuffer</key>
+		<string>Iago</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+	<key>95CF</key>
+	<dict>
+		<key>Card Name</key>
+		<string>ATI FirePro 2260</string>
+		<key>Chip Family</key>
+		<string>CHIP_FAMILY_RV620</string>
+		<key>Controller</key>
+		<string>AMD2400Controller</string>
+		<key>Framebuffer</key>
+		<string>Iago</string>
+		<key>isMobile</key>
+		<false/>
+	</dict>
+</dict>
+</plist>

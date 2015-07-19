@@ -12,34 +12,48 @@ import Cocoa
 class ResultViewController: NSViewController, NSComboBoxDelegate {
     var connectors: [Connector] = []
     var PCIID: String = ""
-    var recommendFB: String = ""
-    var height: Int = 470
     var systemFBname: [String] = []
     var systemFBvalue: [String] = []
-    var FBComboBox: NSComboBox?
-    var FBInf: NSTextField?
-    var typeBoxs: [NSComboBox] = []
+    var typeBoxs: [NSTextField] = []
+    var controlFlagBoxs: [NSComboBox] = []
     var txmitDatas: [NSTextField] = []
     var encDatas: [NSTextField] = []
     var hotpluginDatas: [NSTextField] = []
     var senseidDatas: [NSTextField] = []
     var saveButton: NSButton?
     
+    @IBOutlet weak var cardInfo: NSTextField!
+    @IBOutlet weak var cardId: NSTextField!
+    @IBOutlet weak var cardName: NSTextField!
+    @IBOutlet weak var recommendFB: NSTextField!
+    @IBOutlet weak var FBName: NSTextField!
+    @IBOutlet weak var originFB: NSTextField!
+    @IBOutlet weak var FBComboBox: NSComboBox!
+    @IBOutlet weak var FBInf: NSTextField!
+    @IBOutlet weak var userFB: NSTextField!
+    @IBOutlet weak var typeLabel: NSTextField!
+    @IBOutlet weak var controlFlagLabel: NSTextField!
+    @IBOutlet weak var controller: NSTextField!
+    @IBOutlet weak var idInfoStatus: NSImageView!
+    @IBOutlet weak var idInfoMessage: NSTextField!
+    @IBOutlet weak var opt1: NSSegmentedControl!
+    @IBOutlet weak var opt2: NSSegmentedControl!
+    @IBOutlet weak var opt3: NSSegmentedControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         showCardInfo()
-        height -= 10
         showOriginFB()
         FBComboBox!.setDelegate(self)
         var myThread = NSThread(target: self, selector: "getSystemFB", object: nil)
         myThread.start()
         
-        height -= 180
         showText(connectors.count)
         showData(connectors)
         showSaveAndCloseButton()
         // Do any additional setup after loading the view.
     }
+
     
     override var representedObject: AnyObject? {
         didSet {
@@ -48,87 +62,117 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
     }
     
     func showCardInfo() {
-        var cardInfo = NSTextField()
         cardInfo.stringValue = NSLocalizedString("GRAPHIC_CARD_INFO", comment: "Graphic Card Info: ")
-        cardInfo.frame = CGRectMake(25, CGFloat(height), 140, 25)
-        cardInfo.bordered = false
-        cardInfo.editable = false
-        cardInfo.bezelStyle = NSTextFieldBezelStyle.RoundedBezel
-        self.view.addSubview(cardInfo)
-        height -= 20
         
-        var cardId = NSTextField()
         cardId.stringValue = PCIID
-        cardId.frame = CGRectMake(25, CGFloat(height), 140, 25)
-        cardId.editable = false
-        cardId.selectable = true
-        cardId.bezelStyle = NSTextFieldBezelStyle.RoundedBezel
-        self.view.addSubview(cardId)
         
-        var (name, fb) = getCardInf()
-        recommendFB = fb
+        // Get the path of CardInfo.plist
+        var tempDir = NSBundle.mainBundle().pathForResource("CardInfo", ofType: "plist")
+        var dir = "\(tempDir)"
         
-        var cardName = NSTextField()
-        cardName.stringValue = name
-        cardName.frame = CGRectMake(165, CGFloat(height), 300, 25)
-        cardName.editable = false
-        cardName.selectable = true
-        cardName.bezelStyle = NSTextFieldBezelStyle.RoundedBezel
-        self.view.addSubview(cardName)
-        height -= 25
+        // Delete the disgusting "Optional("...")"
+        dir = dir.substringFromIndex(advance(dir.startIndex, 10))
+        dir = dir.substringToIndex(advance(dir.endIndex, -2))
         
-        if (fb != "Null") {
-            var recommendFB = NSTextField()
-            recommendFB.stringValue = NSLocalizedString("RECOMMEND", comment: "Recommend FrameBuffer to replace: ")
-            recommendFB.frame = CGRectMake(25, CGFloat(height) - 5, 250, 25)
-            recommendFB.bordered = false
-            recommendFB.editable = false
-            recommendFB.bezelStyle = NSTextFieldBezelStyle.RoundedBezel
-            self.view.addSubview(recommendFB)
+        var info = NSMutableDictionary(contentsOfFile: dir)!
+        var id = ""
+        if count(PCIID) >= 13 {
+            id = PCIID.substringFromIndex(advance(PCIID.startIndex, 13))
+        }
         
-            var FBName = NSTextField()
+        if info.objectForKey(id) == nil {
+            var alert = NSAlert()
+            alert.messageText = NSLocalizedString("CARD_INFO_NOT_FOUND", comment: "Card Info Not Found!")
+            alert.runModal()
+            return
+        }
+        var inf: NSMutableDictionary = info.objectForKey(id) as! NSMutableDictionary
+
+        //Split Card Name, Is Mobile, Recommend Framebuffer
+        var name = inf.objectForKey("Card Name") as! String
+        var isMobile = inf.objectForKey("isMobile") as! Bool
+        controller.stringValue = inf.objectForKey("Controller") as! String
+        if controller.stringValue < "AMD7000Controller" {
+            opt1.selectedSegment = 0
+            opt2.selectedSegment = 0
+            opt3.selectedSegment = 0
+        }
+        else {
+            opt1.selectedSegment = 1
+            opt2.selectedSegment = 1
+            opt3.selectedSegment = 1
+        }
+        
+        if isMobile == true {
+            name += NSLocalizedString("MOBILE", comment: "(Mobile)")
+        }
+        var fb = inf.objectForKey("Framebuffer") as! String
+        
+        cardName.stringValue = NSLocalizedString("CARD_NAME", comment: "Card Name: ") + name
+        
+        if (fb != "Null") { // fb is never "Null" now
+            recommendFB.stringValue = NSLocalizedString("RECOMMEND", comment: "Recommend FrameBuffer to replace: ") + fb
+        
             FBName.stringValue = fb
-            FBName.frame = CGRectMake(275, CGFloat(height), 100, 25)
-            FBName.editable = false
-            FBName.selectable = true
-            FBName.bezelStyle = NSTextFieldBezelStyle.RoundedBezel
-            self.view.addSubview(FBName)
-            height -= 25
+        }
+        
+        // check Info.plist in AMDxxxxController
+        var kextInfo = NSMutableDictionary(contentsOfFile: "/System/Library/Extensions/\(controller.stringValue).kext/Contents/Info.plist")
+        if kextInfo == nil {
+            return
+        }
+        var IOKitPersonalities: NSMutableDictionary? = kextInfo!.objectForKey("IOKitPersonalities") as! NSMutableDictionary?
+        if IOKitPersonalities == nil {
+            return
+        }
+        var Controller: NSMutableDictionary? = IOKitPersonalities!.objectForKey("Controller") as! NSMutableDictionary?
+        if Controller == nil {
+            return
+        }
+        var IOPCIMatch: String? = Controller!.objectForKey("IOPCIMatch") as! String?
+        if IOPCIMatch == nil {
+            return
+        }
+        if IOPCIMatch!.rangeOfString(id) != nil {
+            idInfoStatus.image = NSImage(named: "NSStatusAvailable");
+            idInfoMessage.stringValue = NSLocalizedString("ID_IN_PLIST", comment: "Found your card ID in kext")
+        }
+        else {
+            idInfoStatus.image = NSImage(named: "NSStatusUnavailable");
+            idInfoMessage.stringValue = NSLocalizedString("ID_NOT_IN_PLIST", comment: "Not found your card ID in kext")
         }
     }
     
     func showOriginFB() {
         
-        var originFB = NSTextField()
         originFB.stringValue = NSLocalizedString("ORIGIN", comment: "Origin FrameBuffer: ")
-        originFB.frame = CGRectMake(25, CGFloat(height - 3), 150, 25)
-        originFB.bordered = false
-        originFB.editable = false
-        originFB.bezelStyle = NSTextFieldBezelStyle.RoundedBezel
-        self.view.addSubview(originFB)
         
-        FBComboBox = NSComboBox()
         FBComboBox!.placeholderString = NSLocalizedString("PLEASE_WAIT", comment: "Please wait...")
-        FBComboBox!.frame = CGRectMake(175, CGFloat(height), 200, 25)
-        FBComboBox!.editable = false
-        FBComboBox!.selectable = true
-        self.view.addSubview(FBComboBox!)
         
-        FBInf = NSTextField()
         FBInf!.stringValue = ""
-        FBInf!.frame = CGRectMake(25, CGFloat(height - 135), 300, 130)
-        FBInf!.editable = false
-        FBInf!.selectable = true
-        self.view.addSubview(FBInf!)
     }
     
     func getSystemFB() {
+        // Copy otool
+        var copyTask = NSTask()
+        copyTask.launchPath = "/bin/sh"
+        var otoolDir = NSBundle.mainBundle().pathForResource("otool", ofType: nil)
+        var dir = "\(otoolDir)"
+        
+        // Delete the disgusting "Optional("...")"
+        dir = dir.substringFromIndex(advance(dir.startIndex, 10))
+        dir = dir.substringToIndex(advance(dir.endIndex, -2))
+        
+        copyTask.arguments = ["-c", "cp \(dir) /tmp/"]
+        copyTask.launch()
+        
+        // Get System FB by using getSystemFB.php
         var task = NSTask()
         task.launchPath = "/bin/sh"
         
         // Get the path of program
         var tempDir = NSBundle.mainBundle().pathForResource("getSystemFB", ofType: "php")
-        var dir = "\(tempDir)"
+        dir = "\(tempDir)"
         
         // Delete the disgusting "Optional("...")"
         dir = dir.substringFromIndex(advance(dir.startIndex, 10))
@@ -177,7 +221,7 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
         FBComboBox!.placeholderString = NSLocalizedString("SELECT_FB", comment: "Please select a framebuffer")
         FBComboBox!.addItemsWithObjectValues(systemFBname)
         for var i = 0; i < systemFBname.count; i++ {
-            if systemFBname[i].hasPrefix(recommendFB) {
+            if systemFBname[i].hasPrefix(FBName.stringValue) {
                 FBComboBox!.selectItemAtIndex(i)
                 FBInf!.stringValue = systemFBvalue[i]
                 saveButton!.enabled = true
@@ -186,142 +230,47 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
         }
     }
     
-    func getCardInf() -> (String, String) {
-        // Get the path of ati.txt
-        var tempDir = NSBundle.mainBundle().pathForResource("ati", ofType: "txt")
-        var dir = "\(tempDir)"
-        
-        // Delete the disgusting "Optional("...")"
-        dir = dir.substringFromIndex(advance(dir.startIndex, 10))
-        dir = dir.substringToIndex(advance(dir.endIndex, -2))
-        
-        var content = String(contentsOfFile: dir, encoding: NSUTF8StringEncoding, error: nil)
-        
-        var id = ""
-        if count(PCIID) >= 13 {
-            id = PCIID.substringFromIndex(advance(PCIID.startIndex, 13))
-        }
-        
-        // Position card information
-        var split: [String] = content!.componentsSeparatedByString("\r\n")
-        var nameArray: [String] = []
-        var isFound = false
-        for i in split {
-            if count(i) == 0 || i[i.startIndex] == "/" {
-                continue
-            }
-            else {
-                var j = ""
-                if count(i) > 10 {
-                    j = i.substringToIndex(advance(i.startIndex, 8))
-                    j = j.substringFromIndex(advance(j.startIndex, 4))
-                }
-                else {
-                    continue
-                }
-                if j == id.uppercaseString {
-                    nameArray = i.componentsSeparatedByString("\"")
-                    isFound = true
-                    break
-                }
-            }
-        }
-        
-        if (!isFound) {
-            return ("", "Null")
-        }
-        
-        if (nameArray[2].hasSuffix("Mobile")) {
-            nameArray[1] += NSLocalizedString("MOBILE", comment: " (Mobile)")
-        }
-        
-        while nameArray[2][nameArray[2].startIndex] == "\"" {
-            nameArray[2].removeAtIndex(nameArray[2].startIndex)
-        }
-        while nameArray[2][nameArray[2].startIndex] == "," {
-            nameArray[2].removeAtIndex(nameArray[2].startIndex)
-        }
-        while nameArray[2][nameArray[2].startIndex] == " " {
-            nameArray[2].removeAtIndex(nameArray[2].startIndex)
-        }
-        if nameArray[2][nameArray[2].startIndex] == "k" {
-            nameArray[2].removeAtIndex(nameArray[2].startIndex)
-        }
-        var i: String.Index = nameArray[2].startIndex
-        while nameArray[2][i] != " " && nameArray[2][i] != "}" {
-            i = advance(i, 1);
-        }
-        nameArray[2] = nameArray[2].substringToIndex(i)
-        
-        return (nameArray[1], nameArray[2])
-    }
-    
     func showText(count: Int) {
-        var userFB = NSTextField()
         userFB.stringValue = NSLocalizedString("USER_FB", comment: "Framebuffer Of Your Graphics Card: ")
-        userFB.frame = CGRectMake(25, (CGFloat)(height), 300, 25)
-        userFB.bordered = false
-        userFB.editable = false
-        userFB.bezelStyle = NSTextFieldBezelStyle.RoundedBezel
-        self.view.addSubview(userFB)
-        height -= 25
         
-        var typeLabel = NSTextField()
         typeLabel.stringValue = NSLocalizedString("TYPE", comment: "Type")
-        typeLabel.frame = CGRectMake(25, (CGFloat)(height), 100, 25)
-        typeLabel.bordered = false
-        typeLabel.editable = false
-        typeLabel.bezelStyle = NSTextFieldBezelStyle.RoundedBezel
-        self.view.addSubview(typeLabel)
-        
-        var txmitLabel = NSTextField()
-        txmitLabel.stringValue = "txmit"
-        txmitLabel.frame = CGRectMake(145, (CGFloat)(height), 70, 25)
-        txmitLabel.bordered = false
-        txmitLabel.editable = false
-        txmitLabel.bezelStyle = NSTextFieldBezelStyle.RoundedBezel
-        self.view.addSubview(txmitLabel)
-        
-        var encLabel = NSTextField()
-        encLabel.stringValue = "enc"
-        encLabel.frame = CGRectMake(235, (CGFloat)(height), 70, 25)
-        encLabel.bordered = false
-        encLabel.editable = false
-        encLabel.bezelStyle = NSTextFieldBezelStyle.RoundedBezel
-        self.view.addSubview(encLabel)
-        
-        var hotpluginLabel = NSTextField()
-        hotpluginLabel.stringValue = "hotplugin"
-        hotpluginLabel.frame = CGRectMake(325, (CGFloat)(height), 70, 25)
-        hotpluginLabel.bordered = false
-        hotpluginLabel.editable = false
-        hotpluginLabel.bezelStyle = NSTextFieldBezelStyle.RoundedBezel
-        self.view.addSubview(hotpluginLabel)
-        
-        var senseidLabel = NSTextField()
-        senseidLabel.stringValue = "senseid"
-        senseidLabel.frame = CGRectMake(415, (CGFloat)(height), 70, 25)
-        senseidLabel.bordered = false
-        senseidLabel.editable = false
-        senseidLabel.bezelStyle = NSTextFieldBezelStyle.RoundedBezel
-        self.view.addSubview(senseidLabel)
-        height -= 25
+        controlFlagLabel.stringValue = NSLocalizedString("CONTROLFLAG", comment: "Control Flag")
     }
     
     func showData(connectors: [Connector]) {
+        var height = 265
         for var i = 0; i < connectors.count; i++ {
             // Show type
-            var typeBox = NSComboBox()
-            typeBox.frame = CGRectMake(25, (CGFloat)(height), 100, 25)
-            typeBox.addItemsWithObjectValues(["---", "DP", "DVI", "HDMI", "LVDS", "VGA"])
-            typeBox.selectItemAtIndex(connectors[i].type)
+            var typeBox = NSTextField()
+            typeBox.frame = CGRectMake(323, (CGFloat)(height), 80, 25)
+            typeBox.bezelStyle = NSTextFieldBezelStyle.RoundedBezel
+            var reflect = ["---", "DDVI", "DP", "HDMI", "LVDS", "SDVI", "VGA"]
+            typeBox.stringValue = reflect[connectors[i].type]
+            typeBox.editable = false
+            typeBox.selectable = true
             self.view.addSubview(typeBox)
             typeBoxs.append(typeBox)
+            
+            // Show Control Flag
+            var controlFlagBox = NSComboBox()
+            controlFlagBox.frame = CGRectMake(415, (CGFloat)(height), 125, 25)
+            switch connectors[i].type {
+                case 1: controlFlagBox.addItemsWithObjectValues(["0x0014(DVI-D)", "0x0214(DVI-I)", "0x0204(DVI-I)"])
+                case 2: controlFlagBox.addItemsWithObjectValues(["0x0304(高清接口)", "0x0604(普通接口)"])
+                case 3: controlFlagBox.addItemWithObjectValue("0x0204(默认)")
+                case 4: controlFlagBox.addItemsWithObjectValues(["0x0040(普通接口)", "0x0100(高清接口)"])
+                case 5: controlFlagBox.addItemsWithObjectValues(["0x0014(DVI-D)", "0x0214(DVI-I)"])
+                case 6: controlFlagBox.addItemWithObjectValue("0x0010(默认)")
+                default: controlFlagBox.addItemWithObjectValue("---")
+            }
+            controlFlagBox.selectItemAtIndex(connectors[i].controlFlag)
+            self.view.addSubview(controlFlagBox)
+            controlFlagBoxs.append(controlFlagBox)
             
             // Show txmit
             var txmitData = NSTextField()
             txmitData.stringValue = connectors[i].txmit
-            txmitData.frame = CGRectMake(145, (CGFloat)(height), 70, 25)
+            txmitData.frame = CGRectMake(558, (CGFloat)(height+2), 40, 25)
             txmitData.bezelStyle = NSTextFieldBezelStyle.RoundedBezel
             self.view.addSubview(txmitData)
             txmitDatas.append(txmitData)
@@ -329,23 +278,23 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
             // Show enc
             var encData = NSTextField()
             encData.stringValue = connectors[i].enc
-            encData.frame = CGRectMake(235, (CGFloat)(height), 70, 25)
+            encData.frame = CGRectMake(613, (CGFloat)(height+2), 40, 25)
             encData.bezelStyle = NSTextFieldBezelStyle.RoundedBezel
             self.view.addSubview(encData)
             encDatas.append(encData)
             
-            // Show hotplugin
-            var hotpluginData = NSTextField()
-            hotpluginData.stringValue = connectors[i].hotplugin
-            hotpluginData.frame = CGRectMake(325, (CGFloat)(height), 70, 25)
-            hotpluginData.bezelStyle = NSTextFieldBezelStyle.RoundedBezel
-            self.view.addSubview(hotpluginData)
-            hotpluginDatas.append(hotpluginData)
+            // Do Not Show hotplugin
+//            var hotpluginData = NSTextField()
+//            hotpluginData.stringValue = connectors[i].hotplugin
+//            hotpluginData.frame = CGRectMake(613, (CGFloat)(height), 40, 25)
+//            hotpluginData.bezelStyle = NSTextFieldBezelStyle.RoundedBezel
+//            self.view.addSubview(hotpluginData)
+//            hotpluginDatas.append(hotpluginData)
             
             // Show senseid
             var senseidData = NSTextField()
             senseidData.stringValue = connectors[i].senseid
-            senseidData.frame = CGRectMake(415, (CGFloat)(height), 70, 25)
+            senseidData.frame = CGRectMake(668, (CGFloat)(height+2), 40, 25)
             senseidData.bezelStyle = NSTextFieldBezelStyle.RoundedBezel
             self.view.addSubview(senseidData)
             senseidDatas.append(senseidData)
@@ -358,7 +307,7 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
         saveButton = NSButton()
         saveButton!.stringValue = NSLocalizedString("SAVE_ALL", comment: "Save All")
         saveButton!.title = NSLocalizedString("SAVE_ALL", comment: "Save All")
-        saveButton!.frame = CGRectMake(210, 0, 125, 25)
+        saveButton!.frame = CGRectMake(450, 5, 125, 35)
         saveButton!.bezelStyle = NSBezelStyle.RoundedBezelStyle
         saveButton!.enabled = false
         saveButton!.target = self
@@ -368,7 +317,7 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
         var exitButton = NSButton()
         exitButton.stringValue = NSLocalizedString("EXIT", comment: "Exit")
         exitButton.title = NSLocalizedString("EXIT", comment: "Exit")
-        exitButton.frame = CGRectMake(360, 0, 125, 25)
+        exitButton.frame = CGRectMake(600, 5, 125, 35)
         exitButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         exitButton.target = self
         exitButton.action = "exitButtonPressed"
@@ -381,25 +330,186 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
         s.appendString("ATI Connectors Data: \n")
         s.appendString(systemFBname[FBComboBox!.indexOfSelectedItem] + "\n")
         s.appendString(systemFBvalue[FBComboBox!.indexOfSelectedItem] + "\n\n")
+        
+        // Analyze Origin Framebuffer
+        var split = systemFBvalue[FBComboBox!.indexOfSelectedItem].componentsSeparatedByString("\n")
+        var originTypes = split[0].componentsSeparatedByString(", ")
+        var originTypesID: [Int] = []
+        for i in originTypes {
+            switch i {
+                case "DDVI": originTypesID.append(1)
+                case "DP": originTypesID.append(2)
+                case "HDMI": originTypesID.append(3)
+                case "LVDS": originTypesID.append(4)
+                case "SDVI": originTypesID.append(5)
+                case "VGA": originTypesID.append(6)
+                default: originTypesID.append(0)
+            }
+        }
+        var originPlaceholders: [String] = []
+        var originHotplugins: [String] = []
+        for var j = 1; j < split.count - 1; j++ {
+            var placeholder = split[j].substringWithRange(Range<String.Index>(start: advance(split[j].startIndex, 20), end: advance(split[j].startIndex, 24)))
+            originPlaceholders.append(placeholder)
+
+            var hotplugin = split[j].substringWithRange(Range<String.Index>(start: advance(split[j].startIndex, 28), end: advance(split[j].startIndex, 30)))
+            originHotplugins.append(hotplugin)
+        }
+        
         s.appendString("ATI Connectors Patch: \n")
         
-        s.appendString(typeBoxs[0].objectValueOfSelectedItem as! String)
-        for var i = 1; i < typeBoxs.count; i++ {
-            s.appendString(", ")
-            s.appendString(typeBoxs[i].objectValueOfSelectedItem as! String)
+        var record: [Int] = []
+        // record defines which connector data will be the postion.
+        // value > 0 means ROM connector data
+        // value < 0 means Origin Framebuffer connector data
+        
+        if opt3.selectedSegment == 1 {
+            for var i = 1; i <= originTypes.count; i++ {
+                record.append(-i)
+            }
+            var choose: [Bool] = []
+            for var i = 1; i <= connectors.count; i++ {
+                choose.append(false)
+            }
+            
+            // fill in record if connector type is same
+            for var j = 0; j < connectors.count; j++ {
+                for var k = 0; k < originTypes.count; k++ {
+                    if (originTypesID[k] == connectors[j].type) && (record[k] < 0) {
+                        record[k] = j + 1
+                        choose[j] = true
+                        break
+                    }
+                }
+            }
+            
+            // fill in record if no same connector type
+            for var j = 0; j < connectors.count; j++ {
+                if !choose[j] {
+                    for var k = 0; k < originTypes.count; k++ {
+                        if record[k] < 0 {
+                            record[k] = j + 1
+                            choose[j] = true
+                            break
+                        }
+                    }
+                }
+            }
+            
+            // delete unused
+            for var j = 0; j < record.count; j++ {
+                if record[j] < 0 {
+                    record[j] = 0
+                }
+            }
+        }
+        else{
+            var i = 0
+            for i = 1; i <= connectors.count; i++ {
+                record.append(i)
+            }
+            for ; i <= originTypes.count; i++ {
+                record.append(0)
+            }
+        }
+        
+        for var i = 0; i < record.count; i++ {
+            if record[i] == 0 {
+                s.appendString("Null")
+                if i < record.count - 1 {
+                    s.appendString(", ")
+                }
+            }
+            else {
+                s.appendString(typeBoxs[record[i] - 1].stringValue)
+                if i < record.count - 1 {
+                    s.appendString(", ")
+                }
+            }
         }
         s.appendString("\n")
-        for var j = 0; j < typeBoxs.count; j++ {
-            switch (typeBoxs[j].indexOfSelectedItem) {
-                case 1: s.appendString("000400000406000000710000")
-                case 2: s.appendString("040000001402000000010000")
-                case 3: s.appendString("000800000402000000710000")
-                case 4: s.appendString("020000004000000009010000")
-                case 5: s.appendString("100000001000000000010000")
-                default:s.appendString("000000000000000000000000")
+        
+        var allocateHotplugin = 0;
+        for var i = 0; i < record.count; i++ {
+            if (record[i] == 0) {
+                s.appendString("00000000000000000000000000000000\n")
+                continue
             }
-            s.appendString(txmitDatas[j].stringValue + encDatas[j].stringValue + hotpluginDatas[j].stringValue + senseidDatas[j].stringValue + "\n")
+            
+            var j = record[i] - 1
+            // Connector type and Control Flag
+            switch (connectors[j].type) {
+                case 1: // DDVI
+                    s.appendString("04000000")
+                    switch (connectors[j].controlFlag) {
+                        case 0: s.appendString("14000000")
+                        case 1: s.appendString("14020000")
+                        case 2: s.appendString("04020000")
+                        default: s.appendString("<Error> ")
+                    }
+                    s.appendString("0001")
+                case 2: // DP
+                    s.appendString("00040000")
+                    switch (connectors[j].controlFlag) {
+                        case 0: s.appendString("04030000")
+                        case 1: s.appendString("04060000")
+                        default: s.appendString("<Error> ")
+                    }
+                    s.appendString("0001")
+                case 3: // HDMI
+                    s.appendString("00080000040200000071")
+                case 4: // LVDS
+                    s.appendString("02000000")
+                    switch (connectors[j].controlFlag) {
+                        case 0: s.appendString("40000000")
+                        case 1: s.appendString("00010000")
+                        default: s.appendString("<Error> ")
+                    }
+                    s.appendString("0901")
+                case 5: // SDVI
+                    s.appendString("00020000")
+                    switch (connectors[j].controlFlag) {
+                        case 0: s.appendString("14000000")
+                        case 1: s.appendString("14020000")
+                        default: s.appendString("<Error> ")
+                    }
+                    s.appendString("0001")
+                case 6: // VGA
+                    s.appendString("10000000100000000001")
+                default: // Null
+                    s.appendString("00000000000000000000")
+            }
+            if opt1.selectedSegment == 0 {
+                s.appendString("0000")
+            }
+            else {
+                s.appendString(originPlaceholders[i])
+            }
+            
+            s.appendString(txmitDatas[j].stringValue + encDatas[j].stringValue)
+            if opt2.selectedSegment == 0 {
+                if connectors[j].type == 4 {
+                    s.appendString("00")
+                }
+                else {
+                    s.appendString("0\(++allocateHotplugin)")
+                }
+            }
+            else {
+                s.appendString(originHotplugins[i])
+            }
+            
+            s.appendString(senseidDatas[j].stringValue + "\n")
         }
+        
+        // Special Condition Warning
+        if opt3.selectedSegment == 0 && connectors.count > originTypes.count {
+            s.appendString("\nWarning: Number of connectors should be \(originTypes.count)\n")
+        }
+        if controller.stringValue == "AMD6000Controller" && connectors[0].type == 4 && encDatas[0].stringValue == "00" {
+            s.appendString("\nWarning: You may need to change the enc of LVDS to 01 to avoid screen mess\n")
+        }
+        
         s.writeToFile(NSHomeDirectory() + "/Desktop/ATIData.txt", atomically: true, encoding: NSUTF8StringEncoding, error: nil)
         
         var task = NSTask()

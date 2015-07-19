@@ -12,7 +12,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			k04iZwrQ9Q6XYF2ggP9NA8pXt5A=
+			phodOOup4ihq9INuV8b8XTjGR7Q=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -21,7 +21,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			5nSUlnERpFvH2QVTGkrKUTrZ2VQ=
+			kH2/JqBDvCx4cj1gceXMljbUGPA=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -30,16 +30,16 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Elkk/gkAFETKbTCNdGeb/K7IiZ8=
+			0ogxval0OeQmfOo5vJ8BRK/nhMo=
 			</data>
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>Resources/Base.lproj/Main.storyboardc/NSViewController-MaI-3b-6TW.nib</key>
+		<key>Resources/Base.lproj/Main.storyboardc/NSViewController-xOo-Nf-X08.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			K8idX86GPx+KZGhlJg4pi5CawNw=
+			I33/KdXn5FsGZE6f+fIU51lHLKo=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -48,7 +48,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			kW3C+zzqPQjnicl0nbe1aLKaWOw=
+			Yl9Zv0r0M5f5zbScWa9qjmCxK6Y=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -57,35 +57,40 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			5hAo/J5tf2Yh0cAJs2uz5rSok04=
+			e71pQUBXMThjeqbDO27pVLOcxTE=
 			</data>
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>Resources/ati.txt</key>
+		<key>Resources/Base.lproj/Main.storyboardc/xOo-Nf-X08-view-NJ6-qX-Vca.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			qBnd7mX2+q3AZD8xF9yPcIHCaao=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>Resources/CardInfo.plist</key>
 		<data>
-		gVxvMIzSZoJt2AWQZ6O3HyXbK8Y=
-		</data>
-		<key>Resources/correct.png</key>
-		<data>
-		3hJZ6ZtliOqLCszbykzCHTMwwZU=
+		JdqQpHI0uXqOPnS3CnJj/imgFh0=
 		</data>
 		<key>Resources/en.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			k04iZwrQ9Q6XYF2ggP9NA8pXt5A=
+			phodOOup4ihq9INuV8b8XTjGR7Q=
 			</data>
 			<key>optional</key>
 			<true/>
 		</dict>
 		<key>Resources/getSystemFB.php</key>
 		<data>
-		NoTfXQVmJnR0zzm8MBEJYTYkIkg=
+		KcP9ulIBIg9DyNROGp1g03sCOqs=
 		</data>
-		<key>Resources/incorrect.png</key>
+		<key>Resources/otool</key>
 		<data>
-		rzHy1Y3QyPyFfGsxc4mwoUyRsGk=
+		njjlSN10OsL1LPVu3Zp2aLjF7FI=
 		</data>
 		<key>Resources/radeon_bios_decode</key>
 		<data>
@@ -99,7 +104,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			rZuYnMwWwPjAVbWRz3D1SQAPcfw=
+			4jmPxWft0WWXbDmUdFzCKVxE2R0=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -205,7 +210,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			k04iZwrQ9Q6XYF2ggP9NA8pXt5A=
+			phodOOup4ihq9INuV8b8XTjGR7Q=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -214,7 +219,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			5nSUlnERpFvH2QVTGkrKUTrZ2VQ=
+			kH2/JqBDvCx4cj1gceXMljbUGPA=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -223,16 +228,16 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Elkk/gkAFETKbTCNdGeb/K7IiZ8=
+			0ogxval0OeQmfOo5vJ8BRK/nhMo=
 			</data>
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>Resources/Base.lproj/Main.storyboardc/NSViewController-MaI-3b-6TW.nib</key>
+		<key>Resources/Base.lproj/Main.storyboardc/NSViewController-xOo-Nf-X08.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			K8idX86GPx+KZGhlJg4pi5CawNw=
+			I33/KdXn5FsGZE6f+fIU51lHLKo=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -241,7 +246,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			kW3C+zzqPQjnicl0nbe1aLKaWOw=
+			Yl9Zv0r0M5f5zbScWa9qjmCxK6Y=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -250,35 +255,40 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			5hAo/J5tf2Yh0cAJs2uz5rSok04=
+			e71pQUBXMThjeqbDO27pVLOcxTE=
 			</data>
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>Resources/ati.txt</key>
+		<key>Resources/Base.lproj/Main.storyboardc/xOo-Nf-X08-view-NJ6-qX-Vca.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			qBnd7mX2+q3AZD8xF9yPcIHCaao=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>Resources/CardInfo.plist</key>
 		<data>
-		gVxvMIzSZoJt2AWQZ6O3HyXbK8Y=
-		</data>
-		<key>Resources/correct.png</key>
-		<data>
-		3hJZ6ZtliOqLCszbykzCHTMwwZU=
+		JdqQpHI0uXqOPnS3CnJj/imgFh0=
 		</data>
 		<key>Resources/en.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			k04iZwrQ9Q6XYF2ggP9NA8pXt5A=
+			phodOOup4ihq9INuV8b8XTjGR7Q=
 			</data>
 			<key>optional</key>
 			<true/>
 		</dict>
 		<key>Resources/getSystemFB.php</key>
 		<data>
-		NoTfXQVmJnR0zzm8MBEJYTYkIkg=
+		KcP9ulIBIg9DyNROGp1g03sCOqs=
 		</data>
-		<key>Resources/incorrect.png</key>
+		<key>Resources/otool</key>
 		<data>
-		rzHy1Y3QyPyFfGsxc4mwoUyRsGk=
+		njjlSN10OsL1LPVu3Zp2aLjF7FI=
 		</data>
 		<key>Resources/radeon_bios_decode</key>
 		<data>
@@ -292,7 +302,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			rZuYnMwWwPjAVbWRz3D1SQAPcfw=
+			4jmPxWft0WWXbDmUdFzCKVxE2R0=
 			</data>
 			<key>optional</key>
 			<true/>

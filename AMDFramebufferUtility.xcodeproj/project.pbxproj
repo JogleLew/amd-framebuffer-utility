@@ -7,18 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		153CE0331B5B3C7D006265AE /* CardInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 153CE0321B5B3C7D006265AE /* CardInfo.plist */; };
+		15412C5F1B482B8300EA1118 /* otool in Resources */ = {isa = PBXBuildFile; fileRef = 15412C5E1B482B8300EA1118 /* otool */; };
 		157A7B431B411DF000275C92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157A7B421B411DF000275C92 /* AppDelegate.swift */; };
 		157A7B471B411DF000275C92 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 157A7B461B411DF000275C92 /* Images.xcassets */; };
 		157A7B4A1B411DF100275C92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 157A7B481B411DF100275C92 /* Main.storyboard */; };
 		157A7B561B411DF100275C92 /* AMDFramebufferUtilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157A7B551B411DF100275C92 /* AMDFramebufferUtilityTests.swift */; };
-		157A7B611B411E3D00275C92 /* correct.png in Resources */ = {isa = PBXBuildFile; fileRef = 157A7B5F1B411E3D00275C92 /* correct.png */; };
-		157A7B621B411E3D00275C92 /* incorrect.png in Resources */ = {isa = PBXBuildFile; fileRef = 157A7B601B411E3D00275C92 /* incorrect.png */; };
 		157A7B651B411E4800275C92 /* radeon_bios_decode in Resources */ = {isa = PBXBuildFile; fileRef = 157A7B631B411E4800275C92 /* radeon_bios_decode */; };
 		157A7B661B411E4800275C92 /* redsock_bios_decoder in Resources */ = {isa = PBXBuildFile; fileRef = 157A7B641B411E4800275C92 /* redsock_bios_decoder */; };
 		157A7B691B411E5100275C92 /* ConnectorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157A7B671B411E5100275C92 /* ConnectorData.swift */; };
 		157A7B6A1B411E5100275C92 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157A7B681B411E5100275C92 /* ResultViewController.swift */; };
 		157A7B6C1B411E5800275C92 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157A7B6B1B411E5800275C92 /* ViewController.swift */; };
-		157A7B6E1B41237700275C92 /* ati.txt in Resources */ = {isa = PBXBuildFile; fileRef = 157A7B6D1B41237700275C92 /* ati.txt */; };
 		157A7B701B413EC600275C92 /* getSystemFB.php in Resources */ = {isa = PBXBuildFile; fileRef = 157A7B6F1B413EC600275C92 /* getSystemFB.php */; };
 		15D5CA9E1B423999004875C4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 15D5CAA01B423999004875C4 /* Localizable.strings */; };
 /* End PBXBuildFile section */
@@ -34,6 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		153CE0321B5B3C7D006265AE /* CardInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CardInfo.plist; sourceTree = "<group>"; };
+		15412C5E1B482B8300EA1118 /* otool */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = otool; sourceTree = "<group>"; };
 		157A7B3D1B411DF000275C92 /* AMDFramebufferUtility.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AMDFramebufferUtility.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		157A7B411B411DF000275C92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		157A7B421B411DF000275C92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -42,14 +43,11 @@
 		157A7B4F1B411DF100275C92 /* AMDFramebufferUtilityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AMDFramebufferUtilityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		157A7B541B411DF100275C92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		157A7B551B411DF100275C92 /* AMDFramebufferUtilityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMDFramebufferUtilityTests.swift; sourceTree = "<group>"; };
-		157A7B5F1B411E3D00275C92 /* correct.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = correct.png; sourceTree = "<group>"; };
-		157A7B601B411E3D00275C92 /* incorrect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = incorrect.png; sourceTree = "<group>"; };
 		157A7B631B411E4800275C92 /* radeon_bios_decode */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = radeon_bios_decode; sourceTree = "<group>"; };
 		157A7B641B411E4800275C92 /* redsock_bios_decoder */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = redsock_bios_decoder; sourceTree = "<group>"; };
 		157A7B671B411E5100275C92 /* ConnectorData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectorData.swift; sourceTree = "<group>"; };
 		157A7B681B411E5100275C92 /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		157A7B6B1B411E5800275C92 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		157A7B6D1B41237700275C92 /* ati.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ati.txt; sourceTree = "<group>"; };
 		157A7B6F1B413EC600275C92 /* getSystemFB.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = getSystemFB.php; sourceTree = "<group>"; };
 		157A7B711B41999B00275C92 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		15D5CA9F1B423999004875C4 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -100,13 +98,12 @@
 				157A7B671B411E5100275C92 /* ConnectorData.swift */,
 				157A7B6B1B411E5800275C92 /* ViewController.swift */,
 				157A7B681B411E5100275C92 /* ResultViewController.swift */,
+				157A7B481B411DF100275C92 /* Main.storyboard */,
 				15D5CAA01B423999004875C4 /* Localizable.strings */,
 				157A7B461B411DF000275C92 /* Images.xcassets */,
-				157A7B481B411DF100275C92 /* Main.storyboard */,
-				157A7B5F1B411E3D00275C92 /* correct.png */,
-				157A7B601B411E3D00275C92 /* incorrect.png */,
-				157A7B6D1B41237700275C92 /* ati.txt */,
+				153CE0321B5B3C7D006265AE /* CardInfo.plist */,
 				157A7B6F1B413EC600275C92 /* getSystemFB.php */,
+				15412C5E1B482B8300EA1118 /* otool */,
 				157A7B631B411E4800275C92 /* radeon_bios_decode */,
 				157A7B641B411E4800275C92 /* redsock_bios_decoder */,
 				157A7B401B411DF000275C92 /* Supporting Files */,
@@ -220,14 +217,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				157A7B471B411DF000275C92 /* Images.xcassets in Resources */,
-				157A7B621B411E3D00275C92 /* incorrect.png in Resources */,
 				157A7B701B413EC600275C92 /* getSystemFB.php in Resources */,
 				157A7B4A1B411DF100275C92 /* Main.storyboard in Resources */,
+				15412C5F1B482B8300EA1118 /* otool in Resources */,
 				15D5CA9E1B423999004875C4 /* Localizable.strings in Resources */,
 				157A7B651B411E4800275C92 /* radeon_bios_decode in Resources */,
+				153CE0331B5B3C7D006265AE /* CardInfo.plist in Resources */,
 				157A7B661B411E4800275C92 /* redsock_bios_decoder in Resources */,
-				157A7B6E1B41237700275C92 /* ati.txt in Resources */,
-				157A7B611B411E3D00275C92 /* correct.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

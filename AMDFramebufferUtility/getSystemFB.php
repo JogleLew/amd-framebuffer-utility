@@ -6,7 +6,7 @@ $ctype=array('02000000'=>'LVDS','04000000'=>'DDVI','80000000'=>'SVIDEO','1000000
 foreach(glob('/System/Library/Extensions/'.(file_exists('/System/Library/Extensions/AMD6000Controller.kext') ? 'AMD' : 'ATI').'*Controller.kext') as $file) {
 	echo str_pad(substr(strrchr($file,'/'),1),72,'-',STR_PAD_BOTH)."\n\n";
 	$file=array_pop(glob("$file/Contents/MacOS/*"));
-	$a=popen("otool -XvQt $file",'r');
+	$a=popen("/tmp/otool -XvQt $file",'r');
 	$b=fopen($file,'r');
 	while ($l=fgets($a)) {
 		if (strncmp($l,'__ZN',4)!=0 || ($i=strpos($l,'Info10createInfo'))===false) continue;

@@ -6,6 +6,7 @@
 //  Copyright (c) 2015年 joglelew. All rights reserved.
 //
 
+import Foundation
 import Cocoa
 
 class ViewController: NSViewController {
@@ -13,9 +14,8 @@ class ViewController: NSViewController {
     var PCIID: String = ""
     
     @IBOutlet weak var processStatus: NSImageView!
-
-    @IBOutlet weak var filePath: NSTextField!
     @IBOutlet weak var showDataButton: NSButton!
+    @IBOutlet weak var pathControl: NSPathControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,16 +40,16 @@ class ViewController: NSViewController {
         
         // If user not select a file, set void path and pic
         if panel.URLs.count == 0 {
-            filePath.stringValue = ""
-            processStatus.image = nil
+            pathControl.stringValue = ""
+            processStatus.image = nil //NSImage(named: "NSStatusNone");
             return
         }
         // Show path on window
         var pathURL: NSURL = panel.URLs[0] as! NSURL
-        filePath.stringValue = pathURL.path!
+        pathControl.stringValue = pathURL.path!
         
         // Run radeon_bios_decode
-        var result = runProgram("radeon_bios_decode", inputFile: filePath.stringValue)
+        var result = runProgram("radeon_bios_decode", inputFile: pathControl.stringValue)
         var splitResult = result.componentsSeparatedByString("\n")
 
         // Check ROM File Validation
@@ -64,85 +64,85 @@ class ViewController: NSViewController {
         
         // Put picture to show the validation of ROM file
         if (!isValid){
-            processStatus.image = NSImage(named: "incorrect.png")
+            processStatus.image = NSImage(named: "NSStatusUnavailable");
+            /*processStatus.image = NSImage(named: "incorrect.png")*/
             showDataButton.enabled = false
             showDataButton.hidden = true
             return
         }
-        processStatus.image = NSImage(named: "correct.png")
+        processStatus.image = NSImage(named: "NSStatusAvailable");
+        /*processStatus.image = NSImage(named: "correct.png")*/
         showDataButton.enabled = true
         showDataButton.hidden = false
         
         // Prepare connectors array
         connectors = []
         
-        // Get type, hotplugin, senseid
+        // Get senseid
         var hotpluginAllocate = 1
         var type = 0
         var hotplugin = ""
         var senseid = ""
         for var i = 0; i < splitResult.count; i++ {
             if (splitResult[i].hasPrefix("Connector at index")) {
-                i++
+                i += 3
                 var items = splitResult[i].componentsSeparatedByString(" ")
-                var t = items[items.count - 2]
-                if (t.hasPrefix("LVDS")) {
-                    type = 4
-                    hotplugin = "00"
-                }
-                else if (t.hasPrefix("HDMI")) {
-                    type = 3
-                    hotplugin = "0\(hotpluginAllocate++)"
-                }
-                else if (t.hasPrefix("VGA")) {
-                    type = 5
-                    hotplugin = "0\(hotpluginAllocate++)"
-                }
-                else if (t.hasPrefix("DVI")) {
-                    type = 2
-                    hotplugin = "0\(hotpluginAllocate++)"
-                }
-                else if (t.hasPrefix("DisplayPort")) {
-                    type = 1
-                    hotplugin = "0\(hotpluginAllocate++)"
-                }
-                else {
-                    type = 0
-                    hotplugin = ""
-                }
-                i += 2
-                items = splitResult[i].componentsSeparatedByString(" ")
                 senseid = items[items.count - 1].substringFromIndex(advance(items[items.count - 1].startIndex, 2))
                 if (count(senseid) == 1) {
                     senseid = "0" + senseid
                 }
-                var c = Connector(type: type, hotplugin: hotplugin, senseid: senseid)
+                var c = Connector()
+                c.setSenseid(senseid)
                 connectors.append(c)
+            }
+        }
+        // Merge same senseid
+        for var i = 1; i < connectors.count; i++ {
+            if connectors[i].senseid == connectors[i - 1].senseid {
+                connectors.removeAtIndex(i)
+                i--
             }
         }
         
         // Run redsock_bios_decoder
-        result = runProgram("redsock_bios_decoder", inputFile: filePath.stringValue)
+        result = runProgram("redsock_bios_decoder", inputFile: pathControl.stringValue)
         splitResult = result.componentsSeparatedByString("\n")
         
-        // Get txmit, enc
+        // Get type, txmit, enc
         var txmit = ""
         var enc = ""
+        var duallink = ""
         var currentPos = 0
+        var mergeFlag = false
         for var i = 0; i < splitResult.count; i++ {
             if (splitResult[i].hasPrefix("Connector Object Id")) {
-                i++
                 var items = splitResult[i].componentsSeparatedByString(" ")
+                switch items[3] {
+                    case "[1]": connectors[currentPos].setType(5) //SDVI-I
+                                connectors[currentPos].setControlFlag(1)
+                    case "[2]": connectors[currentPos].setType(1) //DDVI-I
+                                connectors[currentPos].setControlFlag(1)
+                    case "[3]": connectors[currentPos].setType(5) //SDVI-D
+                                connectors[currentPos].setControlFlag(0)
+                    case "[4]": connectors[currentPos].setType(1) //DDVI-D
+                                connectors[currentPos].setControlFlag(0)
+                    case "[5]": connectors[currentPos].setType(6) //VGA
+                    case "[12]", "[13]": connectors[currentPos].setType(3)//HDMI
+                    case "[14]": connectors[currentPos].setType(4) //LVDS
+                    case "[19]", "[20]": connectors[currentPos].setType(2) //DP
+                    default: connectors[currentPos].setType(0) //Null
+                }
+                i++
+                items = splitResult[i].componentsSeparatedByString(" ")
                 for var j = 0; j < items.count; j++ {
-                    if (items[j] == "txmit") {
+                    if items[j] == "txmit" {
                         j++
                         txmit = items[j].substringFromIndex(advance(items[j].startIndex, 2));
                         if (count(txmit) > 2) {
                             txmit = items[j].substringToIndex(advance(items[j].endIndex, 2 - count(txmit)))
                         }
-                        connectors[currentPos].setTxmit(txmit)
                     }
-                    if (items[j] == "enc") {
+                    if items[j] == "enc" {
                         j++
                         enc = ""
                         var isEnc = false
@@ -157,8 +157,34 @@ class ViewController: NSViewController {
                         if (count(enc) == 1) {
                             enc = "0" + enc
                         }
+                    }
+                    if items[j] == "[duallink" {
+                        j++
+                        var x = advance(items[j].startIndex, 2)
+                        var y = advance(items[j].startIndex, 3)
+                        duallink = items[j].substringWithRange(Range<String.Index>(start: x, end: y))
+                        if connectors[currentPos].type == 2 && duallink == "1" {
+                            connectors[currentPos].setControlFlag(1)
+                        }
+                    }
+                }
+                
+                if mergeFlag {
+                    if enc == "10" {
+                        connectors[currentPos].setTxmit(txmit)
+                    }
+                    else {
                         connectors[currentPos].setEnc(enc)
                     }
+                }
+                else {
+                    connectors[currentPos].setTxmit(txmit)
+                    connectors[currentPos].setEnc(enc)
+                }
+                
+                if connectors[currentPos].type == 1 {
+                    mergeFlag = !mergeFlag
+                    continue
                 }
                 currentPos++
             }
