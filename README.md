@@ -18,9 +18,10 @@ Open AMD FrameBuffer Utility.app
 #Change Log
 
 V2.0
+
 1. Redesign the user interface
-2. Rewrite code
-3. Add function: check whether card id is in kext 
+1. Rewrite code
+1. Add function: check whether card id is in kext 
 
 
 V1.0
