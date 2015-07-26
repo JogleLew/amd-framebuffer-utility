@@ -15,13 +15,26 @@ class ViewController: NSViewController {
     
     @IBOutlet weak var processStatus: NSImageView!
     @IBOutlet weak var showDataButton: NSButton!
+    
     @IBOutlet weak var pathControl: NSPathControl!
+    @IBOutlet weak var PEWarning: NSTextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Do any additional setup after loading the view.
         showDataButton.enabled = false
         showDataButton.hidden = true
-        // Do any additional setup after loading the view.
+        #if FIREWOLF_PE_SUPPORT
+            PEWarning.hidden = false
+            println("FireWolf PE Support: Yes")
+        #else
+            PEWarning.hidden = true
+        #endif
+        
+        #if DEBUG
+            println("Debug Mode: Enable")
+        #endif
     }
 
     override var representedObject: AnyObject? {
@@ -31,21 +44,33 @@ class ViewController: NSViewController {
     }
 
     @IBAction func selectButtonPressed(sender: NSButtonCell) {
-    
+        #if DEBUG
+            println("******************************************")
+            println("Select button pressed.")
+        #endif
+        
         // Open the panel for user to select ROM file
         var panel = NSOpenPanel()
         panel.canChooseFiles = true
         panel.canChooseDirectories = false
         panel.runModal()
         
-        // If user not select a file, set void path and pic
+        // If user not select a file, set void path and picture
         if panel.URLs.count == 0 {
-            pathControl.stringValue = ""
+            #if DEBUG
+                println("User do not select a file.")
+            #endif
+            pathControl.hidden = true
             processStatus.image = nil //NSImage(named: "NSStatusNone");
             return
         }
+        
         // Show path on window
         var pathURL: NSURL = panel.URLs[0] as! NSURL
+        #if DEBUG
+            println("Get URL: \(pathURL)")
+        #endif
+        pathControl.hidden = false
         pathControl.stringValue = pathURL.path!
         
         // Run radeon_bios_decode
@@ -68,6 +93,9 @@ class ViewController: NSViewController {
             /*processStatus.image = NSImage(named: "incorrect.png")*/
             showDataButton.enabled = false
             showDataButton.hidden = true
+            #if DEBUG
+                println("ROM File: Invalid")
+            #endif
             return
         }
         processStatus.image = NSImage(named: "NSStatusAvailable");
@@ -182,27 +210,41 @@ class ViewController: NSViewController {
                     connectors[currentPos].setEnc(enc)
                 }
                 
-                if connectors[currentPos].type == 1 {
+                if connectors[currentPos].type == 1 && connectors[currentPos].controlFlag == 1 {
                     mergeFlag = !mergeFlag
-                    continue
+                    if mergeFlag {
+                        continue
+                    }
                 }
                 currentPos++
             }
         }
         
         // Print debug information
-        for i in connectors {
-            println(i.toString())
-        }
+        #if DEBUG
+            println("ROM File: Valid")
+            println("Connectors Info:")
+            for i in connectors {
+                println(i.toString())
+            }
+        #endif
     }
     
     override func prepareForSegue(segue: NSStoryboardSegue, sender: AnyObject?) {
         var viewController = segue.destinationController as! ResultViewController
         viewController.connectors = connectors
         viewController.PCIID = PCIID.uppercaseString
+        #if DEBUG
+            println("******************************************")
+            println("Segue to Result View")
+        #endif
     }
     
     func runProgram(name: String, inputFile: String) -> String {
+        #if DEBUG
+            println("\n........Launching program \(name)........")
+        #endif
+        
         var task = NSTask()
         task.launchPath = "/bin/sh"
         
@@ -213,8 +255,10 @@ class ViewController: NSViewController {
         // Delete the disgusting "Optional("...")"
         dir = dir.substringFromIndex(advance(dir.startIndex, 10))
         dir = dir.substringToIndex(advance(dir.endIndex, -2))
+        
+        var dirHandleBlank = dir.stringByReplacingOccurrencesOfString(" ", withString: "\\ ")
         var inputFileHandleBlank = inputFile.stringByReplacingOccurrencesOfString(" ", withString: "\\ ")
-        task.arguments = ["-c", "\(dir) < \(inputFileHandleBlank)"]
+        task.arguments = ["-c", "\(dirHandleBlank) < \(inputFileHandleBlank)"]
         
         // Define
         var pipe = NSPipe()
@@ -226,7 +270,11 @@ class ViewController: NSViewController {
         task.launch()
         var data = file.readDataToEndOfFile()
         var context1 = NSString(data: data, encoding: NSUTF8StringEncoding)
-        println(context1)
+        #if DEBUG
+            println(context1)
+            println("......................................................\n")
+        #endif
+        
         return "\(context1)"
     }
 }

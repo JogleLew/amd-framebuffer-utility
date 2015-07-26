@@ -3,7 +3,7 @@
 "1UK-8n-QPP.title" = "自定义工具栏…";
 
 /* Class = "NSMenuItem"; title = "AMDFramebufferUtility"; ObjectID = "1Xt-HY-uBw"; */
-"1Xt-HY-uBw.title" = "AMDFramebuffer实用工具";
+"1Xt-HY-uBw.title" = "AMD Framebuffer 实用工具";
 
 /* Class = "NSMenu"; title = "Find"; ObjectID = "1b7-l0-nxx"; */
 "1b7-l0-nxx.title" = "查找";
@@ -132,7 +132,7 @@
 "IAo-SY-fd9.title" = "打开…";
 
 /* Class = "NSWindow"; title = "AMD Famebuffer Utility"; ObjectID = "IQv-IB-iLA"; */
-"IQv-IB-iLA.title" = "AMD Famebuffer实用工具";
+/* "IQv-IB-iLA.title" = "AMD Famebuffer实用工具"; */
 
 /* Class = "NSMenuItem"; title = "Justify"; ObjectID = "J5U-5w-g23"; */
 "J5U-5w-g23.title" = "Justify";
@@ -360,7 +360,7 @@
 "tlD-Oa-oAM.title" = "Kern";
 
 /* Class = "NSMenu"; title = "AMDFramebufferUtility"; ObjectID = "uQy-DD-JDr"; */
-"uQy-DD-JDr.title" = "AMDFramebuffer实用工具";
+"uQy-DD-JDr.title" = "AMD Framebuffer 实用工具";
 
 /* Class = "NSMenuItem"; title = "Cut"; ObjectID = "uRl-iY-unG"; */
 "uRl-iY-unG.title" = "剪切";

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "AMDFramebufferUtility.ResultViewController.loadOfflineFB (AMDFramebufferUtility.ResultViewController)() -&gt; ():ResultViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "&quot;\(k)&quot;">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

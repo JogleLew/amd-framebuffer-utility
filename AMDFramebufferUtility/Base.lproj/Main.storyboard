@@ -19,6 +19,7 @@
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
                                                 <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="Exp-CZ-Vem"/>
+                                                <segue destination="yK3-wr-Mkd" kind="modal" id="qqz-cc-GEP"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
@@ -386,6 +387,69 @@
             </objects>
             <point key="canvasLocation" x="75" y="0.0"/>
         </scene>
+        <!--About AMD Framebuffer Utility-->
+        <scene sceneID="nDS-c4-FKt">
+            <objects>
+                <viewController title="About AMD Framebuffer Utility" id="yK3-wr-Mkd" sceneMemberID="viewController">
+                    <view key="view" id="rDv-xr-Ry1">
+                        <rect key="frame" x="0.0" y="0.0" width="505" height="299"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mbY-ka-oTw">
+                                <rect key="frame" x="201" y="231" width="48" height="48"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="9XH-Wg-41U"/>
+                            </imageView>
+                            <imageView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lEO-wN-dwX">
+                                <rect key="frame" x="174" y="123" width="156" height="156"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="logo" id="jqZ-Nm-rvc"/>
+                            </imageView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oKN-v9-yKd">
+                                <rect key="frame" x="184" y="98" width="137" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Developer: ljg-pcbeta" id="HXF-J3-Cbk">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6yh-am-1eC">
+                                <rect key="frame" x="27" y="73" width="464" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Thanks to: The developers of radeon_bios_decode, redsock_bios_decoder" id="Gtk-mk-gJk">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="32k-Kx-Abj">
+                                <rect key="frame" x="29" y="55" width="358" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="                 The developers of Chamelon Bootloader (ati.c)" id="2U7-tk-3ST">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4az-x8-jTE">
+                                <rect key="frame" x="96" y="37" width="402" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="SJ_UnderWater from TonyMacx86 (php script to get framebuffer)" id="asp-GA-m6i">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="btS-fO-nbP">
+                                <rect key="frame" x="96" y="20" width="349" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Testers neycwby09, maojinbing, beastfang from PCBeta" id="m7l-Tb-gbi">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                    </view>
+                </viewController>
+                <customObject id="Ywm-zg-3NM" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="652.5" y="80.5"/>
+        </scene>
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
@@ -463,6 +527,14 @@
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </comboBoxCell>
                                         </comboBox>
+                                        <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aUI-BR-axB">
+                                            <rect key="frame" x="62" y="31" width="162" height="17"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="(Offline Framebuffer Data)" id="CrD-xY-yVj">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
                                     </subviews>
                                 </view>
                                 <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
@@ -641,6 +713,7 @@
                         <outlet property="controller" destination="nRk-aU-etO" id="tf2-7R-Ouf"/>
                         <outlet property="idInfoMessage" destination="EjO-WI-l1y" id="BOc-vc-sDp"/>
                         <outlet property="idInfoStatus" destination="bfQ-P6-IPC" id="Oov-Vb-q9T"/>
+                        <outlet property="offlineSign" destination="aUI-BR-axB" id="Rw1-LQ-s1y"/>
                         <outlet property="opt1" destination="BGv-Vb-jzL" id="AHG-vv-IFk"/>
                         <outlet property="opt2" destination="1B1-Nx-Mkr" id="CUl-fw-6t6"/>
                         <outlet property="opt3" destination="laQ-yh-lhT" id="xZm-Pe-XPA"/>
@@ -694,16 +767,26 @@
                                 <rect key="frame" x="48" y="70" width="25" height="25"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="nJC-KE-WPW"/>
                             </imageView>
-                            <pathControl verticalHuggingPriority="750" fixedFrame="YES" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NZd-oe-FoE">
-                                <rect key="frame" x="68" y="71" width="359" height="22"/>
-                                <pathCell key="cell" selectable="YES" editable="YES" alignment="left" id="Uij-CX-F19">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WdB-Do-nPS">
+                                <rect key="frame" x="364" y="7" width="132" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="For FireWolf PE Only" id="nC7-DQ-YsS">
                                     <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <pathControl hidden="YES" verticalHuggingPriority="750" fixedFrame="YES" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nNX-gm-TEe">
+                                <rect key="frame" x="68" y="71" width="372" height="22"/>
+                                <pathCell key="cell" selectable="YES" editable="YES" alignment="left" id="vvo-Ro-rXy">
+                                    <font key="font" metaFont="system"/>
+                                    <url key="url" string="file://localhost/Applications/"/>
                                 </pathCell>
                             </pathControl>
                         </subviews>
                     </view>
                     <connections>
-                        <outlet property="pathControl" destination="NZd-oe-FoE" id="hV5-ZT-TBg"/>
+                        <outlet property="PEWarning" destination="WdB-Do-nPS" id="GDO-6b-Ww3"/>
+                        <outlet property="pathControl" destination="nNX-gm-TEe" id="IJD-LE-pCT"/>
                         <outlet property="processStatus" destination="B3u-3d-J2M" id="nPV-4f-dKE"/>
                         <outlet property="showDataButton" destination="EXU-4U-fJW" id="XHd-e7-Heu"/>
                     </connections>
@@ -716,5 +799,6 @@
     <resources>
         <image name="NSFollowLinkFreestandingTemplate" width="14" height="14"/>
         <image name="NSStatusNone" width="16" height="16"/>
+        <image name="logo" width="512" height="512"/>
     </resources>
 </document>

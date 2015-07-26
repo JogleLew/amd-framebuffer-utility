@@ -39,18 +39,23 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
     @IBOutlet weak var opt1: NSSegmentedControl!
     @IBOutlet weak var opt2: NSSegmentedControl!
     @IBOutlet weak var opt3: NSSegmentedControl!
+    @IBOutlet weak var offlineSign: NSTextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        showSaveAndCloseButton()
         showCardInfo()
         showOriginFB()
         FBComboBox!.setDelegate(self)
-        var myThread = NSThread(target: self, selector: "getSystemFB", object: nil)
-        myThread.start()
+        #if FIREWOLF_PE_SUPPORT
+            loadOfflineFB()
+        #else
+            var myThread = NSThread(target: self, selector: "getSystemFB", object: nil)
+            myThread.start()
+        #endif
         
         showText(connectors.count)
         showData(connectors)
-        showSaveAndCloseButton()
         // Do any additional setup after loading the view.
     }
 
@@ -78,6 +83,9 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
         var id = ""
         if count(PCIID) >= 13 {
             id = PCIID.substringFromIndex(advance(PCIID.startIndex, 13))
+            #if DEUBUG
+                println("PCI ID: 1002-\(PCIID)")
+            #endif
         }
         
         if info.objectForKey(id) == nil {
@@ -115,6 +123,10 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
         
             FBName.stringValue = fb
         }
+        #if DEUBUG
+            println("Name: \(name)")
+            println("Framebuffer: \(fb)")
+        #endif
         
         // check Info.plist in AMDxxxxController
         var kextInfo = NSMutableDictionary(contentsOfFile: "/System/Library/Extensions/\(controller.stringValue).kext/Contents/Info.plist")
@@ -141,6 +153,9 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
             idInfoStatus.image = NSImage(named: "NSStatusUnavailable");
             idInfoMessage.stringValue = NSLocalizedString("ID_NOT_IN_PLIST", comment: "Not found your card ID in kext")
         }
+        #if DEUBUG
+            println(idInfoMessage.stringValue)
+        #endif
     }
     
     func showOriginFB() {
@@ -159,9 +174,10 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
         var otoolDir = NSBundle.mainBundle().pathForResource("otool", ofType: nil)
         var dir = "\(otoolDir)"
         
-        // Delete the disgusting "Optional("...")"
+        // Delete the disgusting "Optional("...")" and handle blank
         dir = dir.substringFromIndex(advance(dir.startIndex, 10))
         dir = dir.substringToIndex(advance(dir.endIndex, -2))
+        dir = dir.stringByReplacingOccurrencesOfString(" ", withString: "\\ ")
         
         copyTask.arguments = ["-c", "cp \(dir) /tmp/"]
         copyTask.launch()
@@ -174,9 +190,10 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
         var tempDir = NSBundle.mainBundle().pathForResource("getSystemFB", ofType: "php")
         dir = "\(tempDir)"
         
-        // Delete the disgusting "Optional("...")"
+        // Delete the disgusting "Optional("...")" and handle blank
         dir = dir.substringFromIndex(advance(dir.startIndex, 10))
         dir = dir.substringToIndex(advance(dir.endIndex, -2))
+        dir = dir.stringByReplacingOccurrencesOfString(" ", withString: "\\ ")
         task.arguments = ["-c", "php \(dir)"]
         
         // Define
@@ -228,6 +245,63 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
                 break
             }
         }
+        
+        // Store Framebuffer
+//        var dic: NSMutableDictionary = NSMutableDictionary();
+//        var set: NSMutableDictionary = NSMutableDictionary();
+//        for var i = 0; i < systemFBname.count; i++ {
+//            if systemFBname[i].hasPrefix("---") {
+//                set = NSMutableDictionary()
+//                dic.setObject(set, forKey: systemFBname[i])
+//                continue
+//            }
+//            set.setObject(systemFBvalue[i], forKey: systemFBname[i])
+//        }
+//        dic.writeToFile("/Users/jogle/Desktop/offline.plist", atomically: true)
+    }
+    
+    func loadOfflineFB() {
+        var tempDir = NSBundle.mainBundle().pathForResource("OfflineFB", ofType: "plist")
+        var dir = "\(tempDir)"
+        
+        // Delete the disgusting "Optional("...")"
+        dir = dir.substringFromIndex(advance(dir.startIndex, 10))
+        dir = dir.substringToIndex(advance(dir.endIndex, -2))
+        
+        var info = NSMutableDictionary(contentsOfFile: dir)!
+        for (key, value) in info {
+            var name = "\(key)"
+            //name = name.substringFromIndex(advance(name.startIndex, 10))
+            //name = name.substringToIndex(advance(name.endIndex, -2))
+            
+            systemFBname.append(name)
+            systemFBvalue.append("")
+            var set: NSMutableDictionary = value as! NSMutableDictionary
+            for (k, v) in set {
+                var name = "\(k)"
+                //name = name.substringFromIndex(advance(name.startIndex, 10))
+                //name = name.substringToIndex(advance(name.endIndex, -2))
+                
+                var value = "\(v)"
+                //value = value.substringFromIndex(advance(value.startIndex, 10))
+                //value = value.substringToIndex(advance(value.endIndex, -2))
+                
+                systemFBname.append(name)
+                systemFBvalue.append(value)
+            }
+        }
+        
+        FBComboBox!.addItemsWithObjectValues(systemFBname)
+        for var i = 0; i < systemFBname.count; i++ {
+            if systemFBname[i].hasPrefix(FBName.stringValue) {
+                FBComboBox!.selectItemAtIndex(i)
+                FBInf!.stringValue = systemFBvalue[i]
+                saveButton!.enabled = true
+                break
+            }
+        }
+        
+        offlineSign.hidden = false
     }
     
     func showText(count: Int) {
@@ -282,14 +356,6 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
             encData.bezelStyle = NSTextFieldBezelStyle.RoundedBezel
             self.view.addSubview(encData)
             encDatas.append(encData)
-            
-            // Do Not Show hotplugin
-//            var hotpluginData = NSTextField()
-//            hotpluginData.stringValue = connectors[i].hotplugin
-//            hotpluginData.frame = CGRectMake(613, (CGFloat)(height), 40, 25)
-//            hotpluginData.bezelStyle = NSTextFieldBezelStyle.RoundedBezel
-//            self.view.addSubview(hotpluginData)
-//            hotpluginDatas.append(hotpluginData)
             
             // Show senseid
             var senseidData = NSTextField()
@@ -510,13 +576,9 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
             s.appendString("\nWarning: You may need to change the enc of LVDS to 01 to avoid screen mess\n")
         }
         
-        s.writeToFile(NSHomeDirectory() + "/Desktop/ATIData.txt", atomically: true, encoding: NSUTF8StringEncoding, error: nil)
-        
-        var task = NSTask()
-        task.launchPath = "/bin/sh"
-        var dir = NSHomeDirectory() + "/Desktop/ATIData.txt"
-        task.arguments = ["-c", "open \(dir)"]
-        task.launch()
+        var alert = NSAlert()
+        alert.messageText = s as String
+        alert.runModal()
     }
     
     func exitButtonPressed() {

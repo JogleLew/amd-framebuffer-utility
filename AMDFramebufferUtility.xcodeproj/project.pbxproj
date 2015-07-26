@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		153CE0331B5B3C7D006265AE /* CardInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 153CE0321B5B3C7D006265AE /* CardInfo.plist */; };
+		153FBF001B65208F00FC5EA0 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 153FBEFF1B65208F00FC5EA0 /* logo.png */; };
 		15412C5F1B482B8300EA1118 /* otool in Resources */ = {isa = PBXBuildFile; fileRef = 15412C5E1B482B8300EA1118 /* otool */; };
+		156E81591B650DBA005C4FE6 /* OfflineFB.plist in Resources */ = {isa = PBXBuildFile; fileRef = 156E81581B650DBA005C4FE6 /* OfflineFB.plist */; };
 		157A7B431B411DF000275C92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157A7B421B411DF000275C92 /* AppDelegate.swift */; };
 		157A7B471B411DF000275C92 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 157A7B461B411DF000275C92 /* Images.xcassets */; };
 		157A7B4A1B411DF100275C92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 157A7B481B411DF100275C92 /* Main.storyboard */; };
@@ -34,7 +36,9 @@
 
 /* Begin PBXFileReference section */
 		153CE0321B5B3C7D006265AE /* CardInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CardInfo.plist; sourceTree = "<group>"; };
+		153FBEFF1B65208F00FC5EA0 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		15412C5E1B482B8300EA1118 /* otool */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = otool; sourceTree = "<group>"; };
+		156E81581B650DBA005C4FE6 /* OfflineFB.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = OfflineFB.plist; sourceTree = "<group>"; };
 		157A7B3D1B411DF000275C92 /* AMDFramebufferUtility.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AMDFramebufferUtility.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		157A7B411B411DF000275C92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		157A7B421B411DF000275C92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -102,7 +106,9 @@
 				15D5CAA01B423999004875C4 /* Localizable.strings */,
 				157A7B461B411DF000275C92 /* Images.xcassets */,
 				153CE0321B5B3C7D006265AE /* CardInfo.plist */,
+				156E81581B650DBA005C4FE6 /* OfflineFB.plist */,
 				157A7B6F1B413EC600275C92 /* getSystemFB.php */,
+				153FBEFF1B65208F00FC5EA0 /* logo.png */,
 				15412C5E1B482B8300EA1118 /* otool */,
 				157A7B631B411E4800275C92 /* radeon_bios_decode */,
 				157A7B641B411E4800275C92 /* redsock_bios_decoder */,
@@ -220,7 +226,9 @@
 				157A7B701B413EC600275C92 /* getSystemFB.php in Resources */,
 				157A7B4A1B411DF100275C92 /* Main.storyboard in Resources */,
 				15412C5F1B482B8300EA1118 /* otool in Resources */,
+				156E81591B650DBA005C4FE6 /* OfflineFB.plist in Resources */,
 				15D5CA9E1B423999004875C4 /* Localizable.strings in Resources */,
+				153FBF001B65208F00FC5EA0 /* logo.png in Resources */,
 				157A7B651B411E4800275C92 /* radeon_bios_decode in Resources */,
 				153CE0331B5B3C7D006265AE /* CardInfo.plist in Resources */,
 				157A7B661B411E4800275C92 /* redsock_bios_decoder in Resources */,
@@ -329,6 +337,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "-D DEBUG";
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -366,6 +375,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_SWIFT_FLAGS = "";
 				SDKROOT = macosx;
 			};
 			name = Release;
