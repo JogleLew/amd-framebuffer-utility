@@ -11,6 +11,7 @@ import Cocoa
 
 class ResultViewController: NSViewController, NSComboBoxDelegate {
     var connectors: [Connector] = []
+    var fbOriginName: String = ""
     var PCIID: String = ""
     var systemFBname: [String] = []
     var systemFBvalue: [String] = []
@@ -47,12 +48,13 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
         showCardInfo()
         showOriginFB()
         FBComboBox!.setDelegate(self)
-        #if FIREWOLF_PE_SUPPORT
+        if fbOriginName == "" {
             loadOfflineFB()
-        #else
+        }
+        else {
             var myThread = NSThread(target: self, selector: "getSystemFB", object: nil)
             myThread.start()
-        #endif
+        }
         
         showText(connectors.count)
         showData(connectors)
@@ -72,12 +74,8 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
         cardId.stringValue = PCIID
         
         // Get the path of CardInfo.plist
-        var tempDir = NSBundle.mainBundle().pathForResource("CardInfo", ofType: "plist")
+        var tempDir = NSBundle.mainBundle().pathForResource("CardInfo", ofType: "plist")!
         var dir = "\(tempDir)"
-        
-        // Delete the disgusting "Optional("...")"
-        dir = dir.substringFromIndex(advance(dir.startIndex, 10))
-        dir = dir.substringToIndex(advance(dir.endIndex, -2))
         
         var info = NSMutableDictionary(contentsOfFile: dir)!
         var id = ""
@@ -129,7 +127,7 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
         #endif
         
         // check Info.plist in AMDxxxxController
-        var kextInfo = NSMutableDictionary(contentsOfFile: "/System/Library/Extensions/\(controller.stringValue).kext/Contents/Info.plist")
+        var kextInfo = NSMutableDictionary(contentsOfFile: "/Volumes/\(fbOriginName)/System/Library/Extensions/\(controller.stringValue).kext/Contents/Info.plist")
         if kextInfo == nil {
             return
         }
@@ -168,33 +166,23 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
     }
     
     func getSystemFB() {
-        // Copy otool
-        var copyTask = NSTask()
-        copyTask.launchPath = "/bin/sh"
-        var otoolDir = NSBundle.mainBundle().pathForResource("otool", ofType: nil)
-        var dir = "\(otoolDir)"
+        // Get otool path
+        var otoolDir = NSBundle.mainBundle().pathForResource("otool", ofType: nil)!
+        var otooldir = "\(otoolDir)"
+
+        otooldir = otooldir.stringByReplacingOccurrencesOfString(" ", withString: "\\ ")
         
-        // Delete the disgusting "Optional("...")" and handle blank
-        dir = dir.substringFromIndex(advance(dir.startIndex, 10))
-        dir = dir.substringToIndex(advance(dir.endIndex, -2))
-        dir = dir.stringByReplacingOccurrencesOfString(" ", withString: "\\ ")
-        
-        copyTask.arguments = ["-c", "cp \(dir) /tmp/"]
-        copyTask.launch()
-        
-        // Get System FB by using getSystemFB.php
+        // Get System FB by using getSystemFB
         var task = NSTask()
         task.launchPath = "/bin/sh"
         
         // Get the path of program
-        var tempDir = NSBundle.mainBundle().pathForResource("getSystemFB", ofType: "php")
-        dir = "\(tempDir)"
-        
-        // Delete the disgusting "Optional("...")" and handle blank
-        dir = dir.substringFromIndex(advance(dir.startIndex, 10))
-        dir = dir.substringToIndex(advance(dir.endIndex, -2))
+        var tempDir = NSBundle.mainBundle().pathForResource("getSystemFB", ofType: nil)!
+        var dir = "\(tempDir)"
+
         dir = dir.stringByReplacingOccurrencesOfString(" ", withString: "\\ ")
-        task.arguments = ["-c", "php \(dir)"]
+        var fbOriginNameHandleBlank = fbOriginName.stringByReplacingOccurrencesOfString(" ", withString: "\\ ")
+        task.arguments = ["-c", "\(dir) \(fbOriginNameHandleBlank) \(otooldir)"]
         
         // Define
         var pipe = NSPipe()
@@ -205,12 +193,8 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
         
         task.launch()
         var data = file.readDataToEndOfFile()
-        var context1 = NSString(data: data, encoding: NSUTF8StringEncoding)
+        var context1 = NSString(data: data, encoding: NSUTF8StringEncoding)!
         var context = "\(context1)"
-        
-        // Delete the disgusting "Optional("...")"
-        context = context.substringFromIndex(advance(context.startIndex, 10))
-        context = context.substringToIndex(advance(context.endIndex, -2))
         
         var split = context.componentsSeparatedByString("\n")
         for var i = 0; i < split.count; i++ {
@@ -246,7 +230,7 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
             }
         }
         
-        // Store Framebuffer
+        //Store Framebuffer
 //        var dic: NSMutableDictionary = NSMutableDictionary();
 //        var set: NSMutableDictionary = NSMutableDictionary();
 //        for var i = 0; i < systemFBname.count; i++ {
@@ -261,31 +245,20 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
     }
     
     func loadOfflineFB() {
-        var tempDir = NSBundle.mainBundle().pathForResource("OfflineFB", ofType: "plist")
+        var tempDir = NSBundle.mainBundle().pathForResource("OfflineFB", ofType: "plist")!
         var dir = "\(tempDir)"
-        
-        // Delete the disgusting "Optional("...")"
-        dir = dir.substringFromIndex(advance(dir.startIndex, 10))
-        dir = dir.substringToIndex(advance(dir.endIndex, -2))
+        println(dir)
         
         var info = NSMutableDictionary(contentsOfFile: dir)!
         for (key, value) in info {
             var name = "\(key)"
-            //name = name.substringFromIndex(advance(name.startIndex, 10))
-            //name = name.substringToIndex(advance(name.endIndex, -2))
             
             systemFBname.append(name)
             systemFBvalue.append("")
             var set: NSMutableDictionary = value as! NSMutableDictionary
             for (k, v) in set {
                 var name = "\(k)"
-                //name = name.substringFromIndex(advance(name.startIndex, 10))
-                //name = name.substringToIndex(advance(name.endIndex, -2))
-                
                 var value = "\(v)"
-                //value = value.substringFromIndex(advance(value.startIndex, 10))
-                //value = value.substringToIndex(advance(value.endIndex, -2))
-                
                 systemFBname.append(name)
                 systemFBvalue.append(value)
             }
@@ -327,14 +300,14 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
             
             // Show Control Flag
             var controlFlagBox = NSComboBox()
-            controlFlagBox.frame = CGRectMake(415, (CGFloat)(height), 125, 25)
+            controlFlagBox.frame = CGRectMake(415, (CGFloat)(height), 175, 25)
             switch connectors[i].type {
                 case 1: controlFlagBox.addItemsWithObjectValues(["0x0014(DVI-D)", "0x0214(DVI-I)", "0x0204(DVI-I)"])
-                case 2: controlFlagBox.addItemsWithObjectValues(["0x0304(高清接口)", "0x0604(普通接口)"])
-                case 3: controlFlagBox.addItemWithObjectValue("0x0204(默认)")
-                case 4: controlFlagBox.addItemsWithObjectValues(["0x0040(普通接口)", "0x0100(高清接口)"])
+                case 2: controlFlagBox.addItemsWithObjectValues(["0x0304(" + NSLocalizedString("HIGH_RESOLUTION", comment: "High Resolution") + ")", "0x0604(" + NSLocalizedString("NORMAL", comment: "Normal") + ")"])
+                case 3: controlFlagBox.addItemWithObjectValue("0x0204(" + NSLocalizedString("DEFAULT", comment: "Default") + ")")
+                case 4: controlFlagBox.addItemsWithObjectValues(["0x0040(" + NSLocalizedString("NORMAL", comment: "Normal") + ")", "0x0100(" + NSLocalizedString("HIGH_RESOLUTION", comment: "High Resolution") + ")"])
                 case 5: controlFlagBox.addItemsWithObjectValues(["0x0014(DVI-D)", "0x0214(DVI-I)"])
-                case 6: controlFlagBox.addItemWithObjectValue("0x0010(默认)")
+                case 6: controlFlagBox.addItemWithObjectValue("0x0010(" + NSLocalizedString("DEFAULT", comment: "Default") + ")")
                 default: controlFlagBox.addItemWithObjectValue("---")
             }
             controlFlagBox.selectItemAtIndex(connectors[i].controlFlag)
@@ -344,7 +317,7 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
             // Show txmit
             var txmitData = NSTextField()
             txmitData.stringValue = connectors[i].txmit
-            txmitData.frame = CGRectMake(558, (CGFloat)(height+2), 40, 25)
+            txmitData.frame = CGRectMake(608, (CGFloat)(height+2), 40, 25)
             txmitData.bezelStyle = NSTextFieldBezelStyle.RoundedBezel
             self.view.addSubview(txmitData)
             txmitDatas.append(txmitData)
@@ -352,7 +325,7 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
             // Show enc
             var encData = NSTextField()
             encData.stringValue = connectors[i].enc
-            encData.frame = CGRectMake(613, (CGFloat)(height+2), 40, 25)
+            encData.frame = CGRectMake(663, (CGFloat)(height+2), 40, 25)
             encData.bezelStyle = NSTextFieldBezelStyle.RoundedBezel
             self.view.addSubview(encData)
             encDatas.append(encData)
@@ -360,7 +333,7 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
             // Show senseid
             var senseidData = NSTextField()
             senseidData.stringValue = connectors[i].senseid
-            senseidData.frame = CGRectMake(668, (CGFloat)(height+2), 40, 25)
+            senseidData.frame = CGRectMake(718, (CGFloat)(height+2), 40, 25)
             senseidData.bezelStyle = NSTextFieldBezelStyle.RoundedBezel
             self.view.addSubview(senseidData)
             senseidDatas.append(senseidData)
@@ -549,7 +522,12 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
                 s.appendString("0000")
             }
             else {
-                s.appendString(originPlaceholders[i])
+                if i >= originPlaceholders.count {
+                    s.appendString("0000")
+                }
+                else {
+                    s.appendString(originPlaceholders[i])
+                }
             }
             
             s.appendString(txmitDatas[j].stringValue + encDatas[j].stringValue)
@@ -562,7 +540,12 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
                 }
             }
             else {
-                s.appendString(originHotplugins[i])
+                if i >= originHotplugins.count {
+                    s.appendString("00")
+                }
+                else {
+                    s.appendString(originHotplugins[i])
+                }
             }
             
             s.appendString(senseidDatas[j].stringValue + "\n")
@@ -588,6 +571,11 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
     func comboBoxSelectionDidChange(notification: NSNotification) {
         var i = FBComboBox!.indexOfSelectedItem
         FBInf?.stringValue = systemFBvalue[i]
-        saveButton!.enabled = true
+        if systemFBname[i].hasPrefix("---") {
+            saveButton!.enabled = false
+        }
+        else {
+            saveButton!.enabled = true
+        }
     }
 }

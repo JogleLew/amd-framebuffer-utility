@@ -11,26 +11,22 @@ import Cocoa
 
 class ViewController: NSViewController {
     var connectors: [Connector] = []
+    var fbOriginArray: [String] = []
     var PCIID: String = ""
     
     @IBOutlet weak var processStatus: NSImageView!
     @IBOutlet weak var showDataButton: NSButton!
     
     @IBOutlet weak var pathControl: NSPathControl!
-    @IBOutlet weak var PEWarning: NSTextField!
     
+    @IBOutlet weak var framebufferOrigin: NSComboBox!
     override func viewDidLoad() {
         super.viewDidLoad()
+        findSLE()
         
         // Do any additional setup after loading the view.
         showDataButton.enabled = false
         showDataButton.hidden = true
-        #if FIREWOLF_PE_SUPPORT
-            PEWarning.hidden = false
-            println("FireWolf PE Support: Yes")
-        #else
-            PEWarning.hidden = true
-        #endif
         
         #if DEBUG
             println("Debug Mode: Enable")
@@ -234,6 +230,12 @@ class ViewController: NSViewController {
         var viewController = segue.destinationController as! ResultViewController
         viewController.connectors = connectors
         viewController.PCIID = PCIID.uppercaseString
+        if framebufferOrigin.indexOfSelectedItem == 0 {
+            viewController.fbOriginName = ""
+        }
+        else {
+            viewController.fbOriginName = fbOriginArray[framebufferOrigin.indexOfSelectedItem - 1]
+        }
         #if DEBUG
             println("******************************************")
             println("Segue to Result View")
@@ -249,12 +251,8 @@ class ViewController: NSViewController {
         task.launchPath = "/bin/sh"
         
         // Get the path of program
-        var tempDir = NSBundle.mainBundle().pathForResource(name, ofType: nil)
+        var tempDir = NSBundle.mainBundle().pathForResource(name, ofType: nil)!
         var dir = "\(tempDir)"
-        
-        // Delete the disgusting "Optional("...")"
-        dir = dir.substringFromIndex(advance(dir.startIndex, 10))
-        dir = dir.substringToIndex(advance(dir.endIndex, -2))
         
         var dirHandleBlank = dir.stringByReplacingOccurrencesOfString(" ", withString: "\\ ")
         var inputFileHandleBlank = inputFile.stringByReplacingOccurrencesOfString(" ", withString: "\\ ")
@@ -276,6 +274,25 @@ class ViewController: NSViewController {
         #endif
         
         return "\(context1)"
+    }
+    
+    func findSLE() {
+        framebufferOrigin.addItemWithObjectValue(NSLocalizedString("PROGRAM_DATA", comment: "Datas that program contains"))
+        framebufferOrigin.selectItemAtIndex(0)
+        var manager = NSFileManager.defaultManager()
+        var partitions = manager.contentsOfDirectoryAtPath("/Volumes", error: NSErrorPointer())
+        if partitions == nil || partitions?.count == 0{
+            return
+        }
+        var names = partitions as! [String]
+        for var i = 0; i < names.count; i++ {
+            var name = names[i]
+            if manager.fileExistsAtPath("/Volumes/\(name)/System/Library/Extensions") {
+                framebufferOrigin.addItemWithObjectValue(NSLocalizedString("FROM_PARTITION", comment: "Partition: ") + name)
+                fbOriginArray.append(name)
+            }
+        }
+        framebufferOrigin.selectItemAtIndex(1)
     }
 }
 

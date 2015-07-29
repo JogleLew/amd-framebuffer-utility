@@ -5,8 +5,8 @@
 /* Class = "NSMenu"; title = "Find"; ObjectID = "1b7-l0-nxx"; */
 "1b7-l0-nxx.title" = "Find";
 
-/* Class = "NSTextFieldCell"; title = "                 The developers of Chameleon Bootloader (ati.c)"; ObjectID = "2U7-tk-3ST"; */
-"2U7-tk-3ST.title" = "                 Chameleon Bootloader 的开发者 (ati.c)";
+/* Class = "NSTextFieldCell"; title = "                 The developers of Chamelon Bootloader (ati.c)"; ObjectID = "2U7-tk-3ST"; */
+"2U7-tk-3ST.title" = "                 The developers of Chamelon Bootloader (ati.c)";
 
 /* Class = "NSMenuItem"; title = "Transformations"; ObjectID = "2oI-Rn-ZJC"; */
 "2oI-Rn-ZJC.title" = "Transformations";
@@ -30,7 +30,7 @@
 "5kV-Vb-QxS.title" = "About AMDFramebufferUtility";
 
 /* Class = "NSTextFieldCell"; title = "Kext:"; ObjectID = "6DG-cC-g84"; */
-"6DG-cC-g84.title" = "Kext: ";
+"6DG-cC-g84.title" = "Kext:";
 
 /* Class = "NSMenuItem"; title = "Redo"; ObjectID = "6dh-zS-Vam"; */
 "6dh-zS-Vam.title" = "Redo";
@@ -39,19 +39,19 @@
 "78Y-hA-62v.title" = "Correct Spelling Automatically";
 
 /* Class = "NSTextFieldCell"; title = "Type"; ObjectID = "87s-4u-8Cf"; */
-"87s-4u-8Cf.title" = "类型";
+"87s-4u-8Cf.title" = "Type";
 
 /* Class = "NSTextFieldCell"; title = "Please select the ROM of graphic card: "; ObjectID = "8vb-gl-TLO"; */
-"8vb-gl-TLO.title" = "请选择您的显卡ROM文件：";
+"8vb-gl-TLO.title" = "Please select the ROM of graphic card: ";
 
 /* Class = "NSTextFieldCell"; title = "Original Framebuffer:"; ObjectID = "9Zu-h6-0Tq"; */
-"9Zu-h6-0Tq.title" = "原始Framebuffer：";
+"9Zu-h6-0Tq.title" = "Original Framebuffer:";
 
 /* Class = "NSMenuItem"; title = "Substitutions"; ObjectID = "9ic-FL-obx"; */
 "9ic-FL-obx.title" = "Substitutions";
 
 /* Class = "NSButtonCell"; title = "Select"; ObjectID = "9kN-TC-pWJ"; */
-"9kN-TC-pWJ.title" = "选择";
+"9kN-TC-pWJ.title" = "Select";
 
 /* Class = "NSMenuItem"; title = "Smart Copy/Paste"; ObjectID = "9yt-4B-nSM"; */
 "9yt-4B-nSM.title" = "Smart Copy/Paste";
@@ -60,19 +60,19 @@
 "AYu-sK-qS6.title" = "Main Menu";
 
 /* Class = "NSTextFieldCell"; title = "Control Flag"; ObjectID = "Alk-ye-Ecv"; */
-"Alk-ye-Ecv.title" = "控制标志";
+"Alk-ye-Ecv.title" = "Control Flag";
 
 /* Class = "NSMenuItem"; title = "Preferences…"; ObjectID = "BOF-NM-1cW"; */
 "BOF-NM-1cW.title" = "Preferences…";
 
 /* Class = "NSTextFieldCell"; title = "Unknown Status"; ObjectID = "BfL-Ic-Q7M"; */
-"BfL-Ic-Q7M.title" = "未知状态";
+"BfL-Ic-Q7M.title" = "Unknown Status";
 
 /* Class = "NSMenuItem"; title = "Save As…"; ObjectID = "Bw7-FT-i3A"; */
 "Bw7-FT-i3A.title" = "Save As…";
 
 /* Class = "NSTextFieldCell"; title = "(Data was provided by this program)"; ObjectID = "CrD-xY-yVj"; */
-"CrD-xY-yVj.title" = "（数据可能与您系统中的不同）";
+"CrD-xY-yVj.title" = "(Data was provided by this program)";
 
 /* Class = "NSMenuItem"; title = "Close"; ObjectID = "DVo-aG-piG"; */
 "DVo-aG-piG.title" = "Close";
@@ -90,10 +90,10 @@
 "FeM-D8-WVr.title" = "Substitutions";
 
 /* Class = "NSTextFieldCell"; title = "Get framebuffer from: "; ObjectID = "Fxl-sp-rNH"; */
-"Fxl-sp-rNH.title" = "Framebuffer获取来源：";
+"Fxl-sp-rNH.title" = "Get framebuffer from: ";
 
 /* Class = "NSTextFieldCell"; title = "Thanks to: The developers of radeon_bios_decode, redsock_bios_decoder"; ObjectID = "Gtk-mk-gJk"; */
-"Gtk-mk-gJk.title" = "感谢：radeon_bios_decode, redsock_bios_decoder的开发者";
+"Gtk-mk-gJk.title" = "Thanks to: The developers of radeon_bios_decode, redsock_bios_decoder";
 
 /* Class = "NSMenuItem"; title = "Text Replacement"; ObjectID = "HFQ-gK-NFA"; */
 "HFQ-gK-NFA.title" = "Text Replacement";
@@ -102,10 +102,10 @@
 "HFo-cy-zxI.title" = "Show Spelling and Grammar";
 
 /* Class = "NSTextFieldCell"; title = "Developer: ljg-pcbeta"; ObjectID = "HXF-J3-Cbk"; */
-"HXF-J3-Cbk.title" = "开发者：ljg-pcbeta";
+"HXF-J3-Cbk.title" = "Developer: ljg-pcbeta";
 
 /* Class = "NSButtonCell"; title = "Show Connectors Data"; ObjectID = "I0n-I2-iY2"; */
-"I0n-I2-iY2.title" = "显示接口数据";
+"I0n-I2-iY2.title" = "Show Connectors Data";
 
 /* Class = "NSTextFieldCell"; title = "txmit"; ObjectID = "I1S-xu-LIJ"; */
 "I1S-xu-LIJ.title" = "txmit";
@@ -129,10 +129,10 @@
 "NMo-om-nkz.title" = "Services";
 
 /* Class = "NSSegmentedCell"; Nz1-yA-lx5.ibShadowedLabels[0] = "Reassign all hotplugin bits"; ObjectID = "Nz1-yA-lx5"; */
-"Nz1-yA-lx5.ibShadowedLabels[0]" = "重新分配hotplugin";
+"Nz1-yA-lx5.ibShadowedLabels[0]" = "Reassign all hotplugin bits";
 
 /* Class = "NSSegmentedCell"; Nz1-yA-lx5.ibShadowedLabels[1] = "Use original hotplugin bits"; ObjectID = "Nz1-yA-lx5"; */
-"Nz1-yA-lx5.ibShadowedLabels[1]" = "使用原始的hotplugin";
+"Nz1-yA-lx5.ibShadowedLabels[1]" = "Use original hotplugin bits";
 
 /* Class = "NSMenuItem"; title = "Minimize"; ObjectID = "OY7-WF-poV"; */
 "OY7-WF-poV.title" = "Minimize";
@@ -174,10 +174,10 @@
 "WeT-3V-zwk.title" = "Paste and Match Style";
 
 /* Class = "NSSegmentedCell"; WmC-gq-o9O.ibShadowedLabels[0] = "Use zero to fill placeholder bits "; ObjectID = "WmC-gq-o9O"; */
-"WmC-gq-o9O.ibShadowedLabels[0]" = "用零填充占位符";
+"WmC-gq-o9O.ibShadowedLabels[0]" = "Use zero to fill placeholder bits ";
 
 /* Class = "NSSegmentedCell"; WmC-gq-o9O.ibShadowedLabels[1] = "Keep original placeholder bits"; ObjectID = "WmC-gq-o9O"; */
-"WmC-gq-o9O.ibShadowedLabels[1]" = "保持原有占位符";
+"WmC-gq-o9O.ibShadowedLabels[1]" = "Keep original placeholder bits";
 
 /* Class = "NSMenuItem"; title = "Find…"; ObjectID = "Xz5-n4-O0W"; */
 "Xz5-n4-O0W.title" = "Find…";
@@ -189,7 +189,7 @@
 "Ynk-f8-cLZ.title" = "Start Speaking";
 
 /* Class = "NSTextFieldCell"; title = "Recommend Framebuffer to replace: "; ObjectID = "Zji-Fe-bZ7"; */
-"Zji-Fe-bZ7.title" = "推荐替换的framebuffer：";
+"Zji-Fe-bZ7.title" = "Recommend Framebuffer to replace: ";
 
 /* Class = "NSMenuItem"; title = "Print…"; ObjectID = "aTl-1u-JFS"; */
 "aTl-1u-JFS.title" = "Print…";
@@ -198,10 +198,10 @@
 "aUF-d1-5bR.title" = "Window";
 
 /* Class = "NSTextFieldCell"; title = "SJ_UnderWater from TonyMacx86 (php script to get framebuffer)"; ObjectID = "asp-GA-m6i"; */
-"asp-GA-m6i.title" = "SJ_UnderWater 来自 TonyMacx86论坛 (获得framebuffer的php脚本)";
+"asp-GA-m6i.title" = "SJ_UnderWater from TonyMacx86 (php script to get framebuffer)";
 
 /* Class = "NSTextFieldCell"; title = "Graphic Card Info: "; ObjectID = "bO6-lJ-eBo"; */
-"bO6-lJ-eBo.title" = "显卡信息：";
+"bO6-lJ-eBo.title" = "Graphic Card Info: ";
 
 /* Class = "NSMenu"; title = "File"; ObjectID = "bib-Uj-vzu"; */
 "bib-Uj-vzu.title" = "File";
@@ -240,7 +240,7 @@
 "hz9-B4-Xy5.title" = "Services";
 
 /* Class = "NSTextFieldCell"; title = "Testers neycwby09, maojinbing, beastfang from PCBeta"; ObjectID = "m7l-Tb-gbi"; */
-"m7l-Tb-gbi.title" = "测试者 neycwby09, maojinbing, beastfang 来自 PCBeta论坛";
+"m7l-Tb-gbi.title" = "Testers neycwby09, maojinbing, beastfang from PCBeta";
 
 /* Class = "NSMenuItem"; title = "Check Grammar With Spelling"; ObjectID = "mK6-2p-4JG"; */
 "mK6-2p-4JG.title" = "Check Grammar With Spelling";
@@ -273,7 +273,7 @@
 "tXI-mr-wws.title" = "Open Recent";
 
 /* Class = "NSTextFieldCell"; title = "Framebuffer of Your Graphics Card: "; ObjectID = "tfr-ny-FCj"; */
-"tfr-ny-FCj.title" = "您显卡的framebuffer";
+"tfr-ny-FCj.title" = "Framebuffer of Your Graphics Card: ";
 
 /* Class = "NSMenu"; title = "AMDFramebufferUtility"; ObjectID = "uQy-DD-JDr"; */
 "uQy-DD-JDr.title" = "AMDFramebufferUtility";
@@ -306,10 +306,10 @@
 "z6F-FW-3nz.title" = "Show Substitutions";
 
 /* Class = "NSSegmentedCell"; zCG-xC-MNt.ibShadowedLabels[0] = "Keep order of connectors in ROM"; ObjectID = "zCG-xC-MNt"; */
-"zCG-xC-MNt.ibShadowedLabels[0]" = "保持ROM中的接口顺序";
+"zCG-xC-MNt.ibShadowedLabels[0]" = "Keep order of connectors in ROM";
 
 /* Class = "NSSegmentedCell"; zCG-xC-MNt.ibShadowedLabels[1] = "Insert into original framebuffer"; ObjectID = "zCG-xC-MNt"; */
-"zCG-xC-MNt.ibShadowedLabels[1]" = "插入原始framebuffer";
+"zCG-xC-MNt.ibShadowedLabels[1]" = "Insert into original framebuffer";
 
 /* Class = "NSTextFieldCell"; title = "enc"; ObjectID = "zPb-XL-jam"; */
 "zPb-XL-jam.title" = "enc";
