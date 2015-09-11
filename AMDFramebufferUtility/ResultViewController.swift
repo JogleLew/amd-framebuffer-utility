@@ -21,6 +21,7 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
     var encDatas: [NSTextField] = []
     var hotpluginDatas: [NSTextField] = []
     var senseidDatas: [NSTextField] = []
+    var checkBoxes: [NSButton] = []
     var saveButton: NSButton?
     
     @IBOutlet weak var cardInfo: NSTextField!
@@ -101,7 +102,7 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
         if controller.stringValue < "AMD7000Controller" {
             opt1.selectedSegment = 0
             opt2.selectedSegment = 0
-            opt3.selectedSegment = 0
+            opt3.selectedSegment = 1
         }
         else {
             opt1.selectedSegment = 1
@@ -221,10 +222,10 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
         }
         FBComboBox!.placeholderString = NSLocalizedString("SELECT_FB", comment: "Please select a framebuffer")
         FBComboBox!.addItemsWithObjectValues(systemFBname)
-        for var i = 0; i < systemFBname.count; i++ {
-            if systemFBname[i].hasPrefix(FBName.stringValue) {
-                FBComboBox!.selectItemAtIndex(i)
-                FBInf!.stringValue = systemFBvalue[i]
+        for var j = 0; j < systemFBname.count; j++ {
+            if systemFBname[j].lowercaseString.hasPrefix(FBName.stringValue.lowercaseString) {
+                FBComboBox!.selectItemAtIndex(j)
+                FBInf!.stringValue = systemFBvalue[j]
                 saveButton!.enabled = true
                 break
             }
@@ -287,9 +288,18 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
     func showData(connectors: [Connector]) {
         var height = 265
         for var i = 0; i < connectors.count; i++ {
+            // Show choose button
+            var checkBox = NSButton()
+            checkBox.title = ""
+            checkBox.setButtonType(NSButtonType.SwitchButton)
+            checkBox.state = NSOnState
+            checkBox.frame = CGRectMake(355, (CGFloat)(height+1), 25, 25)
+            self.view.addSubview(checkBox)
+            checkBoxes.append(checkBox)
+            
             // Show type
             var typeBox = NSTextField()
-            typeBox.frame = CGRectMake(323, (CGFloat)(height), 80, 25)
+            typeBox.frame = CGRectMake(388, (CGFloat)(height+2), 60, 25)
             typeBox.bezelStyle = NSTextFieldBezelStyle.RoundedBezel
             var reflect = ["---", "DDVI", "DP", "HDMI", "LVDS", "SDVI", "VGA"]
             typeBox.stringValue = reflect[connectors[i].type]
@@ -300,7 +310,9 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
             
             // Show Control Flag
             var controlFlagBox = NSComboBox()
-            controlFlagBox.frame = CGRectMake(415, (CGFloat)(height), 175, 25)
+            controlFlagBox.editable = false
+            controlFlagBox.selectable = true
+            controlFlagBox.frame = CGRectMake(465, (CGFloat)(height), 175, 25)
             switch connectors[i].type {
                 case 1: controlFlagBox.addItemsWithObjectValues(["0x0014(DVI-D)", "0x0214(DVI-I)", "0x0204(DVI-I)"])
                 case 2: controlFlagBox.addItemsWithObjectValues(["0x0304(" + NSLocalizedString("HIGH_RESOLUTION", comment: "High Resolution") + ")", "0x0604(" + NSLocalizedString("NORMAL", comment: "Normal") + ")"])
@@ -317,7 +329,7 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
             // Show txmit
             var txmitData = NSTextField()
             txmitData.stringValue = connectors[i].txmit
-            txmitData.frame = CGRectMake(608, (CGFloat)(height+2), 40, 25)
+            txmitData.frame = CGRectMake(658, (CGFloat)(height+2), 40, 25)
             txmitData.bezelStyle = NSTextFieldBezelStyle.RoundedBezel
             self.view.addSubview(txmitData)
             txmitDatas.append(txmitData)
@@ -325,7 +337,7 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
             // Show enc
             var encData = NSTextField()
             encData.stringValue = connectors[i].enc
-            encData.frame = CGRectMake(663, (CGFloat)(height+2), 40, 25)
+            encData.frame = CGRectMake(713, (CGFloat)(height+2), 40, 25)
             encData.bezelStyle = NSTextFieldBezelStyle.RoundedBezel
             self.view.addSubview(encData)
             encDatas.append(encData)
@@ -333,7 +345,7 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
             // Show senseid
             var senseidData = NSTextField()
             senseidData.stringValue = connectors[i].senseid
-            senseidData.frame = CGRectMake(718, (CGFloat)(height+2), 40, 25)
+            senseidData.frame = CGRectMake(768, (CGFloat)(height+2), 40, 25)
             senseidData.bezelStyle = NSTextFieldBezelStyle.RoundedBezel
             self.view.addSubview(senseidData)
             senseidDatas.append(senseidData)
@@ -364,6 +376,23 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
     }
     
     func saveButtonPressed() {
+        var connectors: [Connector] = []
+        var typeBoxs: [NSTextField] = []
+        var controlFlagBoxs: [NSComboBox] = []
+        var txmitDatas: [NSTextField] = []
+        var encDatas: [NSTextField] = []
+        var senseidDatas: [NSTextField] = []
+        for var i = 0; i < self.connectors.count; i++ {
+            if checkBoxes[i].state == NSOnState {
+                connectors.append(self.connectors[i])
+                typeBoxs.append(self.typeBoxs[i])
+                controlFlagBoxs.append(self.controlFlagBoxs[i])
+                txmitDatas.append(self.txmitDatas[i])
+                encDatas.append(self.encDatas[i])
+                senseidDatas.append(self.senseidDatas[i])
+            }
+        }
+        
         var s = NSMutableString()
         s.appendString(PCIID + "\n\n")
         s.appendString("ATI Connectors Data: \n")

@@ -103,15 +103,21 @@ class ViewController: NSViewController {
         connectors = []
         
         // Get senseid
-        var hotpluginAllocate = 1
-        var type = 0
-        var hotplugin = ""
-        var senseid = ""
         for var i = 0; i < splitResult.count; i++ {
             if (splitResult[i].hasPrefix("Connector at index")) {
+                var senseid = "0"
                 i += 3
                 var items = splitResult[i].componentsSeparatedByString(" ")
-                senseid = items[items.count - 1].substringFromIndex(advance(items[items.count - 1].startIndex, 2))
+                if count(items[items.count - 1]) >= 3 {
+                    senseid = items[items.count - 1].substringFromIndex(advance(items[items.count - 1].startIndex, 2))
+                }
+                else {
+                    i -= 2
+                    items = splitResult[i].componentsSeparatedByString(" ")
+                    if items[items.count - 2] != "LVDS" {
+                        continue
+                    }
+                }
                 if (count(senseid) == 1) {
                     senseid = "0" + senseid
                 }
@@ -133,28 +139,43 @@ class ViewController: NSViewController {
         splitResult = result.componentsSeparatedByString("\n")
         
         // Get type, txmit, enc
+        var type = 0
+        var controlFlag = 0
         var txmit = ""
         var enc = ""
         var duallink = ""
-        var currentPos = 0
+        var currentPos = -1
         var mergeFlag = false
         for var i = 0; i < splitResult.count; i++ {
+            type = 0
+            controlFlag = 0
+            txmit = ""
+            enc = ""
+            duallink = ""
             if (splitResult[i].hasPrefix("Connector Object Id")) {
                 var items = splitResult[i].componentsSeparatedByString(" ")
                 switch items[3] {
-                    case "[1]": connectors[currentPos].setType(5) //SDVI-I
-                                connectors[currentPos].setControlFlag(1)
-                    case "[2]": connectors[currentPos].setType(1) //DDVI-I
-                                connectors[currentPos].setControlFlag(1)
-                    case "[3]": connectors[currentPos].setType(5) //SDVI-D
-                                connectors[currentPos].setControlFlag(0)
-                    case "[4]": connectors[currentPos].setType(1) //DDVI-D
-                                connectors[currentPos].setControlFlag(0)
-                    case "[5]": connectors[currentPos].setType(6) //VGA
-                    case "[12]", "[13]": connectors[currentPos].setType(3)//HDMI
-                    case "[14]": connectors[currentPos].setType(4) //LVDS
-                    case "[19]", "[20]": connectors[currentPos].setType(2) //DP
-                    default: connectors[currentPos].setType(0) //Null
+                    case "[1]": type = 5 //SDVI-I
+                                controlFlag = 1
+                    case "[2]": type = 1 //DDVI-I
+                                controlFlag = 1
+                    case "[3]": type = 5 //SDVI-D
+                                controlFlag = 0
+                    case "[4]": type = 1 //DDVI-D
+                                controlFlag = 0
+                    case "[5]": type = 6 //VGA
+                                controlFlag = 0
+                    case "[12]", "[13]": type = 3 //HDMI
+                                controlFlag = 0
+                    case "[14]": type = 4 //LVDS
+                                controlFlag = 0
+                    case "[19]", "[20]": type = 2 //DP
+                                controlFlag = 0
+                    default: type = 0 //Null
+                                controlFlag = 0
+                }
+                if type == 0 {
+                    continue
                 }
                 i++
                 items = splitResult[i].componentsSeparatedByString(" ")
@@ -187,32 +208,38 @@ class ViewController: NSViewController {
                         var x = advance(items[j].startIndex, 2)
                         var y = advance(items[j].startIndex, 3)
                         duallink = items[j].substringWithRange(Range<String.Index>(start: x, end: y))
-                        if connectors[currentPos].type == 2 && duallink == "1" {
-                            connectors[currentPos].setControlFlag(1)
+                        if type == 2 && duallink == "1" {
+                            controlFlag = 1
                         }
                     }
                 }
                 
                 if mergeFlag {
-                    if enc == "10" {
-                        connectors[currentPos].setTxmit(txmit)
-                    }
-                    else {
-                        connectors[currentPos].setEnc(enc)
-                    }
-                }
-                else {
+                    mergeFlag = false
+                    currentPos++
+                    connectors[currentPos].setType(type)
+                    connectors[currentPos].setControlFlag(controlFlag)
                     connectors[currentPos].setTxmit(txmit)
                     connectors[currentPos].setEnc(enc)
                 }
-                
-                if connectors[currentPos].type == 1 && connectors[currentPos].controlFlag == 1 {
-                    mergeFlag = !mergeFlag
-                    if mergeFlag {
-                        continue
+                else {
+                    if currentPos >= 0 && type == 1 && controlFlag == 1 && connectors[currentPos].type == 1 && connectors[currentPos].controlFlag == 1 {
+                        mergeFlag = true;
+                        if enc == "10" {
+                            connectors[currentPos].setTxmit(txmit)
+                        }
+                        else if enc != "" {
+                            connectors[currentPos].setEnc(enc)
+                        }
+                    }
+                    else {
+                        currentPos++
+                        connectors[currentPos].setType(type)
+                        connectors[currentPos].setControlFlag(controlFlag)
+                        connectors[currentPos].setTxmit(txmit)
+                        connectors[currentPos].setEnc(enc)
                     }
                 }
-                currentPos++
             }
         }
         

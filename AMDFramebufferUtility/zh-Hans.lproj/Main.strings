@@ -5,8 +5,8 @@
 /* Class = "NSMenu"; title = "Find"; ObjectID = "1b7-l0-nxx"; */
 "1b7-l0-nxx.title" = "Find";
 
-/* Class = "NSTextFieldCell"; title = "                 The developers of Chameleon Bootloader (ati.c)"; ObjectID = "2U7-tk-3ST"; */
-"2U7-tk-3ST.title" = "                 Chameleon Bootloader 的开发者 (ati.c)";
+/* Class = "NSTextFieldCell"; title = "The developers of Chameleon Bootloader (ati.c)"; ObjectID = "2U7-tk-3ST"; */
+"2U7-tk-3ST.title" = "Chameleon Bootloader 的开发者 (ati.c)";
 
 /* Class = "NSMenuItem"; title = "Transformations"; ObjectID = "2oI-Rn-ZJC"; */
 "2oI-Rn-ZJC.title" = "Transformations";
@@ -93,7 +93,7 @@
 "Fxl-sp-rNH.title" = "Framebuffer获取来源：";
 
 /* Class = "NSTextFieldCell"; title = "Thanks to: The developers of radeon_bios_decode, redsock_bios_decoder"; ObjectID = "Gtk-mk-gJk"; */
-"Gtk-mk-gJk.title" = "感谢：radeon_bios_decode, redsock_bios_decoder的开发者";
+"Gtk-mk-gJk.title" = "致以感谢： radeon_bios_decode, redsock_bios_decoder的开发者";
 
 /* Class = "NSMenuItem"; title = "Text Replacement"; ObjectID = "HFQ-gK-NFA"; */
 "HFQ-gK-NFA.title" = "Text Replacement";
@@ -198,7 +198,7 @@
 "aUF-d1-5bR.title" = "Window";
 
 /* Class = "NSTextFieldCell"; title = "SJ_UnderWater from TonyMacx86 (php script to get framebuffer)"; ObjectID = "asp-GA-m6i"; */
-"asp-GA-m6i.title" = "SJ_UnderWater 来自 TonyMacx86论坛 (获得framebuffer的php脚本)";
+"asp-GA-m6i.title" = "SJ_UnderWater 来自 TonyMacx86论坛(获得framebuffer的php脚本)";
 
 /* Class = "NSTextFieldCell"; title = "Graphic Card Info: "; ObjectID = "bO6-lJ-eBo"; */
 "bO6-lJ-eBo.title" = "显卡信息：";
@@ -240,7 +240,7 @@
 "hz9-B4-Xy5.title" = "Services";
 
 /* Class = "NSTextFieldCell"; title = "Testers neycwby09, maojinbing, beastfang from PCBeta"; ObjectID = "m7l-Tb-gbi"; */
-"m7l-Tb-gbi.title" = "测试者 neycwby09, maojinbing, beastfang 来自 PCBeta论坛";
+"m7l-Tb-gbi.title" = "来自 PCBeta 论坛的大量测试者";
 
 /* Class = "NSMenuItem"; title = "Check Grammar With Spelling"; ObjectID = "mK6-2p-4JG"; */
 "mK6-2p-4JG.title" = "Check Grammar With Spelling";
