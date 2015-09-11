@@ -5,15 +5,19 @@ For Hackintoshers!
 1. Get Framebuffer informations from ROM of graphics card
 1. Get origin Framebuffer informations from AMD kexts
 1. Recommend suitable Framebuffer to users
-1. Adjust your Framebuffer and save to file on your desktop
+1. Adjust your Framebuffer and show connectors information
 
 #System Requirement
 
 OS X 10.9+
 
-#How To Use
+#Guide Page (Chinese)
 
-Open AMD FrameBuffer Utility.app
+http://bbs.pcbeta.com/viewthread-1637874-1-1.html
+
+#Release Page (Chinese)
+
+http://bbs.pcbeta.com/viewthread-1608818-1-1.html
 
 #Change Log
 
