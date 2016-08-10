@@ -10,13 +10,14 @@ import Foundation
 import Cocoa
 
 class ResultViewController: NSViewController, NSComboBoxDelegate {
+    var mode: Int = 0;
     var connectors: [Connector] = []
     var fbOriginName: String = ""
     var PCIID: String = ""
     var systemFBname: [String] = []
     var systemFBvalue: [String] = []
     var typeBoxs: [NSTextField] = []
-    var controlFlagBoxs: [NSComboBox] = []
+    var controlFlagBoxs: [NSPopUpButton] = []
     var txmitDatas: [NSTextField] = []
     var encDatas: [NSTextField] = []
     var hotpluginDatas: [NSTextField] = []
@@ -53,7 +54,7 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
             loadOfflineFB()
         }
         else {
-            var myThread = NSThread(target: self, selector: "getSystemFB", object: nil)
+            let myThread = NSThread(target: self, selector: #selector(ResultViewController.getSystemFB), object: nil)
             myThread.start()
         }
         
@@ -75,29 +76,29 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
         cardId.stringValue = PCIID
         
         // Get the path of CardInfo.plist
-        var tempDir = NSBundle.mainBundle().pathForResource("CardInfo", ofType: "plist")!
-        var dir = "\(tempDir)"
+        let tempDir = NSBundle.mainBundle().pathForResource("CardInfo", ofType: "plist")!
+        let dir = "\(tempDir)"
         
-        var info = NSMutableDictionary(contentsOfFile: dir)!
+        let info = NSMutableDictionary(contentsOfFile: dir)!
         var id = ""
-        if count(PCIID) >= 13 {
-            id = PCIID.substringFromIndex(advance(PCIID.startIndex, 13))
+        if PCIID.characters.count >= 13 {
+            id = PCIID.substringFromIndex(PCIID.startIndex.advancedBy(13))
             #if DEUBUG
                 println("PCI ID: 1002-\(PCIID)")
             #endif
         }
         
         if info.objectForKey(id) == nil {
-            var alert = NSAlert()
+            let alert = NSAlert()
             alert.messageText = NSLocalizedString("CARD_INFO_NOT_FOUND", comment: "Card Info Not Found!")
             alert.runModal()
             return
         }
-        var inf: NSMutableDictionary = info.objectForKey(id) as! NSMutableDictionary
+        let inf: NSMutableDictionary = info.objectForKey(id) as! NSMutableDictionary
 
         //Split Card Name, Is Mobile, Recommend Framebuffer
         var name = inf.objectForKey("Card Name") as! String
-        var isMobile = inf.objectForKey("isMobile") as! Bool
+        let isMobile = inf.objectForKey("isMobile") as! Bool
         controller.stringValue = inf.objectForKey("Controller") as! String
         if controller.stringValue < "AMD7000Controller" {
             opt1.selectedSegment = 0
@@ -128,19 +129,19 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
         #endif
         
         // check Info.plist in AMDxxxxController
-        var kextInfo = NSMutableDictionary(contentsOfFile: "/Volumes/\(fbOriginName)/System/Library/Extensions/\(controller.stringValue).kext/Contents/Info.plist")
+        let kextInfo = NSMutableDictionary(contentsOfFile: "/Volumes/\(fbOriginName)/System/Library/Extensions/\(controller.stringValue).kext/Contents/Info.plist")
         if kextInfo == nil {
             return
         }
-        var IOKitPersonalities: NSMutableDictionary? = kextInfo!.objectForKey("IOKitPersonalities") as! NSMutableDictionary?
+        let IOKitPersonalities: NSMutableDictionary? = kextInfo!.objectForKey("IOKitPersonalities") as! NSMutableDictionary?
         if IOKitPersonalities == nil {
             return
         }
-        var Controller: NSMutableDictionary? = IOKitPersonalities!.objectForKey("Controller") as! NSMutableDictionary?
+        let Controller: NSMutableDictionary? = IOKitPersonalities!.objectForKey("Controller") as! NSMutableDictionary?
         if Controller == nil {
             return
         }
-        var IOPCIMatch: String? = Controller!.objectForKey("IOPCIMatch") as! String?
+        let IOPCIMatch: String? = Controller!.objectForKey("IOPCIMatch") as! String?
         if IOPCIMatch == nil {
             return
         }
@@ -168,37 +169,45 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
     
     func getSystemFB() {
         // Get otool path
-        var otoolDir = NSBundle.mainBundle().pathForResource("otool", ofType: nil)!
+        let otoolDir = NSBundle.mainBundle().pathForResource("otool", ofType: nil)!
         var otooldir = "\(otoolDir)"
 
         otooldir = otooldir.stringByReplacingOccurrencesOfString(" ", withString: "\\ ")
         
         // Get System FB by using getSystemFB
-        var task = NSTask()
+        let task = NSTask()
         task.launchPath = "/bin/sh"
         
         // Get the path of program
-        var tempDir = NSBundle.mainBundle().pathForResource("getSystemFB", ofType: nil)!
+        var tempDir = "";
+        if mode == 0 {
+            tempDir = NSBundle.mainBundle().pathForResource("getSystemFB16", ofType: nil)!
+        }
+        else if mode == 1 {
+            tempDir = NSBundle.mainBundle().pathForResource("getSystemFB24", ofType: nil)!
+        }
         var dir = "\(tempDir)"
 
         dir = dir.stringByReplacingOccurrencesOfString(" ", withString: "\\ ")
-        var fbOriginNameHandleBlank = fbOriginName.stringByReplacingOccurrencesOfString(" ", withString: "\\ ")
+        let fbOriginNameHandleBlank = fbOriginName.stringByReplacingOccurrencesOfString(" ", withString: "\\ ")
         task.arguments = ["-c", "\(dir) \(fbOriginNameHandleBlank) \(otooldir)"]
         
         // Define
-        var pipe = NSPipe()
+        let pipe = NSPipe()
         task.standardOutput = pipe
         
         var file = NSFileHandle()
         file = pipe.fileHandleForReading
         
         task.launch()
-        var data = file.readDataToEndOfFile()
-        var context1 = NSString(data: data, encoding: NSUTF8StringEncoding)!
-        var context = "\(context1)"
+        let data = file.readDataToEndOfFile()
+        let context1 = NSString(data: data, encoding: NSUTF8StringEncoding)!
+        let context = "\(context1)"
         
         var split = context.componentsSeparatedByString("\n")
-        for var i = 0; i < split.count; i++ {
+        
+        var i = 0
+        while i < split.count {
             if split[i].hasSuffix("---") {
                 var s = split[i].stringByReplacingOccurrencesOfString("-", withString: "")
                 s = s.stringByReplacingOccurrencesOfString(".kext", withString: "")
@@ -206,23 +215,24 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
                 systemFBname.append(s)
                 systemFBvalue.append("")
             }
-            else if count(split[i]) > 0 {
+            else if split[i].characters.count > 0 {
                 var s = split[i].componentsSeparatedByString("@")
                 systemFBname.append(s[0])
                 var n = s[0].componentsSeparatedByString("(")
-                var num = "\(n[1][n[1].startIndex])".toInt()
+                let num = Int("\(n[1][n[1].startIndex])")
                 
                 var datas = ""
                 for _ in 0...num! {
-                    i++
+                    i += 1
                     datas += split[i] + "\n"
                 }
                 systemFBvalue.append(datas)
             }
+            i += 1
         }
         FBComboBox!.placeholderString = NSLocalizedString("SELECT_FB", comment: "Please select a framebuffer")
         FBComboBox!.addItemsWithObjectValues(systemFBname)
-        for var j = 0; j < systemFBname.count; j++ {
+        for j in 0 ..< systemFBname.count {
             if systemFBname[j].lowercaseString.hasPrefix(FBName.stringValue.lowercaseString) {
                 FBComboBox!.selectItemAtIndex(j)
                 FBInf!.stringValue = systemFBvalue[j]
@@ -231,10 +241,10 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
             }
         }
         
-        //Store Framebuffer
-//        var dic: NSMutableDictionary = NSMutableDictionary();
+//        // Store Framebuffer
+//        let dic: NSMutableDictionary = NSMutableDictionary();
 //        var set: NSMutableDictionary = NSMutableDictionary();
-//        for var i = 0; i < systemFBname.count; i++ {
+//        for i in 0 ..< systemFBname.count {
 //            if systemFBname[i].hasPrefix("---") {
 //                set = NSMutableDictionary()
 //                dic.setObject(set, forKey: systemFBname[i])
@@ -246,27 +256,33 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
     }
     
     func loadOfflineFB() {
-        var tempDir = NSBundle.mainBundle().pathForResource("OfflineFB", ofType: "plist")!
-        var dir = "\(tempDir)"
-        println(dir)
+        var tempDir = ""
+        if mode == 1 {
+            tempDir = NSBundle.mainBundle().pathForResource("OfflineFB24", ofType: "plist")!
+        }
+        else if mode == 0 {
+            tempDir = NSBundle.mainBundle().pathForResource("OfflineFB16", ofType: "plist")!
+        }
+        let dir = "\(tempDir)"
+        print(dir)
         
-        var info = NSMutableDictionary(contentsOfFile: dir)!
+        let info = NSMutableDictionary(contentsOfFile: dir)!
         for (key, value) in info {
-            var name = "\(key)"
+            let name = "\(key)"
             
             systemFBname.append(name)
             systemFBvalue.append("")
-            var set: NSMutableDictionary = value as! NSMutableDictionary
+            let set: NSMutableDictionary = value as! NSMutableDictionary
             for (k, v) in set {
-                var name = "\(k)"
-                var value = "\(v)"
+                let name = "\(k)"
+                let value = "\(v)"
                 systemFBname.append(name)
                 systemFBvalue.append(value)
             }
         }
         
         FBComboBox!.addItemsWithObjectValues(systemFBname)
-        for var i = 0; i < systemFBname.count; i++ {
+        for i in 0 ..< systemFBname.count {
             if systemFBname[i].hasPrefix(FBName.stringValue) {
                 FBComboBox!.selectItemAtIndex(i)
                 FBInf!.stringValue = systemFBvalue[i]
@@ -287,19 +303,19 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
     
     func showData(connectors: [Connector]) {
         var height = 265
-        for var i = 0; i < connectors.count; i++ {
+        for i in 0 ..< connectors.count {
             // Show choose button
-            var checkBox = NSButton()
+            let checkBox = NSButton()
             checkBox.title = ""
             checkBox.setButtonType(NSButtonType.SwitchButton)
             checkBox.state = NSOnState
-            checkBox.frame = CGRectMake(355, (CGFloat)(height+1), 25, 25)
+            checkBox.frame = CGRectMake(480, (CGFloat)(height+1), 25, 25)
             self.view.addSubview(checkBox)
             checkBoxes.append(checkBox)
             
             // Show type
-            var typeBox = NSTextField()
-            typeBox.frame = CGRectMake(388, (CGFloat)(height+2), 60, 25)
+            let typeBox = NSTextField()
+            typeBox.frame = CGRectMake(513, (CGFloat)(height+2), 60, 25)
             typeBox.bezelStyle = NSTextFieldBezelStyle.RoundedBezel
             var reflect = ["---", "DDVI", "DP", "HDMI", "LVDS", "SDVI", "VGA"]
             typeBox.stringValue = reflect[connectors[i].type]
@@ -309,43 +325,43 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
             typeBoxs.append(typeBox)
             
             // Show Control Flag
-            var controlFlagBox = NSComboBox()
-            controlFlagBox.editable = false
-            controlFlagBox.selectable = true
-            controlFlagBox.frame = CGRectMake(465, (CGFloat)(height), 175, 25)
+            let controlFlagBox = NSPopUpButton()
+            // controlFlagBox.editable = false
+            // controlFlagBox.selectable = true
+            controlFlagBox.frame = CGRectMake(590, (CGFloat)(height), 175, 25)
             switch connectors[i].type {
-                case 1: controlFlagBox.addItemsWithObjectValues(["0x0014(DVI-D)", "0x0214(DVI-I)", "0x0204(DVI-I)"])
-                case 2: controlFlagBox.addItemsWithObjectValues(["0x0304(" + NSLocalizedString("HIGH_RESOLUTION", comment: "High Resolution") + ")", "0x0604(" + NSLocalizedString("NORMAL", comment: "Normal") + ")"])
-                case 3: controlFlagBox.addItemWithObjectValue("0x0204(" + NSLocalizedString("DEFAULT", comment: "Default") + ")")
-                case 4: controlFlagBox.addItemsWithObjectValues(["0x0040(" + NSLocalizedString("NORMAL", comment: "Normal") + ")", "0x0100(" + NSLocalizedString("HIGH_RESOLUTION", comment: "High Resolution") + ")"])
-                case 5: controlFlagBox.addItemsWithObjectValues(["0x0014(DVI-D)", "0x0214(DVI-I)"])
-                case 6: controlFlagBox.addItemWithObjectValue("0x0010(" + NSLocalizedString("DEFAULT", comment: "Default") + ")")
-                default: controlFlagBox.addItemWithObjectValue("---")
+                case 1: controlFlagBox.addItemsWithTitles(["0x0014(DVI-D)", "0x0214(DVI-I)", "0x0204(DVI-I)"])
+                case 2: controlFlagBox.addItemsWithTitles(["0x0304(" + NSLocalizedString("HIGH_RESOLUTION", comment: "High Resolution") + ")", "0x0604(" + NSLocalizedString("NORMAL", comment: "Normal") + ")"])
+                case 3: controlFlagBox.addItemWithTitle("0x0204(" + NSLocalizedString("DEFAULT", comment: "Default") + ")")
+                case 4: controlFlagBox.addItemsWithTitles(["0x0040(" + NSLocalizedString("NORMAL", comment: "Normal") + ")", "0x0100(" + NSLocalizedString("HIGH_RESOLUTION", comment: "High Resolution") + ")"])
+                case 5: controlFlagBox.addItemsWithTitles(["0x0014(DVI-D)", "0x0214(DVI-I)"])
+                case 6: controlFlagBox.addItemWithTitle("0x0010(" + NSLocalizedString("DEFAULT", comment: "Default") + ")")
+                default: controlFlagBox.addItemWithTitle("---")
             }
             controlFlagBox.selectItemAtIndex(connectors[i].controlFlag)
             self.view.addSubview(controlFlagBox)
             controlFlagBoxs.append(controlFlagBox)
             
             // Show txmit
-            var txmitData = NSTextField()
+            let txmitData = NSTextField()
             txmitData.stringValue = connectors[i].txmit
-            txmitData.frame = CGRectMake(658, (CGFloat)(height+2), 40, 25)
+            txmitData.frame = CGRectMake(783, (CGFloat)(height+2), 40, 25)
             txmitData.bezelStyle = NSTextFieldBezelStyle.RoundedBezel
             self.view.addSubview(txmitData)
             txmitDatas.append(txmitData)
             
             // Show enc
-            var encData = NSTextField()
+            let encData = NSTextField()
             encData.stringValue = connectors[i].enc
-            encData.frame = CGRectMake(713, (CGFloat)(height+2), 40, 25)
+            encData.frame = CGRectMake(838, (CGFloat)(height+2), 40, 25)
             encData.bezelStyle = NSTextFieldBezelStyle.RoundedBezel
             self.view.addSubview(encData)
             encDatas.append(encData)
             
             // Show senseid
-            var senseidData = NSTextField()
+            let senseidData = NSTextField()
             senseidData.stringValue = connectors[i].senseid
-            senseidData.frame = CGRectMake(768, (CGFloat)(height+2), 40, 25)
+            senseidData.frame = CGRectMake(893, (CGFloat)(height+2), 40, 25)
             senseidData.bezelStyle = NSTextFieldBezelStyle.RoundedBezel
             self.view.addSubview(senseidData)
             senseidDatas.append(senseidData)
@@ -358,31 +374,31 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
         saveButton = NSButton()
         saveButton!.stringValue = NSLocalizedString("SAVE_ALL", comment: "Save All")
         saveButton!.title = NSLocalizedString("SAVE_ALL", comment: "Save All")
-        saveButton!.frame = CGRectMake(450, 5, 125, 35)
+        saveButton!.frame = CGRectMake(575, 5, 125, 35)
         saveButton!.bezelStyle = NSBezelStyle.RoundedBezelStyle
         saveButton!.enabled = false
         saveButton!.target = self
-        saveButton!.action = "saveButtonPressed"
+        saveButton!.action = #selector(ResultViewController.saveButtonPressed)
         self.view.addSubview(saveButton!)
         
-        var exitButton = NSButton()
+        let exitButton = NSButton()
         exitButton.stringValue = NSLocalizedString("EXIT", comment: "Exit")
         exitButton.title = NSLocalizedString("EXIT", comment: "Exit")
-        exitButton.frame = CGRectMake(600, 5, 125, 35)
+        exitButton.frame = CGRectMake(725, 5, 125, 35)
         exitButton.bezelStyle = NSBezelStyle.RoundedBezelStyle
         exitButton.target = self
-        exitButton.action = "exitButtonPressed"
+        exitButton.action = #selector(ResultViewController.exitButtonPressed)
         self.view.addSubview(exitButton)
     }
     
     func saveButtonPressed() {
         var connectors: [Connector] = []
         var typeBoxs: [NSTextField] = []
-        var controlFlagBoxs: [NSComboBox] = []
+        var controlFlagBoxs: [NSPopUpButton] = []
         var txmitDatas: [NSTextField] = []
         var encDatas: [NSTextField] = []
         var senseidDatas: [NSTextField] = []
-        for var i = 0; i < self.connectors.count; i++ {
+        for i in 0 ..< self.connectors.count {
             if checkBoxes[i].state == NSOnState {
                 connectors.append(self.connectors[i])
                 typeBoxs.append(self.typeBoxs[i])
@@ -393,7 +409,7 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
             }
         }
         
-        var s = NSMutableString()
+        let s = NSMutableString()
         s.appendString(PCIID + "\n\n")
         s.appendString("ATI Connectors Data: \n")
         s.appendString(systemFBname[FBComboBox!.indexOfSelectedItem] + "\n")
@@ -401,7 +417,7 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
         
         // Analyze Origin Framebuffer
         var split = systemFBvalue[FBComboBox!.indexOfSelectedItem].componentsSeparatedByString("\n")
-        var originTypes = split[0].componentsSeparatedByString(", ")
+        let originTypes = split[0].componentsSeparatedByString(", ")
         var originTypesID: [Int] = []
         for i in originTypes {
             switch i {
@@ -416,11 +432,13 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
         }
         var originPlaceholders: [String] = []
         var originHotplugins: [String] = []
-        for var j = 1; j < split.count - 1; j++ {
-            var placeholder = split[j].substringWithRange(Range<String.Index>(start: advance(split[j].startIndex, 20), end: advance(split[j].startIndex, 24)))
+        for j in 1 ..< split.count - 1 {
+            let range = split[j].startIndex.advancedBy(20) ..< split[j].startIndex.advancedBy(24)
+            let placeholder = split[j].substringWithRange(range)
             originPlaceholders.append(placeholder)
 
-            var hotplugin = split[j].substringWithRange(Range<String.Index>(start: advance(split[j].startIndex, 28), end: advance(split[j].startIndex, 30)))
+            let range2 = split[j].startIndex.advancedBy(28) ..< split[j].startIndex.advancedBy(30)
+            let hotplugin = split[j].substringWithRange(range2)
             originHotplugins.append(hotplugin)
         }
         
@@ -431,18 +449,24 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
         // value > 0 means ROM connector data
         // value < 0 means Origin Framebuffer connector data
         
+        if connectors.count == 0 {
+            let alert = NSAlert()
+            alert.messageText = "Please select at least 1 connector."
+            alert.runModal()
+            return
+        }
         if opt3.selectedSegment == 1 {
-            for var i = 1; i <= originTypes.count; i++ {
+            for i in 1...originTypes.count {
                 record.append(-i)
             }
             var choose: [Bool] = []
-            for var i = 1; i <= connectors.count; i++ {
+            for _ in 1...connectors.count {
                 choose.append(false)
             }
             
             // fill in record if connector type is same
-            for var j = 0; j < connectors.count; j++ {
-                for var k = 0; k < originTypes.count; k++ {
+            for j in 0 ..< connectors.count {
+                for k in 0 ..< originTypes.count {
                     if (originTypesID[k] == connectors[j].type) && (record[k] < 0) {
                         record[k] = j + 1
                         choose[j] = true
@@ -452,9 +476,9 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
             }
             
             // fill in record if no same connector type
-            for var j = 0; j < connectors.count; j++ {
+            for j in 0 ..< connectors.count {
                 if !choose[j] {
-                    for var k = 0; k < originTypes.count; k++ {
+                    for k in 0 ..< originTypes.count {
                         if record[k] < 0 {
                             record[k] = j + 1
                             choose[j] = true
@@ -465,23 +489,25 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
             }
             
             // delete unused
-            for var j = 0; j < record.count; j++ {
+            for j in 0 ..< record.count {
                 if record[j] < 0 {
                     record[j] = 0
                 }
             }
         }
         else{
-            var i = 0
-            for i = 1; i <= connectors.count; i++ {
+            var i = 1
+            while i <= connectors.count {
                 record.append(i)
+                i += 1
             }
-            for ; i <= originTypes.count; i++ {
+            while i <= originTypes.count {
                 record.append(0)
+                i += 1
             }
         }
         
-        for var i = 0; i < record.count; i++ {
+        for i in 0 ..< record.count {
             if record[i] == 0 {
                 s.appendString("Null")
                 if i < record.count - 1 {
@@ -498,18 +524,21 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
         s.appendString("\n")
         
         var allocateHotplugin = 0;
-        for var i = 0; i < record.count; i++ {
+        for i in 0 ..< record.count {
             if (record[i] == 0) {
+                if mode == 1 {
+                    s.appendString("0000000000000000")
+                }
                 s.appendString("00000000000000000000000000000000\n")
                 continue
             }
             
-            var j = record[i] - 1
+            let j = record[i] - 1
             // Connector type and Control Flag
             switch (connectors[j].type) {
                 case 1: // DDVI
                     s.appendString("04000000")
-                    switch (connectors[j].controlFlag) {
+                    switch (controlFlagBoxs[j].indexOfSelectedItem) {
                         case 0: s.appendString("14000000")
                         case 1: s.appendString("14020000")
                         case 2: s.appendString("04020000")
@@ -518,7 +547,7 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
                     s.appendString("0001")
                 case 2: // DP
                     s.appendString("00040000")
-                    switch (connectors[j].controlFlag) {
+                    switch (controlFlagBoxs[j].indexOfSelectedItem) {
                         case 0: s.appendString("04030000")
                         case 1: s.appendString("04060000")
                         default: s.appendString("<Error> ")
@@ -528,7 +557,7 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
                     s.appendString("00080000040200000071")
                 case 4: // LVDS
                     s.appendString("02000000")
-                    switch (connectors[j].controlFlag) {
+                    switch (controlFlagBoxs[j].indexOfSelectedItem) {
                         case 0: s.appendString("40000000")
                         case 1: s.appendString("00010000")
                         default: s.appendString("<Error> ")
@@ -536,7 +565,7 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
                     s.appendString("0901")
                 case 5: // SDVI
                     s.appendString("00020000")
-                    switch (connectors[j].controlFlag) {
+                    switch (controlFlagBoxs[j].indexOfSelectedItem) {
                         case 0: s.appendString("14000000")
                         case 1: s.appendString("14020000")
                         default: s.appendString("<Error> ")
@@ -559,13 +588,18 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
                 }
             }
             
+            if mode == 1 {
+                s.appendString("00000000")
+            }
+            
             s.appendString(txmitDatas[j].stringValue + encDatas[j].stringValue)
             if opt2.selectedSegment == 0 {
                 if connectors[j].type == 4 {
                     s.appendString("00")
                 }
                 else {
-                    s.appendString("0\(++allocateHotplugin)")
+                    allocateHotplugin += 1
+                    s.appendString("0\(allocateHotplugin)")
                 }
             }
             else {
@@ -577,7 +611,11 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
                 }
             }
             
-            s.appendString(senseidDatas[j].stringValue + "\n")
+            s.appendString(senseidDatas[j].stringValue)
+            if mode == 1 {
+                s.appendString("00000000")
+            }
+            s.appendString("\n")
         }
         
         // Special Condition Warning
@@ -588,7 +626,7 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
             s.appendString("\nWarning: You may need to change the enc of LVDS to 01 to avoid screen mess\n")
         }
         
-        var alert = NSAlert()
+        let alert = NSAlert()
         alert.messageText = s as String
         alert.runModal()
     }
@@ -598,7 +636,7 @@ class ResultViewController: NSViewController, NSComboBoxDelegate {
     }
     
     func comboBoxSelectionDidChange(notification: NSNotification) {
-        var i = FBComboBox!.indexOfSelectedItem
+        let i = FBComboBox!.indexOfSelectedItem
         FBInf?.stringValue = systemFBvalue[i]
         if systemFBname[i].hasPrefix("---") {
             saveButton!.enabled = false

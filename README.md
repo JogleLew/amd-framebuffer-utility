@@ -9,7 +9,7 @@ For Hackintoshers!
 
 #System Requirement
 
-OS X 10.9+
+OS X 10.9+ (support macOS Sierra 10.12)
 
 #Guide Page (Chinese)
 
@@ -21,6 +21,14 @@ http://bbs.pcbeta.com/viewthread-1608818-1-1.html
 
 #Change Log
 
+
+V3.0
+
+1. Support macOS Sierra 10.12
+1. Update cards info
+1. Fix crash bugs
+
+
 V2.0
 
 1. Redesign the user interface
@@ -30,6 +38,6 @@ V2.0
 
 V1.0
 
-1. Rewrite all program using Swift - Old One: https://github.com/JogleLew/AMDFrameBufferUtility-abandoned
+1. Rewrite all program using Swift (Old One is abandoned) 
 1. Add function: Get origin Framebuffer informations from AMD kexts && Recommend suitable Framebuffer
 

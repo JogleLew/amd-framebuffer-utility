@@ -26,3 +26,6 @@ FROM_PARTITION = "From partition: ";
 DEFAULT = "Default";
 NORMAL = "Normal";
 HIGH_RESOLUTION = "High Resolution";
+OLD_FRAMEBUFFER_LENGTH = "16 Bytes";
+NEW_FRAMEBUFFER_LENGTH = "24 Bytes";
+FB_LENGTH_TEXT = "Framebuffer length: ";

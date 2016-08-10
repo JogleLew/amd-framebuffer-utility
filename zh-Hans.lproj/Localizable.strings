@@ -26,3 +26,6 @@ FROM_PARTITION = "来自分区：";
 DEFAULT = "默认";
 NORMAL = "普通接口";
 HIGH_RESOLUTION = "高清接口";
+OLD_FRAMEBUFFER_LENGTH = "16字节";
+NEW_FRAMEBUFFER_LENGTH = "24字节";
+FB_LENGTH_TEXT = "Framebuffer长度：";

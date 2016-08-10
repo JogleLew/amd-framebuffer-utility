@@ -18,8 +18,10 @@ class ViewController: NSViewController {
     @IBOutlet weak var showDataButton: NSButton!
     
     @IBOutlet weak var pathControl: NSPathControl!
-    
-    @IBOutlet weak var framebufferOrigin: NSComboBox!
+
+    @IBOutlet weak var fbLengthText: NSTextField!
+    @IBOutlet weak var framebufferLength: NSPopUpButton!
+    @IBOutlet weak var framebufferOrigin: NSPopUpButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         findSLE()
@@ -29,7 +31,7 @@ class ViewController: NSViewController {
         showDataButton.hidden = true
         
         #if DEBUG
-            println("Debug Mode: Enable")
+            print("Debug Mode: Enable")
         #endif
     }
 
@@ -41,12 +43,12 @@ class ViewController: NSViewController {
 
     @IBAction func selectButtonPressed(sender: NSButtonCell) {
         #if DEBUG
-            println("******************************************")
-            println("Select button pressed.")
+            print("******************************************")
+            print("Select button pressed.")
         #endif
         
         // Open the panel for user to select ROM file
-        var panel = NSOpenPanel()
+        let panel = NSOpenPanel()
         panel.canChooseFiles = true
         panel.canChooseDirectories = false
         panel.runModal()
@@ -54,7 +56,7 @@ class ViewController: NSViewController {
         // If user not select a file, set void path and picture
         if panel.URLs.count == 0 {
             #if DEBUG
-                println("User do not select a file.")
+                print("User do not select a file.")
             #endif
             pathControl.hidden = true
             processStatus.image = nil //NSImage(named: "NSStatusNone");
@@ -62,9 +64,9 @@ class ViewController: NSViewController {
         }
         
         // Show path on window
-        var pathURL: NSURL = panel.URLs[0] as! NSURL
+        let pathURL: NSURL = panel.URLs[0] 
         #if DEBUG
-            println("Get URL: \(pathURL)")
+            print("Get URL: \(pathURL)")
         #endif
         pathControl.hidden = false
         pathControl.stringValue = pathURL.path!
@@ -90,7 +92,7 @@ class ViewController: NSViewController {
             showDataButton.enabled = false
             showDataButton.hidden = true
             #if DEBUG
-                println("ROM File: Invalid")
+                print("ROM File: Invalid")
             #endif
             return
         }
@@ -103,13 +105,14 @@ class ViewController: NSViewController {
         connectors = []
         
         // Get senseid
-        for var i = 0; i < splitResult.count; i++ {
+        var i = 0
+        while i < splitResult.count {
             if (splitResult[i].hasPrefix("Connector at index")) {
                 var senseid = "0"
                 i += 3
                 var items = splitResult[i].componentsSeparatedByString(" ")
-                if count(items[items.count - 1]) >= 3 {
-                    senseid = items[items.count - 1].substringFromIndex(advance(items[items.count - 1].startIndex, 2))
+                if items[items.count - 1].characters.count >= 3 {
+                    senseid = items[items.count - 1].substringFromIndex(items[items.count - 1].startIndex.advancedBy(2))
                 }
                 else {
                     i -= 2
@@ -118,20 +121,24 @@ class ViewController: NSViewController {
                         continue
                     }
                 }
-                if (count(senseid) == 1) {
+                if (senseid.characters.count == 1) {
                     senseid = "0" + senseid
                 }
-                var c = Connector()
+                let c = Connector()
                 c.setSenseid(senseid)
                 connectors.append(c)
             }
+            i += 1
         }
+        
         // Merge same senseid
-        for var i = 1; i < connectors.count; i++ {
+        i = 1;
+        while i < connectors.count {
             if connectors[i].senseid == connectors[i - 1].senseid {
                 connectors.removeAtIndex(i)
-                i--
+                i -= 1
             }
+            i += 1
         }
         
         // Run redsock_bios_decoder
@@ -146,11 +153,13 @@ class ViewController: NSViewController {
         var duallink = ""
         var currentPos = -1
         var mergeFlag = false
-        for var i = 0; i < splitResult.count; i++ {
+        
+        i = 0;
+        while i < splitResult.count {
             type = 0
             controlFlag = 0
-            txmit = ""
-            enc = ""
+            txmit = "00"
+            enc = "10"
             duallink = ""
             if (splitResult[i].hasPrefix("Connector Object Id")) {
                 var items = splitResult[i].componentsSeparatedByString(" ")
@@ -177,21 +186,24 @@ class ViewController: NSViewController {
                 if type == 0 {
                     continue
                 }
-                i++
+                i += 1
                 items = splitResult[i].componentsSeparatedByString(" ")
-                for var j = 0; j < items.count; j++ {
+                
+                var j = 0
+                while j < items.count {
                     if items[j] == "txmit" {
-                        j++
-                        txmit = items[j].substringFromIndex(advance(items[j].startIndex, 2));
-                        if (count(txmit) > 2) {
-                            txmit = items[j].substringToIndex(advance(items[j].endIndex, 2 - count(txmit)))
+                        j += 1
+                        txmit = ""
+                        txmit = items[j].substringFromIndex(items[j].startIndex.advancedBy(2));
+                        if (txmit.characters.count > 2) {
+                            txmit = items[j].substringToIndex(items[j].endIndex.advancedBy(2 - txmit.characters.count))
                         }
                     }
                     if items[j] == "enc" {
-                        j++
+                        j += 1
                         enc = ""
                         var isEnc = false
-                        for c in items[j] {
+                        for c in items[j].characters {
                             if (c >= "0" && c <= "9" && isEnc) {
                                 enc += "\(c)"
                             }
@@ -199,31 +211,33 @@ class ViewController: NSViewController {
                                 isEnc = true
                             }
                         }
-                        if (count(enc) == 1) {
+                        if (enc.characters.count == 1) {
                             enc = "0" + enc
                         }
                     }
                     if items[j] == "[duallink" {
-                        j++
-                        var x = advance(items[j].startIndex, 2)
-                        var y = advance(items[j].startIndex, 3)
-                        duallink = items[j].substringWithRange(Range<String.Index>(start: x, end: y))
+                        j += 1
+                        let x = items[j].startIndex.advancedBy(2)
+                        let y = items[j].startIndex.advancedBy(3)
+                        let range = x ..< y
+                        duallink = items[j].substringWithRange(range)
                         if type == 2 && duallink == "1" {
                             controlFlag = 1
                         }
                     }
+                    j += 1
                 }
                 
                 if mergeFlag {
                     mergeFlag = false
-                    currentPos++
+                    currentPos += 1
                     connectors[currentPos].setType(type)
                     connectors[currentPos].setControlFlag(controlFlag)
                     connectors[currentPos].setTxmit(txmit)
                     connectors[currentPos].setEnc(enc)
                 }
                 else {
-                    if currentPos >= 0 && type == 1 && controlFlag == 1 && connectors[currentPos].type == 1 && connectors[currentPos].controlFlag == 1 {
+                    if currentPos >= 0 && connectors[currentPos].type == type && controlFlag == 1 && connectors[currentPos].controlFlag == controlFlag && (type == 1 || type == 5 && enc == "10") {
                         mergeFlag = true;
                         if enc == "10" {
                             connectors[currentPos].setTxmit(txmit)
@@ -233,7 +247,7 @@ class ViewController: NSViewController {
                         }
                     }
                     else {
-                        currentPos++
+                        currentPos += 1
                         connectors[currentPos].setType(type)
                         connectors[currentPos].setControlFlag(controlFlag)
                         connectors[currentPos].setTxmit(txmit)
@@ -241,20 +255,21 @@ class ViewController: NSViewController {
                     }
                 }
             }
+            i += 1
         }
         
         // Print debug information
         #if DEBUG
-            println("ROM File: Valid")
-            println("Connectors Info:")
+            print("ROM File: Valid")
+            print("Connectors Info:")
             for i in connectors {
-                println(i.toString())
+                print(i.toString())
             }
         #endif
     }
     
     override func prepareForSegue(segue: NSStoryboardSegue, sender: AnyObject?) {
-        var viewController = segue.destinationController as! ResultViewController
+        let viewController = segue.destinationController as! ResultViewController
         viewController.connectors = connectors
         viewController.PCIID = PCIID.uppercaseString
         if framebufferOrigin.indexOfSelectedItem == 0 {
@@ -263,59 +278,74 @@ class ViewController: NSViewController {
         else {
             viewController.fbOriginName = fbOriginArray[framebufferOrigin.indexOfSelectedItem - 1]
         }
+        if framebufferLength.indexOfSelectedItem == 0 {
+            viewController.mode = 1
+        }
+        else if framebufferLength.indexOfSelectedItem == 1 {
+            viewController.mode = 0
+        }
         #if DEBUG
-            println("******************************************")
-            println("Segue to Result View")
+            print("******************************************")
+            print("Segue to Result View")
         #endif
     }
     
     func runProgram(name: String, inputFile: String) -> String {
         #if DEBUG
-            println("\n........Launching program \(name)........")
+            print("\n........Launching program \(name)........")
         #endif
         
-        var task = NSTask()
+        let task = NSTask()
         task.launchPath = "/bin/sh"
         
         // Get the path of program
-        var tempDir = NSBundle.mainBundle().pathForResource(name, ofType: nil)!
-        var dir = "\(tempDir)"
+        let tempDir = NSBundle.mainBundle().pathForResource(name, ofType: nil)!
+        let dir = "\(tempDir)"
         
-        var dirHandleBlank = dir.stringByReplacingOccurrencesOfString(" ", withString: "\\ ")
-        var inputFileHandleBlank = inputFile.stringByReplacingOccurrencesOfString(" ", withString: "\\ ")
+        let dirHandleBlank = dir.stringByReplacingOccurrencesOfString(" ", withString: "\\ ")
+        let inputFileHandleBlank = inputFile.stringByReplacingOccurrencesOfString(" ", withString: "\\ ")
         task.arguments = ["-c", "\(dirHandleBlank) < \(inputFileHandleBlank)"]
         
         // Define
-        var pipe = NSPipe()
+        let pipe = NSPipe()
         task.standardOutput = pipe
         
         var file = NSFileHandle()
         file = pipe.fileHandleForReading
         
         task.launch()
-        var data = file.readDataToEndOfFile()
-        var context1 = NSString(data: data, encoding: NSUTF8StringEncoding)
+        let data = file.readDataToEndOfFile()
+        let context1 = NSString(data: data, encoding: NSUTF8StringEncoding)
         #if DEBUG
-            println(context1)
-            println("......................................................\n")
+            print(context1)
+            print("......................................................\n")
         #endif
         
         return "\(context1)"
     }
     
     func findSLE() {
-        framebufferOrigin.addItemWithObjectValue(NSLocalizedString("PROGRAM_DATA", comment: "Datas that program contains"))
+        fbLengthText.stringValue = NSLocalizedString("FB_LENGTH_TEXT", comment: "Framebuffer length")
+        framebufferLength.addItemWithTitle(NSLocalizedString("NEW_FRAMEBUFFER_LENGTH", comment: "New framebuffer length"))
+        framebufferLength.addItemWithTitle(NSLocalizedString("OLD_FRAMEBUFFER_LENGTH", comment: "Old framebuffer length"))
+        framebufferLength.selectItemAtIndex(0)
+        framebufferOrigin.addItemWithTitle(NSLocalizedString("PROGRAM_DATA", comment: "Datas that program contains"))
         framebufferOrigin.selectItemAtIndex(0)
-        var manager = NSFileManager.defaultManager()
-        var partitions = manager.contentsOfDirectoryAtPath("/Volumes", error: NSErrorPointer())
+        let manager = NSFileManager.defaultManager()
+        var partitions: [AnyObject]?
+        do {
+            partitions = try manager.contentsOfDirectoryAtPath("/Volumes")
+        } catch _ as NSError {
+            partitions = nil
+        }
         if partitions == nil || partitions?.count == 0{
             return
         }
         var names = partitions as! [String]
-        for var i = 0; i < names.count; i++ {
-            var name = names[i]
+        for i in 0 ..< names.count {
+            let name = names[i]
             if manager.fileExistsAtPath("/Volumes/\(name)/System/Library/Extensions") {
-                framebufferOrigin.addItemWithObjectValue(NSLocalizedString("FROM_PARTITION", comment: "Partition: ") + name)
+                framebufferOrigin.addItemWithTitle(NSLocalizedString("FROM_PARTITION", comment: "Partition: ") + name)
                 fbOriginArray.append(name)
             }
         }

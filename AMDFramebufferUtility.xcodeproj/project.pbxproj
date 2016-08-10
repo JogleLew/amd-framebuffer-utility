@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		151D14241B68F91200A923FA /* getSystemFB in Resources */ = {isa = PBXBuildFile; fileRef = 151D14231B68F91200A923FA /* getSystemFB */; };
+		1522BE411D5AD01500B58ABC /* getSystemFB24 in Resources */ = {isa = PBXBuildFile; fileRef = 1522BE401D5AD01500B58ABC /* getSystemFB24 */; };
+		1522BE461D5AEED100B58ABC /* OfflineFB24.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1522BE441D5AEED100B58ABC /* OfflineFB24.plist */; };
+		1522BE471D5AEED100B58ABC /* OfflineFB16.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1522BE451D5AEED100B58ABC /* OfflineFB16.plist */; };
+		1522BE491D5AF06F00B58ABC /* getSystemFB16 in Resources */ = {isa = PBXBuildFile; fileRef = 1522BE481D5AF06F00B58ABC /* getSystemFB16 */; };
 		153CE0331B5B3C7D006265AE /* CardInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 153CE0321B5B3C7D006265AE /* CardInfo.plist */; };
 		153FBF001B65208F00FC5EA0 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 153FBEFF1B65208F00FC5EA0 /* logo.png */; };
 		15412C5F1B482B8300EA1118 /* otool in Resources */ = {isa = PBXBuildFile; fileRef = 15412C5E1B482B8300EA1118 /* otool */; };
-		156E81591B650DBA005C4FE6 /* OfflineFB.plist in Resources */ = {isa = PBXBuildFile; fileRef = 156E81581B650DBA005C4FE6 /* OfflineFB.plist */; };
 		157A7B431B411DF000275C92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157A7B421B411DF000275C92 /* AppDelegate.swift */; };
 		157A7B471B411DF000275C92 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 157A7B461B411DF000275C92 /* Images.xcassets */; };
 		157A7B4A1B411DF100275C92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 157A7B481B411DF100275C92 /* Main.storyboard */; };
@@ -35,11 +37,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		151D14231B68F91200A923FA /* getSystemFB */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = getSystemFB; sourceTree = "<group>"; };
+		1522BE401D5AD01500B58ABC /* getSystemFB24 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = getSystemFB24; sourceTree = "<group>"; };
+		1522BE441D5AEED100B58ABC /* OfflineFB24.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = OfflineFB24.plist; sourceTree = "<group>"; };
+		1522BE451D5AEED100B58ABC /* OfflineFB16.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = OfflineFB16.plist; sourceTree = "<group>"; };
+		1522BE481D5AF06F00B58ABC /* getSystemFB16 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = getSystemFB16; sourceTree = "<group>"; };
 		153CE0321B5B3C7D006265AE /* CardInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CardInfo.plist; sourceTree = "<group>"; };
 		153FBEFF1B65208F00FC5EA0 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		15412C5E1B482B8300EA1118 /* otool */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = otool; sourceTree = "<group>"; };
-		156E81581B650DBA005C4FE6 /* OfflineFB.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = OfflineFB.plist; sourceTree = "<group>"; };
 		157A7B3D1B411DF000275C92 /* AMDFramebufferUtility.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AMDFramebufferUtility.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		157A7B411B411DF000275C92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		157A7B421B411DF000275C92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -106,9 +110,11 @@
 				15D5CAA01B423999004875C4 /* Localizable.strings */,
 				157A7B461B411DF000275C92 /* Images.xcassets */,
 				153CE0321B5B3C7D006265AE /* CardInfo.plist */,
-				156E81581B650DBA005C4FE6 /* OfflineFB.plist */,
+				1522BE441D5AEED100B58ABC /* OfflineFB24.plist */,
+				1522BE451D5AEED100B58ABC /* OfflineFB16.plist */,
 				153FBEFF1B65208F00FC5EA0 /* logo.png */,
-				151D14231B68F91200A923FA /* getSystemFB */,
+				1522BE481D5AF06F00B58ABC /* getSystemFB16 */,
+				1522BE401D5AD01500B58ABC /* getSystemFB24 */,
 				15412C5E1B482B8300EA1118 /* otool */,
 				157A7B631B411E4800275C92 /* radeon_bios_decode */,
 				157A7B641B411E4800275C92 /* redsock_bios_decoder */,
@@ -186,11 +192,14 @@
 		157A7B351B411DF000275C92 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = joglelew;
 				TargetAttributes = {
 					157A7B3C1B411DF000275C92 = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = 62HAK64LWS;
 					};
 					157A7B4E1B411DF100275C92 = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -223,11 +232,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1522BE471D5AEED100B58ABC /* OfflineFB16.plist in Resources */,
+				1522BE491D5AF06F00B58ABC /* getSystemFB16 in Resources */,
+				1522BE461D5AEED100B58ABC /* OfflineFB24.plist in Resources */,
+				1522BE411D5AD01500B58ABC /* getSystemFB24 in Resources */,
 				157A7B471B411DF000275C92 /* Images.xcassets in Resources */,
 				157A7B4A1B411DF100275C92 /* Main.storyboard in Resources */,
 				15412C5F1B482B8300EA1118 /* otool in Resources */,
-				156E81591B650DBA005C4FE6 /* OfflineFB.plist in Resources */,
-				151D14241B68F91200A923FA /* getSystemFB in Resources */,
 				15D5CA9E1B423999004875C4 /* Localizable.strings in Resources */,
 				153FBF001B65208F00FC5EA0 /* logo.png in Resources */,
 				157A7B651B411E4800275C92 /* radeon_bios_decode in Resources */,
@@ -320,6 +331,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -335,7 +347,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_SWIFT_FLAGS = "-D DEBUG";
@@ -374,7 +386,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_SWIFT_FLAGS = "";
 				SDKROOT = macosx;
@@ -385,11 +397,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = AMDFramebufferUtility/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = "JL.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -397,11 +413,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = AMDFramebufferUtility/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = "JL.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -420,6 +440,7 @@
 				);
 				INFOPLIST_FILE = AMDFramebufferUtilityTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "JL.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AMDFramebufferUtility.app/Contents/MacOS/AMDFramebufferUtility";
 			};
@@ -436,6 +457,7 @@
 				);
 				INFOPLIST_FILE = AMDFramebufferUtilityTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "JL.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AMDFramebufferUtility.app/Contents/MacOS/AMDFramebufferUtility";
 			};
